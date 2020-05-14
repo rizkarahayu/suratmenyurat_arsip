@@ -45,15 +45,26 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                @if($surat_masuk_kabiro->status_surat == 1)
+                                @if($surat_masuk_kabiro->status_surat == 'diterima')
                                     <input class="form-control" placeholder="Diterima" name="status_surat" id="status_surat" type="text">
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Jenis Pengadaan</label>
                                 <select class="form-control" name="jenis_pengadaan" id="jenis_pengadaan">
                                     <option value="pemilihan">Pemilihan Langsung</option>
                                     <option value="penunjukan">Penunjukan Langsung</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Kabiro</label>
+                                <select required class="form-control" name ="juru_beli" id="juru_beli">
+                                    <option value="" >Pilih Nama Juru Beli</option>
+                                    @foreach ($nama_jurubeli  as  $jurubeli)
+                                        @if ($jurubeli->is_admin == 'pengadaan')
+                                            <option  value="{{ $jurubeli->name }}" > {{ $jurubeli->name }} </option>
+                                        @endif
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="box-footer">

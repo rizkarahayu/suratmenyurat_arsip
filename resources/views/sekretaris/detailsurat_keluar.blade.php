@@ -21,7 +21,7 @@
                         @endif
                         <form class="form-horizontal" method="POST" action="" autocomplete="off" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            @if($surat_masuk_sekretaris->status_surat == 1)
+                            @if($surat_masuk_sekretaris->status_surat == 'diterima')
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode J01</label>

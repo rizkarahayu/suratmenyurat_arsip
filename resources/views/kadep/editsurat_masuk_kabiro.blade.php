@@ -19,7 +19,7 @@
                                 </button>
                             </div>
                         @endif
-                    <form class="form-horizontal" method="POST" action="{{ url('/surat_masuk_kadep/update/'.$surat_masuk_kadep->id) }}" autocomplete="off" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ url('/surat_masuk_kadep/update_kabiro/'.$surat_masuk_kadep->id) }}" autocomplete="off" enctype="multipart/form-data">
                             {{ csrf_field() }}
                         <div class="modal-body">
                             <div class="form-group">
@@ -41,9 +41,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                <select class="form-control" name="status_surat" id="status_surat">
-                                    <option value="diterima" @if (old('status_surat') == 'diterima') selected @endif>Diterima</option>
-                                    <option value="ditolak" @if (old('status_surat') == 'ditolak') selected @endif>Ditolak</option>
+                                <input class="form-control datepicker" placeholder="{{$surat_masuk_kadep->status_surat = 'Diterima'}}" name=">tanggal_diterima" id="tanggal_diterima" disabled type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Kabiro</label>
+                                <select required class="form-control" name ="nama_pj" id="nama_pj">
+                                    <option value="" >Pilih Nama Kabiro (PJ SPK/SPER)</option>
+                                    @foreach ($nama_kabiro  as  $kabiro)
+                                        @if ($kabiro->is_admin == 'kabiro')
+                                            <option  value="{{ $kabiro->name }}" > {{ $kabiro->name }} </option>
+                                        @endif
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="box-footer">

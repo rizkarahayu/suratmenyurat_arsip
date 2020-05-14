@@ -44,16 +44,17 @@
                         </tr>
                         </thead>
                         <tbody>
-                                @foreach($surat_masuk as $i => $masuk)
+                            @foreach($surat_masuk as $i => $masuk)
+                                @if(($masuk->nama_pj==Auth::user()->name))
                                     <tr>
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->kode_proyek }}</td>
                                           <td>{{ $masuk->deskripsi }}</td>
-                                          <td>{{ $masuk->tanggal_diterima }}</td>
-                                          @if( $masuk->status_surat == null)
+                                          <td>{{$masuk->tanggal_diterima}}</td>
+                                          @if( $masuk->status_surat == NULL)
                                             <td><span class="badge badge-warning">{{ $masuk->status_surat = 'Belum Diverifikasi'}}</span></td>
-                                          @elseif ($masuk->status_surat == 1) 
+                                          @elseif ($masuk->status_surat == 'diterima') 
                                             <td><span class="badge badge-success">{{ $masuk->status_surat = 'Diterima'}}</span></td>
                                           @else
                                             <td><span class="badge badge-danger">{{ $masuk->status_surat = 'Ditolak'}}</td>
@@ -78,7 +79,8 @@
                                                 <a href="/surat_masuk_kabiro/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                           </td>
                                     </tr>
-                                @endforeach
+                                @endif
+                            @endforeach
                          </tbody>
                       </table>
                     <div class="card-header align-center"  >

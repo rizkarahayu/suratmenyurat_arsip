@@ -23,8 +23,9 @@ class KabiroController extends Controller
 
     public function datasurat_masuk()
     {
+        $kabiro= User::where('is_admin','kabiro')->get();
         $surat_masuk = SuratMasuk::paginate(10);
-        return view('kabiro.datasurat_masuk', compact( 'surat_masuk'));
+        return view('kabiro.datasurat_masuk', compact( 'surat_masuk','kabiro'));
     }
 
     /**
@@ -57,13 +58,16 @@ class KabiroController extends Controller
     public function edit($id)
     {
         $surat_masuk_kabiro = SuratMasuk::find($id); 
-        return view('kabiro.editsurat_masuk',compact( 'surat_masuk_kabiro')); 
+        $nama_jurubeli = User::get();
+        return view('kabiro.editsurat_masuk',compact( 'surat_masuk_kabiro','nama_jurubeli')); 
     }
+    
 
     public function jenis_pengadaan($id,Request $request)
     {    
         $surat_masuk_kabiro = SuratMasuk::find($id);
         $surat_masuk_kabiro->jenis_pengadaan = $request->input('jenis_pengadaan');
+        $surat_masuk_kabiro->juru_beli = $request->input('juru_beli');
         $surat_masuk_kabiro->save();
         
         if($surat_masuk_kabiro->jenis_pengadaan == 'pemilihan')
@@ -72,6 +76,7 @@ class KabiroController extends Controller
             return redirect('/edit_surat_penunjukan/'.$id)->with(['message'=> 'Form Edit Surat Penunjukan Langsung']);
         }
     }
+
 
     public function pemilihan_langsung($id)
     {
@@ -100,6 +105,7 @@ class KabiroController extends Controller
         $surat_masuk_kabiro->tanggal_selesai_pemenang = $request->input('tanggal_selesai_pemenang');
         $surat_masuk_kabiro->tanggal_mulai_persetujuankontrak = $request->input('tanggal_mulai_persetujuankontrak');
         $surat_masuk_kabiro->tanggal_selesai_persetujuankontrak = $request->input('tanggal_selesai_persetujuankontrak');
+        $surat_masuk_kabiro->status_surat_kabiro = $request->input('status_surat_kabiro');
         $surat_masuk_kabiro->save();
         return redirect('/surat_masuk_kabiro')->with(['message'=> 'Data Berhasil di Edit!!']);
     }
@@ -117,6 +123,7 @@ class KabiroController extends Controller
         $surat_masuk_kabiro->tanggal_selesai_banh = $request->input('tanggal_selesai_banh');
         $surat_masuk_kabiro->tanggal_mulai_persetujuankontrak = $request->input('tanggal_mulai_persetujuankontrak');
         $surat_masuk_kabiro->tanggal_selesai_persetujuankontrak = $request->input('tanggal_selesai_persetujuankontrak');
+        $surat_masuk_kabiro->status_surat_kabiro = $request->input('status_surat_kabiro');
         $surat_masuk_kabiro->save();
         return redirect('/surat_masuk_kabiro')->with(['message'=> 'Data Berhasil di Edit!!']);
     }
@@ -143,6 +150,12 @@ class KabiroController extends Controller
     {
         $surat_masuk_kabiro = SuratMasuk::find($id); 
         return view('kabiro.detailsurat_masuk_pemilihan',compact( 'surat_masuk_kabiro')); 
+    }
+
+    public function data_jurubeli()
+    {
+        $data_jurubeli = User::get();
+        return view('kabiro.data_jurubeli', compact('data_jurubeli'));
     }
 
     /**

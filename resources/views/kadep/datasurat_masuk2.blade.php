@@ -44,7 +44,7 @@
                                           <td>{{ $masuk->tanggal_diterima }}</td>
                                           @if( $masuk->status_surat == null)
                                             <td><span class="badge badge-warning">{{ $masuk->status_surat = 'Belum Diverifikasi'}}</span></td>
-                                          @elseif ($masuk->status_surat == 1) 
+                                          @elseif ($masuk->status_surat == 'diterima') 
                                             <td><span class="badge badge-success">{{ $masuk->status_surat = 'Diterima'}}</span></td>
                                           @else
                                             <td><span class="badge badge-danger">{{ $masuk->status_surat = 'Ditolak'}}</td>

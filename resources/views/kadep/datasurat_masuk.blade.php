@@ -2,6 +2,10 @@
 @section('content')
 <div class="row">
     <div class="container">
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Lakukan Edit untuk Verifikasi Surat</strong>
+    </div>
         <div class="card mt-5">
                 <div class="card-body">
                     <br/>
@@ -42,19 +46,32 @@
                                           <td>{{ $masuk->kode_proyek }}</td>
                                           <td>{{ $masuk->deskripsi }}</td>
                                           <td>{{ $masuk->tanggal_diterima }}</td>
-                                          @if( $masuk->status_surat == null)
-                                            <td><span class="badge badge-warning">{{ $masuk->status_surat = 'Belum Diverifikasi'}}</span></td>
-                                          @elseif ($masuk->status_surat == 1) 
-                                            <td><span class="badge badge-success">{{ $masuk->status_surat = 'Diterima'}}</span></td>
-                                          @else
-                                            <td><span class="badge badge-danger">{{ $masuk->status_surat = 'Ditolak'}}</td>
+                                          @if($masuk->status_surat == 'ditolak') 
+                                            <td><span class="badge badge-danger">Ditolak</span></td>
+                                          @elseif ($masuk->status_surat == 'diterima') 
+                                            <td><span class="badge badge-success">Diterima</span></td>
+                                          @else 
+                                            <td><span class="badge badge-warning">Belum Verifikasi</td>
                                           @endif
-                                          <td>{{ $masuk->nama_pj}}</td>
+                                          @if($masuk->status_surat == 'ditolak') 
+                                            <td>-</td>
+                                          @elseif($masuk->status_surat == 'diterima') 
+                                            <td>{{ $masuk->nama_pj}}</td>
+                                          @else 
+                                            <td>Belum Input</td>
+                                          @endif
+                                          @if($masuk->status_surat == 'ditolak')
+                                          <td>
+                                            <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                                            <a href="/surat_masuk_kadep/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                          </td>
+                                          @else
                                           <td>
                                             <a href="/editsurat_masuk_kadep/{{ $masuk->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                             <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
                                             <a href="/surat_masuk_kadep/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                           </td>
+                                          @endif
                                     </tr>
                                 @endforeach
                          </tbody>
@@ -69,4 +86,29 @@
             </div>
     </div>
 </div>
+<style>
+    .alert {
+    padding: 15px;
+    color: #9F6000;
+    background-color: #FEEFB3;
+    margin-bottom: 0px;
+    }
+
+    /* The close button */
+    .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
+    color: black;
+    }
+</style>
 @endsection

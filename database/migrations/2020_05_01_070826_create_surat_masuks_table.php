@@ -22,7 +22,7 @@ class CreateSuratMasuksTable extends Migration
             $table->date('tanggal_diterima')->nullable();
 
             //kadep
-            $table->boolean('status_surat')->nullable();
+            $table->string('status_surat')->nullable();
             $table->string('nama_pj')->nullable();
 
             //kabiro
@@ -39,6 +39,9 @@ class CreateSuratMasuksTable extends Migration
             $table->date('tanggal_selesai_pemenang')->nullable();
             $table->date('tanggal_mulai_persetujuankontrak')->nullable();
             $table->date('tanggal_selesai_persetujuankontrak')->nullable();
+            $table->string('juru_beli')->nullable();
+            $table->string('status_surat_kabiro')->nullable();
+
 
             //juru beli-spph-baet-banh dan subkon-dok sph
             $table->string('perihal_surat')->nullable();

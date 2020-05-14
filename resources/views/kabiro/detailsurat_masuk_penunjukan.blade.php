@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                        @if($surat_masuk_kabiro->status_surat == 1)
+                                        @if($surat_masuk_kabiro->status_surat == 'diterima')
                                             <input class="form-control" placeholder="Diterima" name="status_surat" id="status_surat" type="text">
                                         @endif
                                     </div> 
@@ -83,63 +83,60 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Jenis Pengadaan</label>
-                                        <input type="text" class="form-control" placeholder="{{$surat_masuk_kabiro->jenis_pengadaan}} Langsung" >       
+                                        <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->jenis_pengadaan}} Langsung" >       
+                                    </div>                                                
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Juru Beli</label>
+                                        <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->juru_beli}}" >       
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai SPPH</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div> 
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai SPPH</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai Pembukaan Penawaran Dokumen</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai Pembukaan Penawaran Dokumen</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div> 
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai BAET</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai BAET</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>    
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai BANH</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai BANH</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai Pemilihan Pemenang</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai Pemilihan Pemenang</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Mulai Usulan + Persetujuan Kontrak</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Selesai Usulan + Persetujuan Kontrak</label>
-                                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_diterima}}" type="text">
-                                            </div>
-                                        </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">No</div>
+                                        <div class="col-sm-5">Tahap</div>
+                                        <div class="col-sm-3">Tanggal Mulai</div>
+                                        <div class="col-sm-3">Tanggal Selesai</div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">1</div>
+                                        <div class="col-sm-5">Buat undangan SPPH</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_spph}}" name="tanggal_mulai_spph" id="tanggal_mulai_spph" type="text"></div>
+                                        <div class="col-sm-3"> <input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesaispph}}" name="tanggal_selesaispph" id="tanggal_selesaispph" type="text"></div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">2</div>
+                                        <div class="col-sm-5">Pembukaan Dokumen Penawaran</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_dokpenawaran}}" name="tanggal_mulai_dokpenawaran" id="tanggal_mulai_dokpenawaran" type="text"></div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_dokpenawaran}}" name="tanggal_selesai_dokpenawaran" id="tanggal_selesai_dokpenawaran" type="text"></div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">3</div>
+                                        <div class="col-sm-5">Evaluasi Teknik (BAET)</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_baet}}" name="tanggal_mulai_baet" id="tanggal_mulai_baet" type="text"></div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_baet}}" name="tanggal_selesai_baet" id="tanggal_selesai_baet" type="text"></div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">4</div>
+                                        <div class="col-sm-5">Negoisasi (BANH)</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_banh}}" name="tanggal_mulai_banh" id="tanggal_mulai_banh" type="text"></div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_banh}}" name="tanggal_selesai_banh" id="tanggal_selesai_banh" type="text"></div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">5</div>
+                                        <div class="col-sm-5">Pemilihan Pemenang</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_pemenang}}" name="tanggal_mulai_banh" id="tanggal_mulai_banh" type="text"></div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_pemenang}}" name="tanggal_selesai_banh" id="tanggal_selesai_banh" type="text"></div>
+                                    </div>
+                                    <div class="row border">
+                                        <div class="col-sm-1">6</div>
+                                        <div class="col-sm-5">Usulan dan Persetujuan Kontrak</div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_persetujuankontrak}}" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="text"></div>
+                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_persetujuankontrak}}" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="text"></div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Penunjukan Langsung</label>
+                                <input class="form-control" placeholder="{{$surat_masuk_kabiro->status_surat_kabiro}}" type="input">
+                            </div>
                             </div>
                         </div>
                         <div class="box-footer">

@@ -37,7 +37,7 @@
                         </thead>
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
-                                    @if($masuk->status_surat == 1)
+                                    @if($masuk->status_surat == 'diterima')
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $masuk->kodej01 }}</td>

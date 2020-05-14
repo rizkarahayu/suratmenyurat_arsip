@@ -68,8 +68,8 @@ class KadepController extends Controller
     public function show($id)
     {
         //
-        $surat_masuk_sekretaris = SuratMasuk::find($id); 
-        return view('sekretaris.detailsurat_masuk',compact( 'surat_masuk_sekretaris')); 
+        $surat_masuk_kadep = SuratMasuk::find($id); 
+        return view('kadep.detailsurat_masuk',compact( 'surat_masuk_kadep')); 
     }
 
     /**
@@ -83,6 +83,13 @@ class KadepController extends Controller
         $nama_kabiro= User::get();
         $surat_masuk_kadep= SuratMasuk::findOrFail($id);
         return view('kadep.editsurat_masuk', compact(['surat_masuk_kadep','nama_kabiro']));
+    }
+
+    public function edit_kabiro($id)
+    {
+        $nama_kabiro= User::get();
+        $surat_masuk_kadep= SuratMasuk::findOrFail($id);
+        return view('kadep.editsurat_masuk_kabiro', compact(['surat_masuk_kadep','nama_kabiro']));
     }
 
     /**
@@ -100,6 +107,22 @@ class KadepController extends Controller
         $surat_masuk_kadep->deskripsi =  $surat_masuk_kadep->deskripsi ;
         $surat_masuk_kadep->tanggal_diterima = $surat_masuk_kadep->tanggal_diterima;
         $surat_masuk_kadep->status_surat = $request->input('status_surat');
+        $surat_masuk_kadep->save();
+        if($surat_masuk_kadep->status_surat == 'diterima'){
+            return redirect('/smasuk_kadep_editkabiro/'.$id)->with(['message'=> 'Data Berhasil di Edit!!']);
+        }else{
+            return redirect('/surat_masuk_kadep')->with(['message'=> 'Data Berhasil di Edit!!']);
+        }
+    }
+
+    public function update_kabiro($id, Request $request)
+    {
+        $surat_masuk_kadep= SuratMasuk::find($id);
+        $surat_masuk_kadep->kodej01 = $surat_masuk_kadep->kodej01;
+        $surat_masuk_kadep->kode_proyek = $surat_masuk_kadep->kode_proyek;
+        $surat_masuk_kadep->deskripsi =  $surat_masuk_kadep->deskripsi ;
+        $surat_masuk_kadep->tanggal_diterima = $surat_masuk_kadep->tanggal_diterima;
+        $surat_masuk_kadep->status_surat = $surat_masuk_kadep->status_surat;
         $surat_masuk_kadep->nama_pj = $request->input('nama_pj');
         $surat_masuk_kadep->save();
         return redirect('/surat_masuk_kadep')->with(['message'=> 'Data Berhasil di Edit!!']);

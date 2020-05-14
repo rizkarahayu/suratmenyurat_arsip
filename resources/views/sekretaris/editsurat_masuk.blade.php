@@ -24,15 +24,15 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode J01</label>
-                                <input type="text" class="form-control" name="kodej01" id="kodej01" required placeholder="{{$surat_masuk_sekretaris->kodej01}}" >       
+                                <input type="text" class="form-control" name="kodej01" id="kodej01" placeholder="{{$surat_masuk_sekretaris->kodej01}}" >       
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode Proyek</label>
-                                <input type="text" class="form-control" name="kode_proyek" id="kode_proyek" required placeholder="{{$surat_masuk_sekretaris->kode_proyek}}" >
+                                <input type="text" class="form-control" name="kode_proyek" id="kode_proyek" placeholder="{{$surat_masuk_sekretaris->kode_proyek}}" >
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>
-                                <input type="text" class="form-control" name="deskripsi" id="deskripsi" required placeholder="{{$surat_masuk_sekretaris->deskripsi}}" >
+                                <input type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="{{$surat_masuk_sekretaris->deskripsi}}" >
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Diterima</label>
