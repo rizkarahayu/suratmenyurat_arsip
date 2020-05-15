@@ -72,6 +72,18 @@ class KadepController extends Controller
         return view('kadep.detailsurat_masuk',compact( 'surat_masuk_kadep')); 
     }
 
+    public function show_penunjukan($id)
+    {
+        $surat_masuk_kadep= SuratMasuk::find($id); 
+        return view('kadep.detailsurat_masuk_penunjukan',compact( 'surat_masuk_kadep')); 
+    }
+
+    public function show_pemilihan($id)
+    {
+        $surat_masuk_kadep = SuratMasuk::find($id); 
+        return view('kadep.detailsurat_masuk_pemilihan',compact( 'surat_masuk_kadep')); 
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

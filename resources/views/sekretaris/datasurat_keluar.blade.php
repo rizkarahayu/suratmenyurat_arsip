@@ -29,7 +29,7 @@
                             <th>Kode J01</th>
                             <th>Kode Proyek</th>
                             <th>Deskripsi Jasa</th>
-                            <th>Tanggal Diterima</th>
+                            <!-- <th>Tanggal Diterima</th> -->
                             <th>Status Surat</th>
                             <th>Nama PJ/Kabiro</th>
                             <th>Action</th>
@@ -37,15 +37,23 @@
                         </thead>
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
-                                    @if($masuk->status_surat == 'diterima')
+                                    @if(($masuk->status_surat == 'diterima') || ($masuk->status_surat == 'ditolak'))
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $masuk->kodej01 }}</td>
                                             <td>{{ $masuk->kode_proyek }}</td>
                                             <td>{{ $masuk->deskripsi }}</td>
-                                            <td>{{ $masuk->tanggal_diterima }}</td>
+                                            <!-- <td>{{ $masuk->tanggal_diterima }}</td> -->
+                                            @if($masuk->status_surat == 'diterima')
                                             <td><span class="badge badge-success">{{ $masuk->status_surat = 'Diterima'}}</span></td>
-                                            <td>{{ $masuk->nama_pj}}</td>
+                                            @else
+                                            <td><span class="badge badge-danger">{{ $masuk->status_surat = 'Ditolak'}}</span></td>
+                                            @endif
+                                            @if($masuk->nama_pj == NULL)
+                                            <td>-</td>
+                                            @else
+                                            <td>{{ $masuk->nama_pj }}</td>
+                                            @endif
                                             <td>
                                                 <!-- <a href="/editsurat_keluar/{{ $masuk->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a> -->
                                                 <a href="/surat_keluar/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>

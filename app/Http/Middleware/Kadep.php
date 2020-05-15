@@ -21,7 +21,7 @@ class Kadep
         }
         
    
-        return redirect('home')->with('error',"You don't have admin access.");
+        return redirect('kadep')->with('error',"You don't have admin access.");
     }
         
 }

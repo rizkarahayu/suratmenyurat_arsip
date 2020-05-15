@@ -26,36 +26,30 @@
                         <tr>
                             <th>No.</th>
                             <th>Kode J01</th>
-                            <th>Kode Proyek</th>
-                            <th>Deskripsi Jasa</th>
-                            <th>Tanggal Diterima</th>
-                            <th>Status Surat</th>
-                            <th>Nama PJ/Kabiro</th>
+                            <th>Status J01</th>
+                            <th>Nama Kepala Biro</th>
+                            <th>Jenis Pengadaan</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
+                                    @if(($masuk->status_surat_kabiro=='onprogress') || ($masuk->status_surat_kabiro=='selesai'))
                                     <tr>
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
-                                          <td>{{ $masuk->kode_proyek }}</td>
-                                          <td>{{ $masuk->deskripsi }}</td>
-                                          <td>{{ $masuk->tanggal_diterima }}</td>
-                                          @if( $masuk->status_surat == null)
-                                            <td><span class="badge badge-warning">{{ $masuk->status_surat = 'Belum Diverifikasi'}}</span></td>
-                                          @elseif ($masuk->status_surat == 'diterima') 
-                                            <td><span class="badge badge-success">{{ $masuk->status_surat = 'Diterima'}}</span></td>
-                                          @else
-                                            <td><span class="badge badge-danger">{{ $masuk->status_surat = 'Ditolak'}}</td>
-                                          @endif
+                                          <td>{{ $masuk->status_surat_kabiro }}</td>
                                           <td>{{ $masuk->nama_pj}}</td>
+                                          <td>{{ $masuk->jenis_pengadaan}}</td>
                                           <td>
-                                            <a href="/editsurat_masuk_kadep/{{ $masuk->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-                                            <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                            <a href="/surat_masuk_kadep/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                          @if($masuk->jenis_pengadaan == 'pemilihan')
+                                                <a href="/surat_masuk_kadep/show/pemilihan/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                                          @else
+                                                <a href="/surat_masuk_kadep/show/penunjukan/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                                          @endif
                                           </td>
                                     </tr>
+                                    @endif
                                 @endforeach
                          </tbody>
                       </table>

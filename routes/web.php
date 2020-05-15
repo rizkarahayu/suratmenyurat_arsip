@@ -31,6 +31,8 @@ Route::group(['middleware'=>['auth','kadep']],function(){
     Route::post('/surat_masuk_kadep/update_kabiro/{id}', 'KadepController@update_kabiro');
     Route::get('/surat_masuk_kadep/show/{id}', 'KadepController@show');
     Route::get('/datapj_spk', 'SekretarisController@datapj');
+    Route::get('/surat_masuk_kadep/show/penunjukan/{id}', 'KadepController@show_penunjukan');
+    Route::get('/surat_masuk_kadep/show/pemilihan/{id}', 'KadepController@show_pemilihan');
 });
 
 // Route::get('/kabiro', 'KabiroController@index')->name('kabiro')->middleware('kabiro');

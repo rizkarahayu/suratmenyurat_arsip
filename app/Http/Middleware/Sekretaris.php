@@ -39,6 +39,6 @@ class Sekretaris
             return $next($request);
         }
 
-        return redirect('home')->with('error',"You don't have admin access.");
+        return redirect('sekretaris')->with('error',"You don't have admin access.");
     }
 }

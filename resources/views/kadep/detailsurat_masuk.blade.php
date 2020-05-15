@@ -1,10 +1,6 @@
 @extends('layout.template')
 @section('content')
     <div class="container">
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <strong>Lakukan Edit untuk Verifikasi Surat</strong>
-    </div>
         <div class="card mt-5">
             <div class="col-xs-12">
                 <div class="box">
@@ -54,7 +50,7 @@
                             @endif
                             </div> 
                             <div class="box-footer">
-                                <a href="{{ url('/datasurat_masuk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
+                                <a href="{{ url('/surat_masuk_kadep') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                         </div>
                         </div>
                     </form>

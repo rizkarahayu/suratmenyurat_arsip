@@ -21,7 +21,6 @@
                         @endif
                         <form class="form-horizontal" method="POST" action="" autocomplete="off" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            @if($surat_masuk_sekretaris->status_surat == 'diterima')
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode J01</label>
@@ -35,24 +34,29 @@
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>
                                         <input type="text" class="form-control" name="deskripsi" id="deskripsi" required placeholder="{{$surat_masuk_sekretaris->deskripsi}}" >
                                     </div> 
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Diterima</label>
-                                        <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima" required placeholder="Pilih Tanggal" > -->
                                         <input class="form-control" placeholder="{{$surat_masuk_sekretaris->tanggal_diterima}}" name="tanggal_diterima" id="tanggal_diterima" type="text">
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                        <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima" required placeholder="Pilih Tanggal" > -->
-                                        <input class="form-control" placeholder="{{ $surat_masuk_sekretaris->status_surat = 'Diterima'}}" name="tanggal_diterima" id="tanggal_diterima" type="text">
+                                        @if($surat_masuk_sekretaris->status_surat == 'ditolak')
+                                        <input type="text" class="form-control" name="status_surat" id="status_surat" required placeholder="{{$surat_masuk_sekretaris->status_surat = 'Ditolak'}}" >
+                                        @else
+                                        <input type="text" class="form-control" name="status_surat" id="status_surat" required placeholder="{{$surat_masuk_sekretaris->status_surat = 'Diterima'}}" >
+                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama PJ/Kabiro</label>
+                                        @if($surat_masuk_sekretaris->nama_pj == NULL)
+                                        <input type="text" class="form-control" name="nama_pj" id="nama_pj" required placeholder="-" >
+                                        @else
                                         <input type="text" class="form-control" name="nama_pj" id="nama_pj" required placeholder="{{$surat_masuk_sekretaris->nama_pj}}" >
+                                        @endif
                                     </div>
                                     <div class="box-footer">
                                         <a href="{{ url('/datasurat_keluar') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                                 </div>
-                            @endif
                         </form>
                     </div>
                 </div>

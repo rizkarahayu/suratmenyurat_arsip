@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Str;
 
+// $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+//CLEARDB_DATABASE_URL: mysql://bd873f42858edd:9923717c@us-cdbr-east-06.cleardb.net/heroku_3509dfb09e7414b?reconnect=true
+
+// $host = $url["host"];
+// $username = $url["user"];
+// $password = $url["pass"];
+// $database = substr($url["path"], 1);
 return [
 
     /*
@@ -15,7 +22,9 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql_heroku'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -91,6 +100,25 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mysql_heroku' => [
+            'driver' => 'mysql',
+            // 'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', 'us-cdbr-east-06.cleardb.net'),
+            // 'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'heroku_3509dfb09e7414b'),
+            'username' => env('DB_USERNAME', 'bd873f42858edd'),
+            'password' => env('DB_PASSWORD', '9923717c'),
+            // 'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+            PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
     ],
 
     /*
