@@ -45,7 +45,7 @@
                         </thead>
                         <tbody>
                             @foreach($surat_masuk as $i => $masuk)
-                                @if(($masuk->nama_pj==Auth::user()->name))
+                                @if(($masuk->nama_pj==Auth::user()->name) && ($masuk->status_surat=='diterima'))
                                     <tr>
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
