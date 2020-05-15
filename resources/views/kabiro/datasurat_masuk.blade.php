@@ -31,9 +31,9 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>No.</th>
+                            <th style="text-align: center;font-size:12px;">No.</th>
                             <th style="text-align: center;font-size:14px;">Kode J01</th>
-                            <th>Kode Proyek</th>
+                            <th style="text-align: center;font-size:14px;">Kode Proyek</th>
                             <th style="text-align: center;font-size:14px;">Deskripsi Jasa</th>
                             <th style="text-align: center;font-size:14px;">Tanggal Diterima</th>
                             <th style="text-align: center;font-size:14px;">Status Surat</th>
