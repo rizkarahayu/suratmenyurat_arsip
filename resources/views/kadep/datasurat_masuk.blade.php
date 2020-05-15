@@ -7,12 +7,12 @@
         <strong>Lakukan Edit untuk Verifikasi Surat</strong>
     </div>
         <div class="card mt-5">
-              <div class="card-header">
-                  <h3 class="card-title text-center">Tabel Data Surat Masuk Kepala Departemen</h3>
-              </div>
                 <div class="card-body">
-                    <br/>
-                    <br/>
+                <div class="box-header">
+                        <div class="card-header text-center">
+                        Tabel Data Surat Masuk Kepala Departemen
+                        </div>
+                    </div>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -63,18 +63,11 @@
                                           @else 
                                             <td>Belum Input</td>
                                           @endif
-                                          @if($masuk->status_surat == 'ditolak')
-                                          <td>
-                                            <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                            <a href="/surat_masuk_kadep/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-                                          </td>
-                                          @else
                                           <td>
                                             <a href="/editsurat_masuk_kadep/{{ $masuk->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                             <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
                                             <a href="/surat_masuk_kadep/delete/{{ $masuk->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                           </td>
-                                          @endif
                                     </tr>
                                 @endforeach
                          </tbody>

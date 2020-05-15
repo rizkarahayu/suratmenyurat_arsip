@@ -48,7 +48,7 @@ Route::group(['middleware'=>['auth','kabiro']],function(){
     Route::get('/surat_masuk_kabiro/show/pemilihan/{id}', 'KabiroController@show_pemilihan');
     //form pemilihan langsung
     Route::get('/edit_surat_pemilihan/{id}', 'KabiroController@pemilihan_langsung');
-    Route::post('/surat_masuk_kabiro/update_pemlihan_langsung/{id}', 'KabiroController@update_pemilihan');
+    Route::post('/surat_masuk_kabiro/update_pemilihan_langsung/{id}', 'KabiroController@update_pemilihan');
     //form pemilihan langsung
     Route::get('/edit_surat_penunjukan/{id}', 'KabiroController@penunjukan_langsung');
     Route::post('/surat_masuk_kabiro/update_penunjukan_langsung/{id}', 'KabiroController@update_penunjukan');
@@ -74,6 +74,8 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     Route::post('/surat_keluar/update/{id}', 'SekretarisController@update_keluar');
     Route::get('/surat_keluar/delete/{id}', 'SekretarisController@delete');
     Route::get('/surat_keluar/show/{id}', 'SekretarisController@show_keluar');
+    Route::get('/surat_keluar/show_manual/{id}', 'SekretarisController@show_keluar_manual');
+
 
     Route::get('/datapj_spk', 'SekretarisController@datapj');
 });

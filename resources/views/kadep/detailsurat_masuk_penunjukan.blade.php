@@ -84,7 +84,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Jenis Pengadaan</label>
                                         <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kadep->jenis_pengadaan}} Langsung" >       
-                                    </div>                                                
+                                    </div>
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Juru Beli</label>
                                         <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kadep->juru_beli}}" >       
@@ -121,12 +121,6 @@
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">5</div>
-                                        <div class="col-sm-5">Pemilihan Pemenang</div>
-                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kadep->tanggal_mulai_pemenang}}" name="tanggal_mulai_banh" id="tanggal_mulai_banh" type="text"></div>
-                                        <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kadep->tanggal_selesai_pemenang}}" name="tanggal_selesai_banh" id="tanggal_selesai_banh" type="text"></div>
-                                    </div>
-                                    <div class="row border">
-                                        <div class="col-sm-1">6</div>
                                         <div class="col-sm-5">Usulan dan Persetujuan Kontrak</div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kadep->tanggal_mulai_persetujuankontrak}}" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="text"></div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kadep->tanggal_selesai_persetujuankontrak}}" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="text"></div>
@@ -140,7 +134,7 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <a href="{{ url('/surat_masuk_kadep') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
+                            <a href="{{ url('/surat_masuk_kadep2') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                         </div>
                     </form>
                     </div>

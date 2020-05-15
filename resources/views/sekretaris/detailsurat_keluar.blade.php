@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Detail Surat Masuk
+                            Detail Surat Masuk Kode J01 : {{$surat_masuk_sekretaris->kodej01}}
                         </div>
                     </div>
                     <div class="box-body">

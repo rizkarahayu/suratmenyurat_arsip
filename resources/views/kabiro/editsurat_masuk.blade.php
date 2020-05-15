@@ -57,7 +57,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Kabiro</label>
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Juru Beli</label>
                                 <select required class="form-control" name ="juru_beli" id="juru_beli">
                                     <option value="" >Pilih Nama Juru Beli</option>
                                     @foreach ($nama_jurubeli  as  $jurubeli)

@@ -12,7 +12,6 @@
         <div class="card mt-5">
                 <div class="card-body">
                     <br/>
-                    <br/>
                     <div class="box-header">
                         <div class="card-header text-center">
                             Tabel Data Surat Masuk Kepala Biro

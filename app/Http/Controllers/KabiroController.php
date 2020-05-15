@@ -90,7 +90,7 @@ class KabiroController extends Controller
         return view('kabiro.editsurat_penunjukan', compact(['surat_masuk_kabiro']));
     }
 
-    public function update_penunjukan($id, Request $request)
+    public function update_pemilihan($id, Request $request)
     {
         $surat_masuk_kabiro = SuratMasuk::find($id);
         $surat_masuk_kabiro->tanggal_mulai_spph = $request->input('tanggal_mulai_spph');
@@ -110,7 +110,7 @@ class KabiroController extends Controller
         return redirect('/surat_masuk_kabiro')->with(['message'=> 'Data Berhasil di Edit!!']);
     }
 
-    public function update_pemilihan($id, Request $request)
+    public function update_penunjukan($id, Request $request)
     {
         $surat_masuk_kabiro = SuratMasuk::find($id);
         $surat_masuk_kabiro->tanggal_mulai_spph = $request->input('tanggal_mulai_spph');

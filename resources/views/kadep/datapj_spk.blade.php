@@ -4,11 +4,11 @@
     <div class="container">
         <div class="card mt-5">
                 <div class="card-body">
-                     <div class="card-header">
-                        <h3 class="card-title text-center">Tabel Data Master Kepala Biro</h3>
+                <div class="box-header">
+                        <div class="card-header text-center">
+                        Tabel Data Master Kepala Biro
+                        </div>
                     </div>
-                    <br/>
-                    <br/>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

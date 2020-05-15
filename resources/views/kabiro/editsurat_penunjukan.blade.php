@@ -34,7 +34,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Jenis Pengadaan</label>
                                         <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->jenis_pengadaan}} Langsung" >       
-                                    </div>                                                
+                                    </div>
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Juru Beli</label>
                                         <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->juru_beli}}" >       
@@ -71,12 +71,6 @@
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">5</div>
-                                        <div class="col-sm-5">Pemilihan Pemenang</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_pemenang" id="tanggal_mulai_pemenang" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_pemenang" id="tanggal_mulai_pemenang" type="date"></div>
-                                    </div>
-                                    <div class="row border">
-                                        <div class="col-sm-1">6</div>
                                         <div class="col-sm-5">Usulan dan Persetujuan Kontrak</div>
                                         <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="date"></div>
                                         <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="date"></div>
@@ -84,7 +78,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Pemilihan Langsung</label>
+                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Penunjukan Langsung</label>
                                 <select required class="form-control" name ="status_surat_kabiro" id="status_surat_kabiro">
                                     <option value="" >Status Surat</option>
                                     <option  value="onprogress" >On Progress</option>

@@ -6,7 +6,6 @@
                 <div class="card-body">
                     <a href="/tambahsurat_masuk" class="btn btn-primary">Buat Surat Masuk</a>
                     <br/>
-                    <br/>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

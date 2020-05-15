@@ -8,7 +8,6 @@
                         <h3 class="card-title text-center">Tabel Surat Masuk Kepala Departemen Bagian 2</h3>
                     </div>
                     <br/>
-                    <br/>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

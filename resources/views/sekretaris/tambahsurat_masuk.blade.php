@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Form Buat Surat Masuk
+                            Form Buat Surat Masuk Sekretaris
                         </div>
                     </div>
                     <div class="box-body">

@@ -120,10 +120,10 @@ class SekretarisController extends Controller
 
     public function datasurat_keluar()
     {
-        // $surat_keluar_sekretaris = SuratKeluar::paginate(10);
+        $surat_keluar = SuratKeluar::paginate(10);
         // return view('sekretaris.datasurat_keluar', compact( 'surat_keluar_sekretaris'));
         $surat_masuk = SuratMasuk::paginate(10);
-        return view('sekretaris.datasurat_keluar', compact( 'surat_masuk'));
+        return view('sekretaris.datasurat_keluar', compact( 'surat_masuk','surat_keluar'));
     }
 
     /**
@@ -171,8 +171,14 @@ class SekretarisController extends Controller
     {
         // $surat_keluar_sekretaris = SuratKeluar::find($id); 
         // return view('sekretaris.detailsurat_keluar',compact( 'surat_keluar_sekretaris')); 
-        $surat_masuk_sekretaris = SuratMasuk::find($id); 
-        return view('sekretaris.detailsurat_keluar',compact( 'surat_masuk_sekretaris')); 
+        $surat_keluar = SuratKeluar::find($id); 
+        return view('sekretaris.detailsurat_keluar2',compact( 'surat_keluar')); 
+    }
+
+    public function show_keluar_manual($id)
+    {
+        $surat_keluar_sekretaris = SuratKeluar::find($id); 
+        return view('sekretaris.detailsurat_keluar2',compact( 'surat_keluar_sekretaris')); 
     }
 
     /**
@@ -204,7 +210,7 @@ class SekretarisController extends Controller
         $surat_keluar_sekretaris->nama_ygambil = $request->input('nama_ygambil');
         $surat_keluar_sekretaris->tanggal_diambil = $request->input('tanggal_diambil');
         $surat_keluar_sekretaris->pj_spk_sper = $request->input('pj_spk_sper');
-        $surat_keluar_sekretaris->status = $request->input('status');
+        // $surat_keluar_sekretaris->status = $request->input('status');
         $surat_keluar_sekretaris->save();
         return redirect('/datasurat_keluar')->with(['message'=> 'Data Berhasil di Edit!!']);
     }
