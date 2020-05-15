@@ -4,6 +4,9 @@
     <div class="container">
         <div class="card mt-5">
                 <div class="card-body">
+                     <div class="card-header">
+                        <h3 class="card-title text-center">Tabel Data Master Kepala Biro</h3>
+                    </div>
                     <br/>
                     <br/>
                     @if (session('status'))
@@ -20,7 +23,6 @@
                             </button>
                         </div>
                     @endif
-
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>

@@ -7,6 +7,9 @@
         <strong>Lakukan Edit untuk Verifikasi Surat</strong>
     </div>
         <div class="card mt-5">
+              <div class="card-header">
+                  <h3 class="card-title text-center">Tabel Data Surat Masuk Kepala Departemen</h3>
+              </div>
                 <div class="card-body">
                     <br/>
                     <br/>

@@ -58,7 +58,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{url('/datapj_spk')}}" class="nav-link">
+                  <a href="{{url('/datapj_spk_kadep')}}" class="nav-link">
                     <i class="far fa-user nav-icon"></i>
                     <p>Data PJ SPK/SPER</p>
                   </a>

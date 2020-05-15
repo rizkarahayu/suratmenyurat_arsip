@@ -45,7 +45,7 @@ class KadepController extends Controller
     public function datapj()
     {
         $data_pj = User::get();
-        return view('sekretaris.datapj_spk', compact('data_pj'));
+        return view('kadep.datapj_spk', compact('data_pj'));
     }
 
     /**

@@ -4,6 +4,9 @@
     <div class="container">
         <div class="card mt-5">
                 <div class="card-body">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Tabel Surat Masuk Kepala Departemen Bagian 2</h3>
+                    </div>
                     <br/>
                     <br/>
                     @if (session('status'))

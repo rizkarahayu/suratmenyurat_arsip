@@ -13,6 +13,11 @@
                 <div class="card-body">
                     <br/>
                     <br/>
+                    <div class="box-header">
+                        <div class="card-header text-center">
+                            Tabel Data Surat Masuk Kepala Biro
+                        </div>
+                    </div>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

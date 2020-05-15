@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Detail Surat Masuk
+                            Edit Penunjukan Langsung Surat Masuk Kode J01 : {{$surat_masuk_kabiro->kodej01}}
                         </div>
                     </div>
                     <div class="box-body">
