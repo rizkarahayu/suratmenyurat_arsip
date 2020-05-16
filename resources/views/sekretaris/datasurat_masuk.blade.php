@@ -4,6 +4,12 @@
     <div class="container">
         <div class="card mt-5">
                 <div class="card-body">
+                <div class="box-header">
+                        <div class="card-header text-center">
+                            Tabel Surat Masuk Sekretaris  
+                        </div>
+                    </div>
+                    <br/>
                     <a href="/tambahsurat_masuk" class="btn btn-primary">Buat Surat Masuk</a>
                     <br/>
                     @if (session('status'))
