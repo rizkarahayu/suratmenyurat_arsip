@@ -56,7 +56,7 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                        <img src="img/logo.png" style="height: 30px;" alt="">
+                        <img src="{{('assets/img/logo.png')}}" style="height: 30px;" alt="">
                         <a class="navbar-brand" href="index.html">e-Procurement</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fancyNav" aria-controls="fancyNav" aria-expanded="false" aria-label="Toggle navigation"><span class="ti-menu"></span></button>
                         <div class="collapse navbar-collapse" id="fancyNav">
@@ -89,7 +89,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Hero Area Start ***** -->
-    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url(img/bg-img/about-1.jpg);">
+    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url({{asset('assets/img/bg-img/about-1.jpg')}})">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -153,7 +153,7 @@
 
                 <div class="col-12 col-lg-6 col-xl-5 ml-xl-auto">
                     <div class="about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="img/bg-img/hero-3.jpg" alt="">
+                        <img src="{{asset('assets/img/bg-img/hero-3.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
     <!-- ***** Skills Area End ***** -->
 
     <!-- ***** Service Area Start ***** -->
-    <section class="fancy-services-area bg-img bg-overlay section-padding-100-70" style="background-image: url(img/bg-img/hero-2.jpg)">
+    <section class="fancy-services-area bg-img bg-overlay section-padding-100-70" style="background-image: url({{asset('assets/img/bg-img/hero-2.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -216,7 +216,7 @@
                         <div class="single-testimonial d-md-flex align-items-center">
                             <!-- Testimonial Thumb -->
                             <div class="testimonial-thumbnail">
-                                <img src="img/clients-img/1.jpg" alt="">
+                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
                             </div>
                             <!-- Content -->
                             <div class="testimonilas-content">
@@ -229,7 +229,7 @@
                         <div class="single-testimonial d-md-flex align-items-center">
                             <!-- Testimonial Thumb -->
                             <div class="testimonial-thumbnail">
-                                <img src="img/clients-img/1.jpg" alt="">
+                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
                             </div>
                             <!-- Content -->
                             <div class="testimonilas-content">
@@ -242,7 +242,7 @@
                         <div class="single-testimonial d-md-flex align-items-center">
                             <!-- Testimonial Thumb -->
                             <div class="testimonial-thumbnail">
-                                <img src="img/clients-img/1.jpg" alt="">
+                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
                             </div>
                             <!-- Content -->
                             <div class="testimonilas-content">
@@ -259,7 +259,7 @@
     <!-- ***** Testimonials Area End ***** -->
 
     <!-- ***** CTA Area Start ***** -->
-    <section class="fancy-cta-area bg-img bg-overlay section-padding-100" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <section class="fancy-cta-area bg-img bg-overlay section-padding-100" style="background-image: url({{asset('assets/img/bg-img/hero-3.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -290,7 +290,7 @@
                 <!-- Single Blog -->
                 <div class="col-12 col-md-4">
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="img/blog-img/blog-1.jpg" alt="">
+                        <img src="{{asset('assets/img/blog-img/blog-1.jpg')}}" alt="">
                         <div class="blog-content">
                             <h5><a href="static-page.html">We Create Experiences</a></h5>
                             <p>e-Procurement meningkatkan efektifitas dan efisiensi kerja</p>
@@ -300,7 +300,7 @@
                 <!-- Single Blog -->
                 <div class="col-12 col-md-4">
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="1s">
-                        <img src="img/blog-img/blog-2.jpg" alt="">
+                        <img src="{{asset('assets/img/blog-img/blog-2.jpg')}}" alt="">
                         <div class="blog-content">
                             <h5><a href="static-page.html">Simple, Fast And Fun</a></h5>
                             <p>Mudah diakses baik melalui PC maupun ponsel, kapan saja dimana saja</p>
@@ -310,7 +310,7 @@
                 <!-- Single Blog -->
                 <div class="col-12 col-md-4">
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="1.5s">
-                        <img src="img/blog-img/blog-3.jpg" alt="">
+                        <img src="{{asset('assets/img/blog-img/blog-3.jpg')}}" alt="">
                         <div class="blog-content">
                             <h5><a href="static-page.html">Device Friendly</a></h5>
                             <p>Mudah digunakan dan mempercepat proses pengadaan jasa</p>
@@ -329,7 +329,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
-                            <img src="img/logo.png" style="height: 50px;" alt="">
+                            <img src="{{asset('assets/img/logo.png')}}" style="height: 50px;" alt="">
                         </div>
                     </div>
                     <!-- Footer Widget -->
