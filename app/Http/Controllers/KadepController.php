@@ -119,12 +119,14 @@ class KadepController extends Controller
         $surat_masuk_kadep->deskripsi =  $surat_masuk_kadep->deskripsi ;
         $surat_masuk_kadep->tanggal_diterima = $surat_masuk_kadep->tanggal_diterima;
         $surat_masuk_kadep->status_surat = $request->input('status_surat');
+        $surat_masuk_kadep->nama_pj = $request->input('nama_pj');
         $surat_masuk_kadep->save();
-        if($surat_masuk_kadep->status_surat == 'diterima'){
-            return redirect('/smasuk_kadep_editkabiro/'.$id)->with(['message'=> 'Data Berhasil di Edit!!']);
-        }else{
-            return redirect('/surat_masuk_kadep')->with(['message'=> 'Data Berhasil di Edit!!']);
-        }
+        return redirect('/surat_masuk_kadep')->with(['message'=> 'Data Berhasil di Edit!!']);
+        // if($surat_masuk_kadep->status_surat == 'diterima'){
+        //     return redirect('/smasuk_kadep_editkabiro/'.$id)->with(['message'=> 'Data Berhasil di Edit!!']);
+        // }else{
+        //     return redirect('/surat_masuk_kadep')->with(['message'=> 'Data Berhasil di Edit!!']);
+        // }
     }
 
     public function update_kabiro($id, Request $request)
