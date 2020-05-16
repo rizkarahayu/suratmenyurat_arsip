@@ -169,10 +169,8 @@ class SekretarisController extends Controller
      */
     public function show_keluar($id)
     {
-        // $surat_keluar_sekretaris = SuratKeluar::find($id); 
-        // return view('sekretaris.detailsurat_keluar',compact( 'surat_keluar_sekretaris')); 
-        $surat_keluar = SuratKeluar::find($id); 
-        return view('sekretaris.detailsurat_keluar2',compact( 'surat_keluar')); 
+        $surat_masuk_sekretaris = SuratMasuk::find($id); 
+        return view('sekretaris.detailsurat_keluar',compact( 'surat_masuk_sekretaris')); 
     }
 
     public function show_keluar_manual($id)

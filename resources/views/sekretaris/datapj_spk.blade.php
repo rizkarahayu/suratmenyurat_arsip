@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card mt-5">
                 <div class="card-body">
-                div class="box-header">
+                <div class="box-header">
                         <div class="card-header text-center">
                         Tabel Data Master Kepala Biro
                         </div>
