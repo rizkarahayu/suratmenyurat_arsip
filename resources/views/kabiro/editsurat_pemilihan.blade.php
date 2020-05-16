@@ -33,11 +33,11 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Jenis Pengadaan</label>
-                                        <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->jenis_pengadaan}} Langsung" >       
+                                        <input type="text" class="form-control"  value="{{$surat_masuk_kabiro->jenis_pengadaan}} Langsung" >       
                                     </div>                                                
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-6 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Juru Beli</label>
-                                        <input type="text" class="form-control" disabled placeholder="{{$surat_masuk_kabiro->juru_beli}}" >       
+                                        <input type="text" class="form-control"  value="{{$surat_masuk_kabiro->juru_beli}}" >       
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">No</div>
@@ -48,38 +48,38 @@
                                     <div class="row border">
                                         <div class="col-sm-1">1</div>
                                         <div class="col-sm-5">Buat undangan SPPH</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_spph" id="tanggal_mulai_spph" type="date"></div>
-                                        <div class="col-sm-3"> <input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesaispph" id="tanggal_selesaispph" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_spph}}" name="tanggal_mulai_spph" id="tanggal_mulai_spph" type="date"></div>
+                                        <div class="col-sm-3"> <input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesaispph}}" name="tanggal_selesaispph" id="tanggal_selesaispph" type="date"></div>
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">2</div>
                                         <div class="col-sm-5">Pembukaan Dokumen Penawaran</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_dokpenawaran" id="tanggal_mulai_dokpenawaran" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_dokpenawaran" id="tanggal_selesai_dokpenawaran" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_dokpenawaran}}" name="tanggal_mulai_dokpenawaran" id="tanggal_mulai_dokpenawaran" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesai_dokpenawaran}}" name="tanggal_selesai_dokpenawaran" id="tanggal_selesai_dokpenawaran" type="date"></div>
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">3</div>
                                         <div class="col-sm-5">Evaluasi Teknik (BAET)</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_baet" id="tanggal_mulai_baet" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_baet" id="tanggal_selesai_baet" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_baet}}" name="tanggal_mulai_baet" id="tanggal_mulai_baet" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesai_baet}}" name="tanggal_selesai_baet" id="tanggal_selesai_baet" type="date"></div>
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">4</div>
                                         <div class="col-sm-5">Negoisasi (BANH)</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_banh" id="tanggal_mulai_banh" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_banh" id="tanggal_selesai_banh" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_banh}}" name="tanggal_mulai_banh" id="tanggal_mulai_banh" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesai_banh}}" name="tanggal_selesai_banh" id="tanggal_selesai_banh" type="date"></div>
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">5</div>
                                         <div class="col-sm-5">Pemilihan Pemenang</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_pemenang" id="tanggal_mulai_pemenang" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_pemenang" id="tanggal_selesai_pemenang" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_pemenang}}" name="tanggal_mulai_pemenang" id="tanggal_mulai_pemenang" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesai_pemenang}}" name="tanggal_selesai_pemenang" id="tanggal_selesai_pemenang" type="date"></div>
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">6</div>
                                         <div class="col-sm-5">Usulan dan Persetujuan Kontrak</div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="date"></div>
-                                        <div class="col-sm-3"><input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_mulai_persetujuankontrak}}" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="date"></div>
+                                        <div class="col-sm-3"><input class="form-control" value="{{$surat_masuk_kabiro->tanggal_selesai_persetujuankontrak}}" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="date"></div>
                                     </div>
                                 </div>
                             </div>

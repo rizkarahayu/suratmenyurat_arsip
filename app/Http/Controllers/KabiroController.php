@@ -70,11 +70,12 @@ class KabiroController extends Controller
         $surat_masuk_kabiro->juru_beli = $request->input('juru_beli');
         $surat_masuk_kabiro->save();
         
-        if($surat_masuk_kabiro->jenis_pengadaan == 'pemilihan')
-            return redirect('/edit_surat_pemilihan/'.$id)->with(['message'=> 'Form Edit Surat Pemilihan Langsung']);
-        else{
-            return redirect('/edit_surat_penunjukan/'.$id)->with(['message'=> 'Form Edit Surat Penunjukan Langsung']);
-        }
+        return redirect('/surat_masuk_kabiro/edit/'.$id)->with(['message'=> 'Form Edit Jenis Pengadaan Surat Kabiro']);
+        // if($surat_masuk_kabiro->jenis_pengadaan == 'pemilihan')
+        //     return redirect('/edit_surat_pemilihan/'.$id)->with(['message'=> 'Form Edit Surat Pemilihan Langsung']);
+        // else{
+        //     return redirect('/edit_surat_penunjukan/'.$id)->with(['message'=> 'Form Edit Surat Penunjukan Langsung']);
+        // }
     }
 
 

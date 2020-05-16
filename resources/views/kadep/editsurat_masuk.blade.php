@@ -24,20 +24,20 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode J01</label>
-                                <input type="text" class="form-control" name="kodej01" id="kodej01" disabled placeholder="{{$surat_masuk_kadep->kodej01}}" >
+                                <input type="text" class="form-control" name="kodej01" id="kodej01"  value="{{$surat_masuk_kadep->kodej01}}" >
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Kode Proyek</label>
-                                <input type="text" class="form-control" name="kode_proyek" id="kode_proyek" disabled placeholder="{{$surat_masuk_kadep->kode_proyek}}" >
+                                <input type="text" class="form-control" name="kode_proyek" id="kode_proyek"  value="{{$surat_masuk_kadep->kode_proyek}}" >
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>
-                                <input type="text" class="form-control" name="deskripsi" id="deskripsi" disabled placeholder="{{$surat_masuk_kadep->deskripsi}}">
+                                <input type="text" class="form-control" name="deskripsi" id="deskripsi"  value="{{$surat_masuk_kadep->deskripsi}}">
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Diterima</label>
-                                <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima" required placeholder="Pilih Tanggal" > -->
-                                <input class="form-control datepicker" placeholder="{{$surat_masuk_kadep->tanggal_diterima}}" name=">tanggal_diterima" id="tanggal_diterima" disabled type="text">
+                                <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima" required value="Pilih Tanggal" > -->
+                                <input class="form-control datepicker" value="{{$surat_masuk_kadep->tanggal_diterima}}" name=">tanggal_diterima" id="tanggal_diterima"  type="text">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>

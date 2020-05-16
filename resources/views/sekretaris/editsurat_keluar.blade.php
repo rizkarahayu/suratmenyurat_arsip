@@ -24,12 +24,12 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nomor Surat</label>
-                                <input type="text" class="form-control" name="nomor_surat" id="nomor_surat" required placeholder="{{ $surat_keluar_sekretaris->nomor_surat }}" >       
+                                <input type="text" class="form-control" name="nomor_surat" id="nomor_surat" value="{{ $surat_keluar_sekretaris->nomor_surat }}">
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Subkontraktor</label>
-                                <select required class="form-control" name ="nama_subkon" id="nama_subkon">
-                                    <option value="" >{{ $surat_keluar_sekretaris->nama_subkon }}</option>
+                                <select  class="form-control" name ="nama_subkon" id="nama_subkon">
+                                    <option value="{{ $surat_keluar_sekretaris->nama_subkon }}" >{{ $surat_keluar_sekretaris->nama_subkon }}</option>
                                     @foreach ($nama_subkon  as  $subkon)
                                         @if ($subkon->is_admin == 'subkontraktor')
                                             <option  value="{{ $subkon->name }}" > {{ $subkon->name }} </option>
@@ -39,21 +39,21 @@
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>
-                                <input type="text" class="form-control" name="deskripsi" id="deskripsi" required placeholder="{{ $surat_keluar_sekretaris->deskripsi }}" >
+                                <input type="text" class="form-control" name="deskripsi" id="deskripsi"  value="{{ $surat_keluar_sekretaris->deskripsi }}" >
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Diambil</label>
-                                <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima" required placeholder="Pilih Tanggal" > -->
-                                <input class="form-control datepicker" name="tanggal_diambil" id="tanggal_diambil" type="date" required placeholder="{{ $surat_keluar_sekretaris->tanggal_diambil }}>
+                                <!-- <input type="date" class="date form-control" name="tanggal_diterima" id="tanggal_diterima"  value="Pilih Tanggal" > -->
+                                <input class="form-control datepicker" name="tanggal_diambil" id="tanggal_diambil" type="date"  value="{{ $surat_keluar_sekretaris->tanggal_diambil }}">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Pengambil</label>
-                                <input class="form-control" placeholder="{{ $surat_keluar_sekretaris->nama_ygambil }}" name="nama_ygambil" id="nama_ygambil" type="text">
+                                <input class="form-control" value="{{ $surat_keluar_sekretaris->nama_ygambil }}" name="nama_ygambil" id="nama_ygambil" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Kabiro</label>
-                                <select required class="form-control" name ="pj_spk_sper" id="pj_spk_sper">
-                                    <option value="" >{{ $surat_keluar_sekretaris->pj_spk_sper }}</option>
+                                <select  class="form-control" name ="pj_spk_sper" id="pj_spk_sper">
+                                    <option value="{{ $surat_keluar_sekretaris->pj_spk_sper }}">{{ $surat_keluar_sekretaris->pj_spk_sper }}</option>
                                     @foreach ($nama_subkon  as  $kabiro)
                                         @if ($kabiro->is_admin == 'kabiro')
                                             <option  value="{{ $kabiro->name }}" > {{ $kabiro->name }} </option>
@@ -64,7 +64,7 @@
                             <!-- <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Kabiro</label>
                                 <select class="form-control" name="status" id="status">
-                                    <option required placeholder="{{ $surat_keluar_sekretaris->status }}" >{{ $surat_keluar_sekretaris->status }}</option>
+                                    <option  value="{{ $surat_keluar_sekretaris->status }}" >{{ $surat_keluar_sekretaris->status }}</option>
                                     <option value="1" @if (old('status') == 1) selected @endif>Diterima</option>
                                     <option value="0" @if (old('status') == 0) selected @endif>Ditolak</option>
                                 </select>
