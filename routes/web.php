@@ -42,7 +42,7 @@ Route::group(['middleware'=>['auth','kabiro']],function(){
     Route::get('/surat_masuk_kabiro', 'KabiroController@datasurat_masuk');
     Route::get('/surat_masuk_kabiro/edit/{id}', 'KabiroController@edit');
     Route::post('/surat_masuk_kabiro/jenis_pengadaan/{id}', 'KabiroController@jenis_pengadaan');
-    Route::get('/surat_masuk_kabiro/delete/{id}', 'SekretarisController@destroy');
+    Route::get('/surat_masuk_kabiro/delete/{id}', 'KabiroController@destroy');
     //show detail pengadaan
     Route::get('/surat_masuk_kabiro/show/penunjukan/{id}', 'KabiroController@show_penunjukan');
     Route::get('/surat_masuk_kabiro/show/pemilihan/{id}', 'KabiroController@show_pemilihan');
@@ -60,7 +60,7 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     //surat masuk
     Route::get('/sekretaris', 'SekretarisController@index')->name('sekretaris');
     Route::get('/datasurat_masuk', 'SekretarisController@datasurat_masuk')->name('datasurat_masuk');
-    Route::get('tambahsurat_masuk', 'SekretarisController@create')->name('tambahsurat_masuk');
+    Route::get('/tambahsurat_masuk', 'SekretarisController@create')->name('tambahsurat_masuk');
     Route::post('/tambahsurat_masuk/store', 'SekretarisController@store')->name('tambahsurat_masuk/store');
     Route::get('/editsurat_masuk/{id}', 'SekretarisController@edit');
     Route::post('/surat_masuk/update/{id}', 'SekretarisController@update');
