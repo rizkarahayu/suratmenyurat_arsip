@@ -56,7 +56,7 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                        <img src="{{asset('assets/img/logo.png')}}" style="height: 30px;" alt="">
+                        <img src="{{('assets/img/logo.png')}}" style="height: 30px;" alt="">
                         <a class="navbar-brand" href="index.html">e-Procurement</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fancyNav" aria-controls="fancyNav" aria-expanded="false" aria-label="Toggle navigation"><span class="ti-menu"></span></button>
                         <div class="collapse navbar-collapse" id="fancyNav">
