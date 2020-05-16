@@ -1,10 +1,39 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="{{url('/home')}}" class="brand-link">
+  @if(Auth::user()->is_admin=='kadep')
+    <a href="{{url('/kadep')}}" class="brand-link">
       <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
+  @endif
+  @if(Auth::user()->is_admin=='kabiro')
+    <a href="{{url('/kabiro')}}" class="brand-link">
+      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">ADAJASAPROC</span>
+    </a>
+  @endif
+  @if(Auth::user()->is_admin=='sekretaris')
+    <a href="{{url('/sekretaris')}}" class="brand-link">
+      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">ADAJASAPROC</span>
+    </a>
+  @endif
+  @if(Auth::user()->is_admin=='subkontraktor')
+    <a href="{{url('/subkontraktor')}}" class="brand-link">
+      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">ADAJASAPROC</span>
+    </a>
+  @endif
+  @if(Auth::user()->is_admin=='pengadaan')
+    <a href="{{url('/timpengadaan')}}" class="brand-link">
+      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">ADAJASAPROC</span>
+    </a>
+  @endif
 
     <!-- Sidebar -->
     <div class="sidebar">
