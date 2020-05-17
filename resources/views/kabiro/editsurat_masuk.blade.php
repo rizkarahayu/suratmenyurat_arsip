@@ -156,7 +156,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Pemilihan Langsung</label>
                                     <select required class="form-control" name ="status_surat_kabiro" id="status_surat_kabiro">
-                                        <option value="" >Status Surat</option>
+                                        <option value="{{$surat_masuk_kabiro->status_surat_kabiro}" ></option>
                                             <option  value="onprogress" >On Progress</option>
                                             <option  value="selesai" >Selesai</option>
                                     </select>
@@ -232,7 +232,7 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Penunjukan Langsung</label>
                                 <select required class="form-control" name ="status_surat_kabiro" id="status_surat_kabiro">
-                                    <option value="" >Status Surat</option>
+                                    <option value="{{$surat_masuk_kabiro->status_surat_kabiro}}" ></option>
                                     <option  value="onprogress" >On Progress</option>
                                     <option  value="selesai" >Selesai</option>
                                 </select>
