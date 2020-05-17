@@ -156,9 +156,9 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Pemilihan Langsung</label>
                                     <select required class="form-control" name ="status_surat_kabiro" id="status_surat_kabiro">
-                                        <option disabled value="" >Status Surat</option>
-                                            <option  disabled value="onprogress" >On Progress</option>
-                                            <option  disabled value="selesai" >Selesai</option>
+                                        <option value="" >Status Surat</option>
+                                            <option  value="onprogress" >On Progress</option>
+                                            <option  value="selesai" >Selesai</option>
                                     </select>
                                 </div>
                                 <div class="box-footer">
