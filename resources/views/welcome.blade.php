@@ -89,7 +89,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Hero Area Start ***** -->
-    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url({{asset('assets/img/gambar-pal /1507891697OA2-company-Sliderpalcoid-2017.jpg')}})">
+    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url({{asset('assets/img/gambar-pal/1507891697OA2-company-Sliderpalcoid-2017.jpg')}})">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
