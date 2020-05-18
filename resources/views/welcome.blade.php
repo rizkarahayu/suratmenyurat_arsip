@@ -65,7 +65,7 @@
                             <!-- Search & Shop Btn Area -->
                             <div class="fancy-search-and-shop-area">
                                 <a id="nav-link" href="{{ route('login') }}">Login</a>
-                                <a id="nav-link" href="{{ route('register') }}">Register</a>
+                                <!-- <a id="nav-link" href="{{ route('register') }}">Register</a> -->
                                 <!-- @if (Route::has('login'))
                                     <div class="top-right links">
                                         @auth
@@ -89,7 +89,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Hero Area Start ***** -->
-    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url({{asset('assets/img/bg-img/about-1.jpg')}})">
+    <div class="fancy-hero-area bg-img bg-overlay animated-img" style="background-image: url({{asset('assets/img/gambar-pal /1507891697OA2-company-Sliderpalcoid-2017.jpg')}})">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -99,7 +99,7 @@
                         </div>
                         <h2>e-Procurement</h2>
                         <h3 class="text-white">Sistem Informasi Pengadaan Jasa PT. PAL Indonesia (Persero)</h3><br/>
-                        <a href="#" class="btn fancy-btn fancy-active">Join Us</a>
+                        <a href="{{ route('login') }}" class="btn fancy-btn fancy-active">Join Us</a>
                     </div>
                 </div>
             </div>
@@ -264,9 +264,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content text-center">
-                        <h2>Ready To Start Your Procurement?</h2>
-                        <p>There are many ways to contact us. You may drop us a line, give us a call or send an email, choose what suits you the most.</p>
-                        <a href="#" class="btn fancy-btn">Join us</a>
+                        <h2>Bergabunglah Bersama Kami</h2>
+                        <p>Untuk Informasi Pendaftaran Subkontraktor Dapat Mengunjungi Laman :</p>
+                        <a href="https://webvendor.pal.co.id/formulir" class="btn fancy-btn">Join us</a>
                     </div>
                 </div>
             </div>
@@ -363,7 +363,7 @@
                             <!-- Copywrite Text -->
                             <div class="copywrite-text">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made for <i class="fa fa-heart-o" aria-hidden="true"></i> Sheilla Isnaini
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made for <i class="fa fa-heart-o" aria-hidden="true"></i> PT PAL INDONESIA PERSERO
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                             <!-- Footer Nav -->
