@@ -113,12 +113,6 @@ class CreateUsersSeeder extends Seeder
                 'password'=> bcrypt('123456'),
             ],
             [
-                'name'=>'PT. BAKHTERA FREIGHT WORLDIDE',
-                'email'=>'bakhterafreight@mail.com',
-                'is_admin'=>'subkontraktor',
-                'password'=> bcrypt('123456'),
-            ],
-            [
                 'name'=>'PT. CAHAYA PUTRA TEKNIK',
                 'email'=>'cahayaputra@mail.com',
                 'is_admin'=>'subkontraktor',
