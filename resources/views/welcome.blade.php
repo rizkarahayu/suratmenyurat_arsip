@@ -207,55 +207,14 @@
     <!-- ***** Service Area End ***** -->
 
     <!-- ***** Testimonials Area Start ***** -->
-    <section class="fancy-testimonials-area section-padding-100">
+    <!-- <section class="fancy-testimonials-area section-padding-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="testimonials-slides owl-carousel">
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial d-md-flex align-items-center">
-                            <!-- Testimonial Thumb -->
-                            <div class="testimonial-thumbnail">
-                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="testimonilas-content">
-                                <span class="playfair-font quote">“</span>
-                                <h5>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</h5>
-                                <h6>Aigars Silkalns - <span>CEO DeerCreative</span></h6>
-                            </div>
-                        </div>
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial d-md-flex align-items-center">
-                            <!-- Testimonial Thumb -->
-                            <div class="testimonial-thumbnail">
-                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="testimonilas-content">
-                                <span class="playfair-font quote">“</span>
-                                <h5>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</h5>
-                                <h6>Aigars Silkalns - <span>CEO DeerCreative</span></h6>
-                            </div>
-                        </div>
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial d-md-flex align-items-center">
-                            <!-- Testimonial Thumb -->
-                            <div class="testimonial-thumbnail">
-                                <img src="{{asset('assets/img/clients-img/1.jpg')}}" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="testimonilas-content">
-                                <span class="playfair-font quote">“</span>
-                                <h5>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</h5>
-                                <h6>Aigars Silkalns - <span>CEO DeerCreative</span></h6>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** Testimonials Area End ***** -->
 
     <!-- ***** CTA Area Start ***** -->
@@ -266,7 +225,7 @@
                     <div class="cta-content text-center">
                         <h2>Bergabunglah Bersama Kami</h2>
                         <p>Untuk Informasi Pendaftaran Subkontraktor Dapat Mengunjungi Laman :</p>
-                        <a href="https://webvendor.pal.co.id/formulir" class="btn fancy-btn">Join us</a>
+                        <a href="https://webvendor.pal.co.id/formulir" class="btn fancy-btn">Pendaftaran Subkontraktor</a>
                     </div>
                 </div>
             </div>
@@ -337,7 +296,7 @@
                         <div class="single-footer-widget">
                             <h6>Website Perusahaan</h6>
                             <div class="single-tweet">
-                                <a href="wwww.pal.co.id" style="color: white;">www.pal.co.id</a>
+                                <a href="http://www.pal.co.id/" style="color: white;">www.pal.co.id</a>
                             </div>
                         </div>
                     </div>

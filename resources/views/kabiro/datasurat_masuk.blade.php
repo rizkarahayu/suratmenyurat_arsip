@@ -38,12 +38,12 @@
                             <th style="text-align: center;font-size:12px;">No.</th>
                             <th style="text-align: center;font-size:14px;">Kode J01</th>
                             <th style="text-align: center;font-size:14px;">Kode Proyek</th>
-                            <th style="text-align: center;font-size:14px;">Deskripsi Jasa</th>
+                            <!-- <th style="text-align: center;font-size:14px;">Deskripsi Jasa</th> -->
                             <th style="text-align: center;font-size:14px;">Tanggal Diterima</th>
-                            <th style="text-align: center;font-size:14px;">Status Surat</th>
+                            <th style="text-align: center;font-size:14px;">Status Surat J01</th>
                             <th style="text-align: center;font-size:14px;">Nama PJ/Kabiro</th>
                             <th style="text-align: center;font-size:14px;">Jenis Pengadaan</th>
-                            <!-- <th>Buat Surat</th> -->
+                            <th style="text-align: center;font-size:14px;">Status Surat Kabiro</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -54,7 +54,6 @@
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->kode_proyek }}</td>
-                                          <td>{{ $masuk->deskripsi }}</td>
                                           <td>{{$masuk->tanggal_diterima}}</td>
                                           @if( $masuk->status_surat == NULL)
                                             <td><span class="badge badge-warning">{{ $masuk->status_surat = 'Belum Diverifikasi'}}</span></td>
@@ -73,6 +72,11 @@
                                                 <a href="/editsurat_masuk_kadep/{{ $masuk->id }}" class="btn btn-warning">Penunjukan Langsung</a><br>
                                                 <a href="/surat_masuk_kadep/show/{{ $masuk->id }}" class="btn btn-success">Pemilihan Langsung<i class="fa fa-eye"></i></a>
                                           </td> -->
+                                          @if( $masuk->status_surat_kabiro == null)
+                                             <td>Belum Isi Status Surat Kabiro</td>
+                                          @else 
+                                            <td>{{ $masuk->status_surat_kabiro}}</td>
+                                          @endif
                                           <td>
                                                 @if($masuk->jenis_pengadaan == 'pemilihan')
                                                     <a href="/surat_masuk_kabiro/show/pemilihan/{{ $masuk->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>

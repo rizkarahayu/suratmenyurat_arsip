@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">2</div>
-                                        <div class="col-sm-5">Pembukaan Dokumen Penawaran</div>
+                                        <div class="col-sm-5">Penerimaan Dokumen Penawaran</div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_dokpenawaran}}" name="tanggal_mulai_dokpenawaran" id="tanggal_mulai_dokpenawaran" type="text"></div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_dokpenawaran}}" name="tanggal_selesai_dokpenawaran" id="tanggal_selesai_dokpenawaran" type="text"></div>
                                     </div>
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="row border">
                                         <div class="col-sm-1">6</div>
-                                        <div class="col-sm-5">Usulan dan Persetujuan Kontrak</div>
+                                        <div class="col-sm-5">Pengesahan/Penandatanganan Kontrak</div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_mulai_persetujuankontrak}}" name="tanggal_mulai_persetujuankontrak" id="tanggal_mulai_persetujuankontrak" type="text"></div>
                                         <div class="col-sm-3"><input class="form-control" placeholder="{{$surat_masuk_kabiro->tanggal_selesai_persetujuankontrak}}" name="tanggal_selesai_persetujuankontrak" id="tanggal_selesai_persetujuankontrak" type="text"></div>
                                     </div>
