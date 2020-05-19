@@ -9,28 +9,28 @@
   @if(Auth::user()->is_admin=='kabiro')
     <a href="{{url('/kabiro')}}" class="brand-link">
       <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+           style="opacity: .8; width:60px; height:60px;">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
   @endif
   @if(Auth::user()->is_admin=='sekretaris')
     <a href="{{url('/sekretaris')}}" class="brand-link">
       <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+           style="opacity: .8; width:60px; height:60px;">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
   @endif
   @if(Auth::user()->is_admin=='subkontraktor')
     <a href="{{url('/subkontraktor')}}" class="brand-link">
       <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+           style="opacity: .8; width:60px; height:60px;">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
   @endif
   @if(Auth::user()->is_admin=='pengadaan')
     <a href="{{url('/timpengadaan')}}" class="brand-link">
       <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+           style="opacity: .8; width:60px; height:60px;">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
   @endif
