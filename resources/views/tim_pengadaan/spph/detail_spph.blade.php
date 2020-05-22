@@ -1,4 +1,4 @@
-@extends('layout.template')
+<!-- @extends('layout.template')
 @section('content')
     <div class="container">
         <div class="card mt-5">
@@ -69,4 +69,4 @@
             });
         });
     </script>
-@endsection
+@endsection -->

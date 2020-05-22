@@ -1,4 +1,4 @@
-@extends('layout.template')
+<!-- @extends('layout.template')
 @section('content')
 <div class="row">
     <div class="container">
@@ -43,7 +43,6 @@
                             <th>Nomor Surat</th>
                             <th>Perihal</th>
                             <th>Tanggal Dibuat</th>
-                            <!-- <th>Deskripsi Pekerjaan Jasa</th> -->
                             <th>Tanggal Pelaksanaan</th>
                             <th>Jam</th>
                             <th>Action</th>
@@ -56,7 +55,6 @@
                                             <td>{{ $spph->no_surat }}</td>
                                             <td>{{ $spph->perihal }}</td>
                                             <td>{{ $spph->tanggal_dibuat }}</td>
-                                            <!-- <td>{{ $spph->deskripsi_jasa }}</td> -->
                                             <td>{{ $spph->tanggal_pelaksanaan }}</td>
                                             <td>{{ $spph->jam }}</td>
                                             <td>
@@ -94,4 +92,4 @@
             });
         });
     </script>
-@endsection
+@endsection -->
