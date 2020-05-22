@@ -76,9 +76,33 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     Route::get('/surat_keluar/show/{id}', 'SekretarisController@show_keluar');
     Route::get('/surat_keluar/show_manual/{id}', 'SekretarisController@show_keluar_manual');
 
-
     Route::get('/datapj_spk', 'SekretarisController@datapj');
 });
-Route::get('/timpengadaan', 'TimpengadaanController@index')->name('timpengadaan')->middleware('timpengadaan');
+
+Route::group(['middleware'=>['auth','timpengadaan']],function(){
+    Route::get('/timpengadaan', 'TimpengadaanController@index')->name('timpengadaan');
+    Route::get('/dataspph', 'TimpengadaanController@data_spph')->name('dataspph');
+    Route::get('/tambah_spph', 'TimpengadaanController@create');
+    Route::post('/tambah_spph/store', 'TimpengadaanController@store');
+    Route::get('/edit_spph/{id}', 'TimpengadaanController@edit');
+    Route::post('/edit_spph/update/{id}', 'TimpengadaanController@update');
+    Route::get('/dok_spph/delete/{id}', 'TimpengadaanController@destroy');
+    Route::get('/dok_spph/show/{id}', 'TimpengadaanController@show');
+    Route::get('/dok_spph/download/{id}', 'TimpengadaanController@cetak_pdf_spph');
+    Route::get('/dok_spph/upload/{id}', 'TimpengadaanController@upload_spph');
+
+    // //surat keluar
+    // Route::get('/datasurat_keluar', 'SekretarisController@datasurat_keluar');
+    // Route::get('tambahsurat_keluar', 'SekretarisController@tambah');
+    // Route::post('/tambahsurat_keluar/store', 'SekretarisController@store_keluar');
+    // Route::get('/editsurat_keluar/{id}', 'SekretarisController@edit_keluar');
+    // Route::post('/surat_keluar/update/{id}', 'SekretarisController@update_keluar');
+    // Route::get('/surat_keluar/delete/{id}', 'SekretarisController@delete');
+    // Route::get('/surat_keluar/show/{id}', 'SekretarisController@show_keluar');
+    // Route::get('/surat_keluar/show_manual/{id}', 'SekretarisController@show_keluar_manual');
+
+
+    // Route::get('/datapj_spk', 'SekretarisController@datapj');
+});
 Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor')->middleware('subkontraktor');
 

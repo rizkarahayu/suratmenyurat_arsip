@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\TimPengadaan;
 use Illuminate\Http\Request;
+use App\Models\DokSpph;
+use PDF;
 
 class TimPengadaanController extends Controller
 {
@@ -18,6 +20,12 @@ class TimPengadaanController extends Controller
         return view('tim_pengadaan.pengadaanHome');
     }
 
+    public function data_spph()
+    {
+        $dok_spph = DokSpph::paginate(10);
+        return view('tim_pengadaan.spph.data_dok_spph', compact( 'dok_spph'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +33,7 @@ class TimPengadaanController extends Controller
      */
     public function create()
     {
-        //
+        return view('tim_pengadaan.spph.tambah_spph');
     }
 
     /**
@@ -36,7 +44,17 @@ class TimPengadaanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dok_spph = new DokSpph;
+        $dok_spph->no_surat = $request->input('no_surat');
+        $dok_spph->perihal = $request->input('perihal');
+        $dok_spph->tanggal_dibuat = $request->input('tanggal_dibuat');
+        $dok_spph->deskripsi_jasa = $request->input('deskripsi_jasa');
+        $dok_spph->tanggal_pelaksanaan = $request->input('tanggal_pelaksanaan');
+        $dok_spph->jam = $request->input('jam');
+        // $dok_spph->keterangan = $request->input('keterangan');
+        $dok_spph->save();
+
+        return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);
     }
 
     /**
@@ -45,9 +63,24 @@ class TimPengadaanController extends Controller
      * @param  \App\Models\TimPengadaan  $timPengadaan
      * @return \Illuminate\Http\Response
      */
-    public function show(TimPengadaan $timPengadaan)
+    public function show($id)
     {
-        //
+        $dok_spph = DokSpph::find($id); 
+        return view('tim_pengadaan.spph.spph_download',compact( 'dok_spph')); 
+    }
+
+        /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cetak_pdf_spph($id)
+    {
+        $dok_spph= DokSpph::find($id);
+        set_time_limit(600);
+        $pdf = PDF::loadview('tim_pengadaan.spph.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('spph.pdf');
+        // return $pdf->stream('spph.pdf');
     }
 
     /**
@@ -56,9 +89,10 @@ class TimPengadaanController extends Controller
      * @param  \App\Models\TimPengadaan  $timPengadaan
      * @return \Illuminate\Http\Response
      */
-    public function edit(TimPengadaan $timPengadaan)
+    public function edit($id)
     {
-        //
+        $dok_spph = DokSpph::findOrFail($id);
+        return view('tim_pengadaan.spph.edit_spph', compact(['dok_spph']));
     }
 
     /**
@@ -68,9 +102,18 @@ class TimPengadaanController extends Controller
      * @param  \App\Models\TimPengadaan  $timPengadaan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TimPengadaan $timPengadaan)
+    public function update($id,Request $request)
     {
-        //
+        $dok_spph = DokSpph::find($id);
+        $dok_spph->no_surat = $request->input('no_surat');
+        $dok_spph->perihal = $request->input('perihal');
+        $dok_spph->tanggal_dibuat = $request->input('tanggal_dibuat');
+        $dok_spph->deskripsi_jasa = $request->input('deskripsi_jasa');
+        $dok_spph->tanggal_pelaksanaan = $request->input('tanggal_pelaksanaan');
+        $dok_spph->jam = $request->input('jam');
+        $dok_spph->save();
+
+        return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);
     }
 
     /**
@@ -79,8 +122,10 @@ class TimPengadaanController extends Controller
      * @param  \App\Models\TimPengadaan  $timPengadaan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TimPengadaan $timPengadaan)
+    public function destroy($id)
     {
-        //
+        $dok_spph = DokSpph::find($id);
+        $dok_spph->delete();
+        return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Hapus!!']);
     }
 }
