@@ -73,10 +73,10 @@
                 </div>
             </div>
                     <div class="card-header align-center"  >
-                        Halaman : {{ $dok_spph ?? ''->currentPage() }} <br/>
-                        Jumlah Data : {{ $dok_spph ?? ''->total() }} <br/>
-                        Data Per Halaman : {{ $dok_spph ?? ''->perPage() }} <br/>
-                        {{ $dok_spph ?? ''->links() }}
+                        Halaman : {{ $dok_spph->currentPage() }} <br/>
+                        Jumlah Data : {{ $dok_spph->total() }} <br/>
+                        Data Per Halaman : {{ $dok_spph->perPage() }} <br/>
+                        {{ $dok_spph->links() }}
                     </div>  
                 </div>
             </div>
