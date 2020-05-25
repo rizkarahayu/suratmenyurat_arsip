@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DokSpph;
 use App\Models\User;
+use PDF;
 
 class JuruBeliController extends Controller
 {
