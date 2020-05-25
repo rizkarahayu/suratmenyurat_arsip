@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Form Buat Surat Keluar Sekretaris  
+                            Form Buat Dokumen SPPH  
                         </div>
                     </div>
                     <div class="box-body">
