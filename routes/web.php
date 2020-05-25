@@ -79,9 +79,9 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     Route::get('/datapj_spk', 'SekretarisController@datapj');
 });
 
-// Route::group(['middleware'=>['auth','timpengadaan']],function(){
-//     Route::get('/timpengadaan', 'TimpengadaanController@index')->name('timpengadaan');
-//     Route::get('/dataspph', 'TimpengadaanController@data_spph')->name('dataspph');
+Route::group(['middleware'=>['auth','timpengadaan']],function(){
+    Route::get('/timpengadaan', 'TimpengadaanController@index')->name('timpengadaan');
+    Route::get('/dataspph', 'TimpengadaanController@data_spph')->name('dataspph');
 //     Route::get('/tambah_spph', 'TimpengadaanController@create');
 //     Route::post('/tambah_spph/store', 'TimpengadaanController@store');
 //     Route::get('/edit_spph/{id}', 'TimpengadaanController@edit');
@@ -92,6 +92,6 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
 //     Route::get('/dok_spph/upload/{id}', 'TimpengadaanController@upload');
 //     Route::post('/dok_spph/upload_store/{id}', 'TimpengadaanController@upload_spph');
 // });
-Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan')->middleware('timpengadaan');
+// Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan')->middleware('timpengadaan');
 Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor')->middleware('subkontraktor');
 
