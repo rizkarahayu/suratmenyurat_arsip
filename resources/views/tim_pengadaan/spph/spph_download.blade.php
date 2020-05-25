@@ -6,8 +6,8 @@
 <table style="width:100%">
   <tr>
     <td>
-        <img src="{{url('../assets/dist/img/download.jpg')}}" width="200px" align="left">
-        <img src="{{url('../assets/dist/img/downloadpal.jpg')}}" width="200px" align="right">
+        <img src="{{asset('assets/dist/img/download.jpg')}}" width="200px" align="left">
+        <img src="{{asset('assets/dist/img/downloadpal.jpg')}}" width="200px" align="right">
     </td>
   </tr>
   <tr>
@@ -71,6 +71,10 @@
     </p>
     </td>
   </tr>
+  <tr>
+  <td><br/></td>
+  </tr>
+  <tr>
   <tr>
   <td><br/></td>
   </tr>
