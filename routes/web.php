@@ -80,8 +80,8 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
 });
 
 Route::group(['middleware'=>['auth','timpengadaan']],function(){
-    Route::get('/timpengadaan', 'TimpengadaanController@index')->name('timpengadaan');
-    Route::get('/dataspph', 'TimpengadaanController@data_spph')->name('dataspph');
+    Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan');
+    // Route::get('/dataspph', 'TimpengadaanController@data_spph')->name('dataspph');
 //     Route::get('/tambah_spph', 'TimpengadaanController@create');
 //     Route::post('/tambah_spph/store', 'TimpengadaanController@store');
 //     Route::get('/edit_spph/{id}', 'TimpengadaanController@edit');
