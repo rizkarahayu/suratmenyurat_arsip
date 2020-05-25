@@ -77,4 +77,13 @@ class JuruBeliController extends Controller
         $dok_spph->delete();
         return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Hapus!!']);
     }
+
+    public function cetak_pdf_spph($id)
+    {
+        $dok_spph= DokSpph::find($id);
+        set_time_limit(600);
+        $pdf = PDF::loadview('jurubeli.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('spph.pdf');
+        // return $pdf->stream('spph.pdf');
+    }
 }

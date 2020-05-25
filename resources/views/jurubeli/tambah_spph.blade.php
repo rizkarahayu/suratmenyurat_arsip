@@ -58,7 +58,7 @@
                                 <input type="text" class="form-control" name="jam" id="jam" required placeholder="Masukkan Jam" >
                             </div> 
                             <div class="box-footer">
-                                <a href="{{ url('/datasurat_keluar') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
+                                <a href="{{ url('/dataspph') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                                 <button type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
                                     <i class="fa fa-save"></i> Save
                                 </button>
