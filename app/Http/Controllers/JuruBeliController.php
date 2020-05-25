@@ -70,4 +70,11 @@ class JuruBeliController extends Controller
 
         return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);
     }
+
+    public function destroy($id)
+    {
+        $dok_spph = DokSpph::find($id);
+        $dok_spph->delete();
+        return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Hapus!!']);
+    }
 }
