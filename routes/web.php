@@ -87,7 +87,7 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
 //     Route::get('/edit_spph/{id}', 'TimpengadaanController@edit');
 //     Route::post('/edit_spph/update/{id}', 'TimpengadaanController@update');
 //     Route::get('/dok_spph/delete/{id}', 'TimpengadaanController@destroy');
-//     Route::get('/dok_spph/show/{id}', 'TimpengadaanController@show');
+    Route::get('/dok_spph/show/{id}', 'JuruBeliController@show');
 //     Route::get('/dok_spph/download/{id}', 'TimpengadaanController@cetak_pdf_spph');
 //     Route::get('/dok_spph/upload/{id}', 'TimpengadaanController@upload');
 //     Route::post('/dok_spph/upload_store/{id}', 'TimpengadaanController@upload_spph');

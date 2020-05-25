@@ -43,4 +43,9 @@ class JuruBeliController extends Controller
         return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);
     }
 
+    public function show($id)
+    {
+        $dok_spph = DokSpph::find($id); 
+        return view('jurubeli.detail_spph',compact( 'dok_spph')); 
+    }
 }
