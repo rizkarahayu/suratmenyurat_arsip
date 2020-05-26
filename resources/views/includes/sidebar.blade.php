@@ -179,51 +179,20 @@
                   </a>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen BAET
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
+                  <a href="{{url('/dataspph')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Dokumen SPPH</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Dokumen BAET</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Surat SPH Masuk</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Dokumen BANH</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p> Dokumen Estimasi Index Kewajaran Harga</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p> Dokumen Surat Kontrak</p>
+                    <p>Data Surat BAET</p>
                   </a>
                 </li>
               </ul>
