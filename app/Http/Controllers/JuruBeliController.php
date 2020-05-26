@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\DokSpph;
 use App\Models\User;
 use PDF;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class JuruBeliController extends Controller
 {
@@ -86,5 +88,25 @@ class JuruBeliController extends Controller
         $pdf = PDF::loadview('jurubeli.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
         return $pdf->download('spph.pdf');
         // return $pdf->stream('spph.pdf');
+    }
+
+    public function upload($id)
+    {
+        $dok_spph = DokSpph::findOrFail($id);
+        return view('jurubeli.upload_spph', compact(['dok_spph']));
+    }
+
+    public function upload_spph($id,Request $request)
+    {
+        $dok_spph = DokSpph::find($id);
+        $dok_spph->keterangan = $request->input('keterangan');
+        $file = $request->file('file');
+        $extension = $file->getClientOriginalExtension();
+        $newName = rand(100000,1001238912).".".$extension;
+        $file->move('uploads/file',$newName);
+        $dok_spph->file = $newName;
+        $dok_spph->save();
+        // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
+        return redirect('/dok_spph/upload/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
 }

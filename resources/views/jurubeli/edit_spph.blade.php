@@ -43,7 +43,7 @@
                             </div>  
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Dibuat</label>
-                                <input class="form-control datepicker" name="tanggal_dibuat" id="tanggal_dibuat" type="datetime" value="{{$dok_spph->tanggal_dibuat}}">
+                                <input class="form-control datepicker" name="tanggal_dibuat" id="tanggal_dibuat" type="datetime-local" value="{{$dok_spph->tanggal_dibuat}}">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>

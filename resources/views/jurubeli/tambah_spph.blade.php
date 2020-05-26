@@ -43,7 +43,7 @@
                             </div>  
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal Dibuat</label>
-                                <input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_dibuat" id="tanggal_dibuat" type="date">
+                                <input class="form-control datepicker" placeholder="Pilih Tanggal" name="tanggal_dibuat" id="tanggal_dibuat" type="datetime-local">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Deskripsi Pekerjaan Jasa</label>
