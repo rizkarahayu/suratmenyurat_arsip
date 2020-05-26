@@ -180,25 +180,25 @@
                 <!-- Single Service -->
                 <div class="col-12 col-md-4">
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="0.5s">
-                        <i class="ti-ruler-pencil"></i>
-                        <h5>Fitur 1</h5>
-                        <p>Buat Dokumen <br/>Deskripsi : beberapa dokumen kebutuhan pengadaan kini dapat dibuat dalam sistem</p>
+                    <i class="ti-book"></i>
+                        <h5>Buat Dokumen</h5>
+                        <p>Deskripsi : beberapa dokumen kebutuhan pengadaan kini dapat dibuat dalam sistem</p>
                     </div>
                 </div>
                 <!-- Single Service -->
                 <div class="col-12 col-md-4">
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="1s">
                         <i class="ti-desktop"></i>
-                        <h5>Fitur 2</h5>
-                        <p>Upload SPH <br/>Deskripsi : Subkontraktor dapat dengan mudah mengirimkan SPH, cukup dengan upload dalam sistem</p>
+                        <h5>Upload SPH</h5>
+                        <p>Deskripsi : Subkontraktor dapat dengan mudah mengirimkan SPH, cukup dengan upload dalam sistem</p>
                     </div>
                 </div>
                 <!-- Single Service -->
                 <div class="col-12 col-md-4">
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="1.5s">
-                        <i class="ti-announcement"></i>
-                        <h5>Fitur 3</h5>
-                        <p>Tahap Pengadaan Terjadwal <br/>Deskripsi : Kini pengadaan dapat dilakukan setting jadwal disetiap tahapnya sesuai metode yang dipilih</p>
+                    <i class="ti-alarm-clock"></i>
+                        <h5>Tahap Pengadaan Terjadwal</h5>
+                        <p>Deskripsi : Kini pengadaan dapat dilakukan setting jadwal disetiap tahapnya sesuai metode yang dipilih</p>
                     </div>
                 </div>
             </div>
