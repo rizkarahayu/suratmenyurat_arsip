@@ -16,6 +16,21 @@
     </td>
   </tr>
   <tr>
+    <td>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <br/>
+    </td>
+  </tr>
+  <tr>
     <td><p align="right" style="font-size:13px;">Surabaya,  {{ date('d-M-yy', strtotime($dok_spph->tanggal_pelaksanaan)) }}</p></td>
   </tr>
   <tr>
