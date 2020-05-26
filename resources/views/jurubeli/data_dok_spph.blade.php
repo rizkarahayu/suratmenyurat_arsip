@@ -27,14 +27,6 @@
                             </button>
                         </div>
                     @endif
-            <div class="card card-default">
-                <div class="card-header">
-                    <h3 class="card-title">Tabel Data Dokumen SPPH</h3>
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-                            </div>
-                    </div>
                 <div class="card-body">
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
