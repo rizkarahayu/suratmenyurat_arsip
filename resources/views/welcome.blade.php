@@ -182,7 +182,7 @@
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="0.5s">
                         <i class="ti-ruler-pencil"></i>
                         <h5>Fitur 1</h5>
-                        <p>Buat Dokumen (Deskripsi : beberapa dokumen kebutuhan pengadaan kini dapat dibuat dalam sistem)/p>
+                        <p>Buat Dokumen <br/>(Deskripsi : beberapa dokumen kebutuhan pengadaan kini dapat dibuat dalam sistem)</p>
                     </div>
                 </div>
                 <!-- Single Service -->
@@ -190,7 +190,7 @@
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="1s">
                         <i class="ti-desktop"></i>
                         <h5>Fitur 2</h5>
-                        <p>Upload SPH (Deskripsi : Subkontraktor dapat dengan mudah mengirimkan SPH, cukup dengan upload dalam sistem</p>
+                        <p>Upload SPH <br/>(Deskripsi : Subkontraktor dapat dengan mudah mengirimkan SPH, cukup dengan upload dalam sistem</p>
                     </div>
                 </div>
                 <!-- Single Service -->
@@ -198,7 +198,7 @@
                     <div class="single-service-area text-center wow fadeInUp" data-wow-delay="1.5s">
                         <i class="ti-announcement"></i>
                         <h5>Fitur 3</h5>
-                        <p>Tahap Pengadaan Terjadwal (Deskripsi : Kini pengadaan dapat dilakukan setting jadwal disetiap tahapnya sesuai metode yang dipilih)</p>
+                        <p>Tahap Pengadaan Terjadwal <br/>(Deskripsi : Kini pengadaan dapat dilakukan setting jadwal disetiap tahapnya sesuai metode yang dipilih)</p>
                     </div>
                 </div>
             </div>
