@@ -6,9 +6,9 @@
 <table style="width:100%">
   <tr>
     <td>
-        <!-- <img src="{{asset('images/download.jpeg')}}" width="100px" align="left">
-        <img src="{{asset('images/user.jpg')}}" width="100px" align="right"> -->
-        <img src="/assets/dist/img/user2-160x160.jpg">
+        <img src="{{asset('images/download.jpeg')}}" width="100px" align="left">
+        <img src="{{asset('images/user.jpg')}}" width="100px" align="right">
+        <!-- <img src="/assets/dist/img/user2-160x160.jpg"> -->
     </td>
   </tr>
   <tr>
