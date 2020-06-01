@@ -190,7 +190,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{url('/dataspph')}}" class="nav-link">
+                  <a href="{{url('/databaet')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
                     <p>Data Surat BAET</p>
                   </a>

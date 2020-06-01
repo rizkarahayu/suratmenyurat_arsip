@@ -81,6 +81,7 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
 
 Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan');
+    //SPPH
     Route::get('/dataspph', 'JuruBeliController@data_spph')->name('dataspph');
     Route::get('/tambah_spph', 'JuruBeliController@create');
     Route::post('/tambah_spph/store', 'JuruBeliController@store');
@@ -91,6 +92,17 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
     Route::get('/dok_spph/upload/{id}', 'JuruBeliController@upload');
     Route::post('/dok_spph/upload_store/{id}', 'JuruBeliController@upload_spph');
+    //BAET
+    Route::get('/databaet', 'JuruBeliController@data_baet')->name('databaet');
+    Route::get('/tambah_baet', 'JuruBeliController@create_baet');
+    Route::post('/tambah_baet/store', 'JuruBeliController@store_baet');
+    Route::get('/edit_baet/{id}', 'JuruBeliController@edit_baet');
+    Route::post('/edit_baet/update/{id}', 'JuruBeliController@update_baet');
+    Route::get('/dok_baet/delete/{id}', 'JuruBeliController@destroy_baet');
+    Route::get('/dok_baet/show/{id}', 'JuruBeliController@show_baet');
+    // Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
+    Route::get('/dok_baet/upload_baet/{id}', 'JuruBeliController@upload_baet');
+    Route::post('/dok_baet/uploadstore_baet/{id}', 'JuruBeliController@uploadstore_baet');
 });
 
 Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor')->middleware('subkontraktor');
