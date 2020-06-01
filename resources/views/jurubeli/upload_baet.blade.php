@@ -60,7 +60,7 @@
                                             <tr>
                                             <td>
                                                 <!-- <iframe src="{{url('/uploads/file/'.$dok_baet->file)}}" width="100%" height="600px"><iframe> -->
-                                                <a href="{{asset('/uploads/file/'.$dok_baet->file)}}">{{$dok_baet->file}}</a>
+                                                <a href="{{asset('/uploads/baet/'.$dok_baet->file)}}">{{$dok_baet->file}}</a>
                                             </td>
                                                 <td>{{ $dok_baet->keterangan_upload }}</td>
                                             </tr>
