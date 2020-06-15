@@ -224,7 +224,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{url('/databanh')}}" class="nav-link">
+                  <a href="{{url('/dataspph')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
                     <p>Data Surat BANH</p>
                   </a>
