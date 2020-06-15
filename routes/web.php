@@ -100,65 +100,32 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::post('/edit_baet/update/{id}', 'JuruBeliController@update_baet');
     Route::get('/dok_baet/delete/{id}', 'JuruBeliController@destroy_baet');
     Route::get('/dok_baet/show/{id}', 'JuruBeliController@show_baet');
-    // Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
+    Route::get('/dok_baet/download/{id}', 'JuruBeliController@cetak_pdf_spph');
     Route::get('/dok_baet/upload_baet/{id}', 'JuruBeliController@upload_baet');
     Route::post('/dok_baet/uploadstore_baet/{id}', 'JuruBeliController@uploadstore_baet');
+    
     //Konfirmasi SPH
-    Route::get('/datasph', 'JuruBeliController@data_sph')->name('datasph');
-    Route::get('/tambah_sph', 'JuruBeliController@create_sph');
-    Route::post('/tambah_sph/store', 'JuruBeliController@store_sph');
-    Route::get('/edit_sph/{id}', 'JuruBeliController@edit_sph');
-    Route::post('/edit_sph/update/{id}', 'JuruBeliController@update_sph');
-    Route::get('/dok_sph/delete/{id}', 'JuruBeliController@destroy_sph');
-    Route::get('/dok_sph/show/{id}', 'JuruBeliController@show_sph');
-    // // Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
-    Route::get('/dok_sph/upload_sph/{id}', 'JuruBeliController@upload_sph');
-    Route::post('/dok_sph/uploadstore_sph/{id}', 'JuruBeliController@uploadstore_sph');
+    Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_sph');
 
     //BANH
-    // Route::get('/databanh', 'JuruBeliController@data_banh')->name('databanh');
-    // Route::get('/tambah_banh', 'JuruBeliController@create_banh');
-    // Route::post('/tambah_banh/store', 'JuruBeliController@store_banh');
-    // Route::get('/edit_banh/{id}', 'JuruBeliController@edit_banh');
-    // Route::post('/edit_banh/update/{id}', 'JuruBeliController@update_banh');
-    // Route::get('/dok_banh/delete/{id}', 'JuruBeliController@destroy_banh');
-    // Route::get('/dok_banh/show/{id}', 'JuruBeliController@show_banh');
-    // // // Route::get('/dok_banh/download/{id}', 'JuruBeliController@cetak_pdf_banh');
-    // Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
-    // Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
-
-    // //Pemenang
-    // Route::get('/datapemenang', 'JuruBeliController@data_pemenang')->name('datapemenang');
-    // Route::get('/tambah_pemenang', 'JuruBeliController@create_pemenang');
-    // Route::post('/tambah_pemenang/store', 'JuruBeliController@store_pemenang');
-    // Route::get('/edit_pemenang/{id}', 'JuruBeliController@edit_pemenang');
-    // Route::post('/edit_pemenang/update/{id}', 'JuruBeliController@update_pemenang');
-    // Route::get('/dok_pemenang/delete/{id}', 'JuruBeliController@destroy_pemenang');
-    // Route::get('/dok_pemenang/show/{id}', 'JuruBeliController@show_pemenang');
-
-    // //usulan
-    // Route::get('/datausulan', 'JuruBeliController@data_usulan')->name('datausulan');
-    // Route::get('/tambah_usulan', 'JuruBeliController@create_usulan');
-    // Route::post('/tambah_usulan/store', 'JuruBeliController@store_usulan');
-    // Route::get('/edit_usulan/{id}', 'JuruBeliController@edit_usulan');
-    // Route::post('/edit_usulan/update/{id}', 'JuruBeliController@update_usulan');
-    // Route::get('/dok_usulan/delete/{id}', 'JuruBeliController@destroy_usulan');
-    // Route::get('/dok_usulan/show/{id}', 'JuruBeliController@show_usulan');
-    // Route::get('/dok_usulan/upload_usulan/{id}', 'JuruBeliController@upload_usulan');
-    // Route::post('/dok_usulan/uploadstore_usulan/{id}', 'JuruBeliController@uploadstore_usulan');
-
-    // //SPK
-    // Route::get('/dataspk', 'JuruBeliController@data_spk')->name('dataspk');
-    // Route::get('/tambah_spk', 'JuruBeliController@create_spk');
-    // Route::post('/tambah_spk/store', 'JuruBeliController@store_spk');
-    // Route::get('/edit_spk/{id}', 'JuruBeliController@edit_spk');
-    // Route::post('/edit_spk/update/{id}', 'JuruBeliController@update_spk');
-    // Route::get('/dok_spk/delete/{id}', 'JuruBeliController@destroy_spk');
-    // Route::get('/dok_spk/show/{id}', 'JuruBeliController@show_spk');
-    // // // Route::get('/dok_spk/download/{id}', 'JuruBeliController@cetak_pdf_spk');
-    // Route::get('/dok_spk/upload_spk/{id}', 'JuruBeliController@upload_spk');
-    // Route::post('/dok_spk/uploadstore_spk/{id}', 'JuruBeliController@uploadstore_spk');
+    Route::get('/databanh', 'JuruBeliController@data_banh')->name('databanh');
+   
 });
 
-Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor')->middleware('subkontraktor');
+Route::group(['middleware'=>['auth','subkontraktor']],function(){
+    Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor');
+
+    //SPH
+    Route::get('/datasph', 'SubkontraktorController@data_sph')->name('datasph');
+    Route::get('/tambah_sph', 'SubkontraktorController@create_sph');
+    Route::post('/tambah_sph/store', 'SubkontraktorController@store_sph');
+    Route::get('/edit_sph/{id}', 'SubkontraktorController@edit_sph');
+    Route::post('/edit_sph/update/{id}', 'SubkontraktorController@update_sph');
+    Route::get('/dok_sph/delete/{id}', 'SubkontraktorController@destroy_sph');
+    Route::get('/dok_sph/show/{id}', 'SubkontraktorController@show_sph');
+    Route::get('/dok_sph/upload_sph/{id}', 'SubkontraktorController@upload_sph');
+    Route::post('/dok_sph/uploadstore_sph/{id}', 'SubkontraktorController@uploadstore_sph');
+
+});
+
 

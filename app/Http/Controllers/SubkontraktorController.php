@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Subkontraktor;
 use Illuminate\Http\Request;
+use App\Models\DokSph;
 
 class SubkontraktorController extends Controller
 {
@@ -82,5 +83,73 @@ class SubkontraktorController extends Controller
     public function destroy(Subkontraktor $subkontraktor)
     {
         //
+    }
+
+    public function show_sph($id)
+    {
+        $dok_sph = DokSph::findOrFail($id);
+        $nama_subkon = User::get();
+        return view('sub_kontraktor.detail_sph', compact(['dok_sph','nama_subkon'])); 
+    }
+
+    public function edit_sph($id)
+    {
+        $dok_sph = DokSph::findOrFail($id);
+        $nama_subkon = User::get();
+        return view('sub_kontraktor.edit_sph', compact(['dok_sph','nama_subkon']));
+    }
+
+    public function update_sph($id,Request $request)
+    {
+        $dok_sph                       = DokSph::find($id);
+        $dok_sph->no_surat             = $request->input('no_surat');
+        $dok_sph->tanggal_dibuat       = $request->input('tanggal_dibuat');
+        $dok_sph->no_spph              = $request->input('no_spph');
+        $dok_sph->tanggal_spph         = $request->input('tanggal_spph');
+        $dok_sph->deskripsi_pekerjaan  = $request->input('deskripsi_pekerjaan');
+        $dok_sph->nama_proyek          = $request->input('nama_proyek');
+        $dok_sph->harga                = $request->input('harga');
+        $dok_sph->terbilang            = $request->input('terbilang');
+        $dok_sph->nama_subkon          = $request->input('nama_subkon');
+        $dok_sph->nama_perwakilan      = $request->input('nama_perwakilan');
+        $dok_sph->save();
+
+        return redirect('/datasph')->with(['message'=> 'Data Berhasil di Simpan!!']);
+    }
+
+    public function destroy_sph($id)
+    {
+        $dok_sph = DokSph::find($id);
+        $dok_sph->delete();
+        return redirect('/datasph')->with(['message'=> 'Data Berhasil di Hapus!!']);
+    }
+
+    public function cetak_pdf_sph($id)
+    {
+        $dok_spph= DokSph::find($id);
+        set_time_limit(600);
+        $pdf = PDF::loadview('sub_kontraktor.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('spph.pdf');
+        // return $pdf->stream('spph.pdf');
+    }
+
+    public function upload_sph($id)
+    {
+        $dok_sph = DokSph::findOrFail($id);
+        return view('sub_kontraktor.upload_sph', compact(['dok_sph']));
+    }
+
+    public function uploadstore_sph($id,Request $request)
+    {
+        $dok_sph = DokSph::find($id);
+        $dok_sph->keterangan= $request->input('keterangan');
+        $file = $request->file('file');
+        $extension = $file->getClientOriginalExtension();
+        $newName = rand(100000,1001238912).".".$extension;
+        $file->move('uploads/sph',$newName);
+        $dok_sph->file = $newName;
+        $dok_sph->save();
+        // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
+        return redirect('/dok_sph/upload_sph/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
 }
