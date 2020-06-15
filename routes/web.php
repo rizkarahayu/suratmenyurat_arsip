@@ -109,6 +109,15 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
 
     //BANH
     Route::get('/databanh', 'JuruBeliController@data_banh')->name('databanh');
+    Route::get('/tambah_banh', 'JuruBeliController@create_banh');
+    Route::post('/tambah_banh/store', 'JuruBeliController@store_banh');
+    Route::get('/edit_banh/{id}', 'JuruBeliController@edit_banh');
+    Route::post('/edit_banh/update/{id}', 'JuruBeliController@update_banh');
+    Route::get('/dok_banh/delete/{id}', 'JuruBeliController@destroy_banh');
+    Route::get('/dok_banh/show/{id}', 'JuruBeliController@show_banh');
+    Route::get('/dok_banh/download/{id}', 'JuruBeliController@cetak_pdf_banh');
+    Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
+    Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
    
 });
 
