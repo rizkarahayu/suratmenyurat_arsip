@@ -85,6 +85,37 @@ class SubkontraktorController extends Controller
         //
     }
 
+    public function data_sph()
+    {
+        $dok_sph = DokSph::paginate(10);
+        return view('sub_kontraktor.data_dok_sph', compact( 'dok_sph'));
+    }
+
+    public function create_sph()
+    {
+        $nama_subkon = User::get();
+        $dok_sph = DokSph::paginate(10);
+        return view('sub_kontraktor.tambah_sph', compact(['dok_sph','nama_subkon']));
+    }
+
+    public function store_sph(Request $request)
+    {
+        $dok_sph                       = new Doksph;
+        $dok_sph->no_surat             = $request->input('no_surat');
+        $dok_sph->tanggal_dibuat       = $request->input('tanggal_dibuat');
+        $dok_sph->no_spph              = $request->input('no_spph');
+        $dok_sph->tanggal_spph         = $request->input('tanggal_spph');
+        $dok_sph->deskripsi_pekerjaan  = $request->input('deskripsi_pekerjaan');
+        $dok_sph->nama_proyek          = $request->input('nama_proyek');
+        $dok_sph->harga                = $request->input('harga');
+        $dok_sph->terbilang            = $request->input('terbilang');
+        $dok_sph->nama_subkon          = $request->input('nama_subkon');
+        $dok_sph->nama_perwakilan      = $request->input('nama_perwakilan');
+        $dok_sph->save();
+
+        return redirect('/datasph')->with(['message'=> 'Data Berhasil di Simpan!!']);
+    }
+
     public function show_sph($id)
     {
         $dok_sph = DokSph::findOrFail($id);
