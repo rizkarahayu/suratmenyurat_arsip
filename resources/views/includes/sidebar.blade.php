@@ -197,6 +197,91 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen SPH
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/datasph')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Surat SPH</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen BANH
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/databanh')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Surat BANH</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen Pemenang
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/datapemenang')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Surat Pemenang</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dok Usulan Pengadaan
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/datausulan')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Usulan Pengadaan</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen SPK
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/dataspk')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Surat SPK</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
           @endif
           @if(Auth::user()->is_admin =='subkontraktor')
             <li class="nav-item has-treeview">

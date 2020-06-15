@@ -21,7 +21,7 @@
                         @endif
                     <form class="form-horizontal" method="POST" action="{{ url('/edit_baet/update/'.$dok_baet->id) }}" autocomplete="off" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            <div class="modal-body">
+                        <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nomor Surat</label>
                                 <input type="text" class="form-control" name="no_surat" id="no_surat"  value="{{$dok_baet->no_surat}}">       

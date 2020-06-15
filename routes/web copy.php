@@ -114,7 +114,6 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     // // Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
     Route::get('/dok_sph/upload_sph/{id}', 'JuruBeliController@upload_sph');
     Route::post('/dok_sph/uploadstore_sph/{id}', 'JuruBeliController@uploadstore_sph');
-
     //BANH
     Route::get('/databanh', 'JuruBeliController@data_banh')->name('databanh');
     Route::get('/tambah_banh', 'JuruBeliController@create_banh');
@@ -124,9 +123,8 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_banh/delete/{id}', 'JuruBeliController@destroy_banh');
     Route::get('/dok_banh/show/{id}', 'JuruBeliController@show_banh');
     // // Route::get('/dok_banh/download/{id}', 'JuruBeliController@cetak_pdf_banh');
-    Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
-    Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
-
+    // Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
+    // Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
     //Pemenang
     Route::get('/datapemenang', 'JuruBeliController@data_pemenang')->name('datapemenang');
     Route::get('/tambah_pemenang', 'JuruBeliController@create_pemenang');
@@ -156,8 +154,8 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_spk/delete/{id}', 'JuruBeliController@destroy_spk');
     Route::get('/dok_spk/show/{id}', 'JuruBeliController@show_spk');
     // // Route::get('/dok_spk/download/{id}', 'JuruBeliController@cetak_pdf_spk');
-    Route::get('/dok_spk/upload_spk/{id}', 'JuruBeliController@upload_spk');
-    Route::post('/dok_spk/uploadstore_spk/{id}', 'JuruBeliController@uploadstore_spk');
+    // Route::get('/dok_spk/upload_spk/{id}', 'JuruBeliController@upload_spk');
+    // Route::post('/dok_spk/uploadstore_spk/{id}', 'JuruBeliController@uploadstore_spk');
 });
 
 Route::get('/subkontraktor', 'SubkontraktorController@index')->name('subkontraktor')->middleware('subkontraktor');
