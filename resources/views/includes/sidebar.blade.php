@@ -231,7 +231,7 @@
                 </li>
               </ul>
             </li>
-            <!-- <li class="nav-item has-treeview">
+            <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
@@ -281,22 +281,39 @@
                   </a>
                 </li>
               </ul>
-            </li> -->
+            </li>
           @endif
           @if(Auth::user()->is_admin =='subkontraktor')
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-envelope"></i>
                   <p>
-                    Surat Masuk
+                    Dokumen SPH
                     <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{url('/datasph')}}" class="nav-link">
                     <i class="fas fa-envelope-open-text nav-icon"></i>
-                      <p>Data Surat Masuk</p>
+                      <p>Data Surat SPH</p>
+                    </a>
+                  </li>
+                </ul>
+            </li>
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-envelope"></i>
+                  <p>
+                    Dokumen SPH
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{url('/datasph')}}" class="nav-link">
+                    <i class="fas fa-envelope-open-text nav-icon"></i>
+                      <p>Data Surat SPH</p>
                     </a>
                   </li>
                 </ul>
