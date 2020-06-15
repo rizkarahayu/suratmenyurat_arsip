@@ -118,6 +118,38 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_banh/download/{id}', 'JuruBeliController@cetak_pdf_banh');
     Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
     Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
+
+    //Pemenang
+    Route::get('/datapemenang', 'JuruBeliController@data_pemenang')->name('datapemenang');
+    Route::get('/tambah_pemenang', 'JuruBeliController@create_pemenang');
+    Route::post('/tambah_pemenang/store', 'JuruBeliController@store_pemenang');
+    Route::get('/edit_pemenang/{id}', 'JuruBeliController@edit_pemenang');
+    Route::post('/edit_pemenang/update/{id}', 'JuruBeliController@update_pemenang');
+    Route::get('/dok_pemenang/delete/{id}', 'JuruBeliController@destroy_pemenang');
+    Route::get('/dok_pemenang/show/{id}', 'JuruBeliController@show_pemenang');
+
+    //usulan
+    Route::get('/datausulan', 'JuruBeliController@data_usulan')->name('datausulan');
+    Route::get('/tambah_usulan', 'JuruBeliController@create_usulan');
+    Route::post('/tambah_usulan/store', 'JuruBeliController@store_usulan');
+    Route::get('/edit_usulan/{id}', 'JuruBeliController@edit_usulan');
+    Route::post('/edit_usulan/update/{id}', 'JuruBeliController@update_usulan');
+    Route::get('/dok_usulan/delete/{id}', 'JuruBeliController@destroy_usulan');
+    Route::get('/dok_usulan/show/{id}', 'JuruBeliController@show_usulan');
+    Route::get('/dok_usulan/upload_usulan/{id}', 'JuruBeliController@upload_usulan');
+    Route::post('/dok_usulan/uploadstore_usulan/{id}', 'JuruBeliController@uploadstore_usulan');
+
+    //SPK
+    Route::get('/dataspk', 'JuruBeliController@data_spk')->name('dataspk');
+    Route::get('/tambah_spk', 'JuruBeliController@create_spk');
+    Route::post('/tambah_spk/store', 'JuruBeliController@store_spk');
+    Route::get('/edit_spk/{id}', 'JuruBeliController@edit_spk');
+    Route::post('/edit_spk/update/{id}', 'JuruBeliController@update_spk');
+    Route::get('/dok_spk/delete/{id}', 'JuruBeliController@destroy_spk');
+    Route::get('/dok_spk/show/{id}', 'JuruBeliController@show_spk');
+    Route::get('/dok_spk/download/{id}', 'JuruBeliController@cetak_pdf_spk');
+    Route::get('/dok_spk/upload_spk/{id}', 'JuruBeliController@upload_spk');
+    Route::post('/dok_spk/uploadstore_spk/{id}', 'JuruBeliController@uploadstore_spk');
    
 });
 
