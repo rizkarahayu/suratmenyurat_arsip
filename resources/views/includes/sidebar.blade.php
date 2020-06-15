@@ -209,12 +209,12 @@
                 <li class="nav-item">
                   <a href="{{url('/datasph')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat SPH</p>
+                    <p>Download Surat SPH</p>
                   </a>
                 </li>
               </ul>
             </li>
-            <!-- <li class="nav-item has-treeview">
+            <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
@@ -231,7 +231,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item has-treeview">
+            <!-- <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
