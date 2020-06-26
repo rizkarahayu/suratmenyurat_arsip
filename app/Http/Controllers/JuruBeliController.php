@@ -9,6 +9,7 @@ use App\Models\DokBanh;
 use App\Models\DokPemenang;
 use App\Models\DokUsulan;
 use App\Models\DokSpk;
+use App\Models\DokSph;
 use App\Models\User;
 use PDF;
 use Illuminate\Support\Facades\Storage;
@@ -153,6 +154,7 @@ class JuruBeliController extends Controller
     {
         $dok_baet = DokBaet::find($id); 
         return view('jurubeli.detail_baet',compact( 'dok_baet')); 
+        // return view('jurubeli.baet_download',compact( 'dok_baet')); 
     }
 
     public function edit_baet($id)
@@ -194,10 +196,10 @@ class JuruBeliController extends Controller
 
     public function cetak_pdf_baet($id)
     {
-        $dok_spph= DokSpph::find($id);
+        $dok_baet = DokBaet::find($id);
         set_time_limit(600);
-        $pdf = PDF::loadview('jurubeli.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
-        return $pdf->download('spph.pdf');
+        $pdf = PDF::loadview('jurubeli.baet_download', compact('dok_baet'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('baet.pdf');
 
     }
 
@@ -312,10 +314,10 @@ class JuruBeliController extends Controller
 
     public function cetak_pdf_banh($id)
     {
-        $dok_spph= DokBanh::find($id);
+        $dok_banh= DokBanh::find($id);
         set_time_limit(600);
-        $pdf = PDF::loadview('jurubeli.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
-        return $pdf->download('spph.pdf');
+        $pdf = PDF::loadview('jurubeli.banh_download', compact('dok_banh'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('banh.pdf');
         // return $pdf->stream('spph.pdf');
     }
 
@@ -335,6 +337,33 @@ class JuruBeliController extends Controller
         $file_banh->move('uploads/banh',$newNamebanh);
         $dok_banh->file_banh = $newNamebanh;
         //
+        // $dok_banh->keterangan_estimasi = $request->input('keterangan_estimasi');
+        // $file_estimasi = $request->file('file_estimasi');
+        // $extension_estimasi = $file_estimasi->getClientOriginalExtension();
+        // $newNameestimasi = rand(100000,1001238912).".".$extension_estimasi;
+        // $file_estimasi->move('uploads/banh',$newNameestimasi);
+        // $dok_banh->file_estimasi = $newNameestimasi;
+        $dok_banh->save();
+        // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
+        return redirect('/dok_banh/upload_banh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
+    }
+   
+    public function upload_eikh($id)
+    {
+        $dok_banh = DokBanh::findOrFail($id);
+        return view('jurubeli.upload_eikh', compact(['dok_banh']));
+    }
+
+    public function uploadstore_eikh($id,Request $request)
+    {
+        $dok_banh = DokBanh::find($id);
+        // $dok_banh->keterangan_banh = $request->input('keterangan_banh');
+        // $file_banh = $request->file('file_banh');
+        // $extension_banh = $file_banh->getClientOriginalExtension();
+        // $newNamebanh = rand(100000,1001238912).".".$extension_banh;
+        // $file_banh->move('uploads/banh',$newNamebanh);
+        // $dok_banh->file_banh = $newNamebanh;
+        // //
         $dok_banh->keterangan_estimasi = $request->input('keterangan_estimasi');
         $file_estimasi = $request->file('file_estimasi');
         $extension_estimasi = $file_estimasi->getClientOriginalExtension();
@@ -343,7 +372,7 @@ class JuruBeliController extends Controller
         $dok_banh->file_estimasi = $newNameestimasi;
         $dok_banh->save();
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
-        return redirect('/dok_banh/upload_banh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
+        return redirect('/dok_banh/upload_eikh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
    
     //Pemenang
@@ -429,7 +458,7 @@ class JuruBeliController extends Controller
     public function show_usulan($id)
     {
         $dok_usulan = DokUsulan::findOrFail($id);
-        return view('jurubeli.detail_usulan', compact(['dok_usulan'])); 
+        return view('jurubeli.memo_download', compact(['dok_usulan'])); 
     }
 
     public function edit_usulan($id)
@@ -473,6 +502,12 @@ class JuruBeliController extends Controller
         $dok_usulan->save();
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
         return redirect('/dok_usulan/upload_usulan/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
+    }
+
+    public function data_sph()
+    {
+        $dok_sph = DokSph::paginate(10);
+        return view('jurubeli.data_dok_sph', compact( 'dok_sph'));
     }
 
     //SPK
@@ -564,9 +599,9 @@ class JuruBeliController extends Controller
 
     public function cetak_pdf_spk($id)
     {
-        $dok_spph= DokSpk::find($id);
+        $dok_spk= DokSpk::find($id);
         set_time_limit(600);
-        $pdf = PDF::loadview('jurubeli.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
+        $pdf = PDF::loadview('jurubeli.spk_download', compact('dok_spk'))->setPaper('A4', 'potrait'); 
         return $pdf->download('spph.pdf');
         // return $pdf->stream('spph.pdf');
     }

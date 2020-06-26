@@ -175,7 +175,24 @@
                 <li class="nav-item">
                   <a href="{{url('/dataspph')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat SPPH</p>
+                    <p>Buat SPPH</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>
+                  Dokumen SPH
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/datasphjuru')}}" class="nav-link">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                    <p>Data Dokumen Penawaran</p>
                   </a>
                 </li>
               </ul>
@@ -192,24 +209,7 @@
                 <li class="nav-item">
                   <a href="{{url('/databaet')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat BAET</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-envelope"></i>
-                <p>
-                  Dokumen SPH
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{url('/datasph')}}" class="nav-link">
-                  <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Download Surat SPH</p>
+                    <p>Buat Dokumen BAET</p>
                   </a>
                 </li>
               </ul>
@@ -226,7 +226,7 @@
                 <li class="nav-item">
                   <a href="{{url('/databanh')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat BANH</p>
+                    <p>Buat Dokumen BANH & EIKH</p>
                   </a>
                 </li>
               </ul>
@@ -235,7 +235,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
-                  Dokumen Pemenang
+                  Dok Pengumuman Pemenang
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -243,7 +243,7 @@
                 <li class="nav-item">
                   <a href="{{url('/datapemenang')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat Pemenang</p>
+                    <p>Pengumuman Pemenang</p>
                   </a>
                 </li>
               </ul>
@@ -252,7 +252,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
-                  Dok Usulan Pengadaan
+                  Dokumen MUPP
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -260,7 +260,7 @@
                 <li class="nav-item">
                   <a href="{{url('/datausulan')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Usulan Pengadaan</p>
+                    <p>Data Dok. MUPP</p>
                   </a>
                 </li>
               </ul>
@@ -269,7 +269,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
                 <p>
-                  Dokumen SPK
+                  Dokumen SPK/SPER
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -277,7 +277,7 @@
                 <li class="nav-item">
                   <a href="{{url('/dataspk')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Surat SPK</p>
+                    <p>SPER</p>
                   </a>
                 </li>
               </ul>

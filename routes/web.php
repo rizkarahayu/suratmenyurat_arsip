@@ -92,6 +92,7 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_spph');
     Route::get('/dok_spph/upload/{id}', 'JuruBeliController@upload');
     Route::post('/dok_spph/upload_store/{id}', 'JuruBeliController@upload_spph');
+    
     //BAET
     Route::get('/databaet', 'JuruBeliController@data_baet')->name('databaet');
     Route::get('/tambah_baet', 'JuruBeliController@create_baet');
@@ -100,12 +101,13 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::post('/edit_baet/update/{id}', 'JuruBeliController@update_baet');
     Route::get('/dok_baet/delete/{id}', 'JuruBeliController@destroy_baet');
     Route::get('/dok_baet/show/{id}', 'JuruBeliController@show_baet');
-    Route::get('/dok_baet/download/{id}', 'JuruBeliController@cetak_pdf_spph');
+    Route::get('/dok_baet/download/{id}', 'JuruBeliController@cetak_pdf_baet');
     Route::get('/dok_baet/upload_baet/{id}', 'JuruBeliController@upload_baet');
     Route::post('/dok_baet/uploadstore_baet/{id}', 'JuruBeliController@uploadstore_baet');
     
     //Konfirmasi SPH
     Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_sph');
+    Route::get('/datasphjuru', 'JuruBeliController@data_sph');
 
     //BANH
     Route::get('/databanh', 'JuruBeliController@data_banh')->name('databanh');
@@ -118,6 +120,8 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::get('/dok_banh/download/{id}', 'JuruBeliController@cetak_pdf_banh');
     Route::get('/dok_banh/upload_banh/{id}', 'JuruBeliController@upload_banh');
     Route::post('/dok_banh/uploadstore_banh/{id}', 'JuruBeliController@uploadstore_banh');
+    Route::get('/dok_banh/upload_eikh/{id}', 'JuruBeliController@upload_eikh');
+    Route::post('/dok_banh/uploadstore_eikh/{id}', 'JuruBeliController@uploadstore_eikh');
 
     //Pemenang
     Route::get('/datapemenang', 'JuruBeliController@data_pemenang')->name('datapemenang');
