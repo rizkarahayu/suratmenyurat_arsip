@@ -79,8 +79,8 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     Route::get('/datapj_spk', 'SekretarisController@datapj');
 });
 
-Route::group(['middleware'=>['auth','timpengadaan']],function(){
-    Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan');
+Route::group(['middleware'=>['auth','jurubeli']],function(){
+    Route::get('/jurubeli', 'JuruBeliController@index')->name('jurubeli');
     //SPPH
     Route::get('/dataspph', 'JuruBeliController@data_spph')->name('dataspph');
     Route::get('/tambah_spph', 'JuruBeliController@create');

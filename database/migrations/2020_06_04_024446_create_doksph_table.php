@@ -26,6 +26,7 @@ class CreateDoksphTable extends Migration
             $table->string('nama_subkon')->nullable();
             $table->string('nama_perwakilan')->nullable();
             $table->string('keterangan')->nullable();
+            $table->string('status')->nullable();
             $table->string('file')->nullable();
             $table->timestamps();
         });

@@ -28,7 +28,7 @@
     </a>
   @endif
   @if(Auth::user()->is_admin=='pengadaan')
-    <a href="{{url('/timpengadaan')}}" class="brand-link">
+    <a href="{{url('/jurubeli')}}" class="brand-link">
       <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8; ">
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
@@ -305,27 +305,18 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-envelope"></i>
                   <p>
-                    Dokumen SPH
+                    Dokumen SPPH
                     <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{url('/datasph')}}" class="nav-link">
+                    <a href="{{url('/dataspphsubkon')}}" class="nav-link">
                     <i class="fas fa-envelope-open-text nav-icon"></i>
-                      <p>Data Surat SPH</p>
+                      <p>Download SPPH</p>
                     </a>
                   </li>
                 </ul>
-            </li>
-            <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-list"></i>
-                  <p>
-                    Dokumen SPH
-                    <!-- <i class="fas fa-angle-left right"></i> -->
-                  </p>
-                </a>
             </li>
           @endif
           @if(Auth::user()->is_admin=='kabiro')

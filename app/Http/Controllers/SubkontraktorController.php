@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Subkontraktor;
 use Illuminate\Http\Request;
 use App\Models\DokSph;
+use App\Models\DokSpph;
+use App\Models\User;
+use PDF;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class SubkontraktorController extends Controller
 {
@@ -155,12 +160,12 @@ class SubkontraktorController extends Controller
         return redirect('/datasph')->with(['message'=> 'Data Berhasil di Hapus!!']);
     }
 
-    public function cetak_pdf_sph($id)
+    public function cetak_sph($id)
     {
-        $dok_spph= DokSph::find($id);
+        $dok_sph= DokSph::find($id);
         set_time_limit(600);
-        $pdf = PDF::loadview('sub_kontraktor.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
-        return $pdf->download('spph.pdf');
+        $pdf = PDF::loadview('sub_kontraktor.sph_download', compact('dok_sph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('sph.pdf');
         // return $pdf->stream('spph.pdf');
     }
 
@@ -174,6 +179,7 @@ class SubkontraktorController extends Controller
     {
         $dok_sph = DokSph::find($id);
         $dok_sph->keterangan= $request->input('keterangan');
+        $dok_sph->status               = $request->input('status');
         $file = $request->file('file');
         $extension = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$extension;
@@ -183,4 +189,27 @@ class SubkontraktorController extends Controller
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
         return redirect('/dok_sph/upload_sph/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
+
+    public function data_spph()
+    {
+        $dok_spph = DokSpph::paginate(10);
+        return view('sub_kontraktor.data_dok_spph', compact( 'dok_spph'));
+    }
+
+
+    public function cetak_spph($id)
+    {
+        $dok_sph= DokSpph::find($id);
+        set_time_limit(600);
+        $pdf = PDF::loadview('sub_kontraktor.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('sph.pdf');
+        // return $pdf->stream('spph.pdf');
+    }
+
+    public function show_spph($id)
+    {
+        $dok_spph = DokSpph::find($id); 
+        return view('sub_kontraktor.detail_spph',compact( 'dok_spph')); 
+    }
+
 }

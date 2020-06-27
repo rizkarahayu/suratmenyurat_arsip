@@ -29,7 +29,7 @@ class Sekretaris
         // }
 
         // if (auth()->user()->is_admin == 3) {
-        //     return redirect()->route('timpengadaan');
+        //     return redirect()->route('jurubeli');
         // }
 
         // if (auth()->user()->is_admin == 4) {

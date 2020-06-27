@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Form Buat Dokumen SPPH
+                            Form Buat Dokumen SPH
                         </div>
                     </div>
                     <div class="box-body">

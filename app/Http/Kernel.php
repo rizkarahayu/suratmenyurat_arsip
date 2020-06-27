@@ -65,7 +65,7 @@ class Kernel extends HttpKernel
         'kadep' => \App\Http\Middleware\Kadep::class,
         'sekretaris' => \App\Http\Middleware\Sekretaris::class,
         'subkontraktor' => \App\Http\Middleware\Subkontraktor::class,
-        'timpengadaan' => \App\Http\Middleware\Timpengadaan::class,
+        'jurubeli' => \App\Http\Middleware\JuruBeli::class,
         'kabiro' => \App\Http\Middleware\Kabiro::class,
     ];
 }

@@ -79,8 +79,8 @@ Route::group(['middleware'=>['auth','sekretaris']],function(){
     Route::get('/datapj_spk', 'SekretarisController@datapj');
 });
 
-Route::group(['middleware'=>['auth','timpengadaan']],function(){
-    Route::get('/timpengadaan', 'JuruBeliController@index')->name('timpengadaan');
+Route::group(['middleware'=>['auth','jurubeli']],function(){
+    Route::get('/jurubeli', 'JuruBeliController@index')->name('jurubeli');
     //SPPH
     Route::get('/dataspph', 'JuruBeliController@data_spph')->name('dataspph');
     Route::get('/tambah_spph', 'JuruBeliController@create');
@@ -162,6 +162,7 @@ Route::group(['middleware'=>['auth','subkontraktor']],function(){
 
     //SPH
     Route::get('/datasph', 'SubkontraktorController@data_sph')->name('datasph');
+    Route::get('/dataspphsubkon', 'SubkontraktorController@data_spph');
     Route::get('/tambah_sph', 'SubkontraktorController@create_sph');
     Route::post('/tambah_sph/store', 'SubkontraktorController@store_sph');
     Route::get('/edit_sph/{id}', 'SubkontraktorController@edit_sph');
@@ -169,8 +170,10 @@ Route::group(['middleware'=>['auth','subkontraktor']],function(){
     Route::get('/dok_sph/delete/{id}', 'SubkontraktorController@destroy_sph');
     Route::get('/dok_sph/show/{id}', 'SubkontraktorController@show_sph');
     Route::get('/dok_sph/upload_sph/{id}', 'SubkontraktorController@upload_sph');
+    Route::get('/dok_sph_sub/download/{id}', 'SubkontraktorController@cetak_sph');
+    Route::get('/dok_spph_sub/download/{id}', 'SubkontraktorController@cetak_spph');
     Route::post('/dok_sph/uploadstore_sph/{id}', 'SubkontraktorController@uploadstore_sph');
-
+    Route::get('/dok_spph/show/{id}', 'SubkontraktorController@show_spph');
 });
 
 

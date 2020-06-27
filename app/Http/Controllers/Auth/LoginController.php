@@ -61,7 +61,7 @@ class LoginController extends Controller
                 return redirect()->route('sekretaris');
             }
             elseif (auth()->user()->is_admin == 'pengadaan') {
-                return redirect()->route('timpengadaan');
+                return redirect()->route('jurubeli');
             }
             elseif (auth()->user()->is_admin == 'subkontraktor') {
                 return redirect()->route('subkontraktor');

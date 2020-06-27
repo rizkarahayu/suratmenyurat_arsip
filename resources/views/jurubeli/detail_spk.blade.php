@@ -90,6 +90,10 @@
                                 <input class="form-control" name="nama_perwakilan" id="nama_perwakilan" disabled placeholder="{{$dok_spk->nama_perwakilan}}">
                             </div>
                             <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Alamat Subkontraktor</label>
+                                <input class="form-control" name="alamat" id="alamat" disabled placeholder="{{$dok_spk->nama_perwakilan}}">
+                            </div>
+                            <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tembusan1</label>
                                 <input class="form-control" placeholder="{{$dok_spk->tembusan1}}" name="tembusan1" id="tembusan1" type="text">
                             </div>

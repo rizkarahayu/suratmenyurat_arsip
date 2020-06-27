@@ -42,6 +42,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_sph  as $i => $sph)
+                                    @if ($sph->nama_subkon == Auth::user()->name)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $sph->no_surat }}</td>
@@ -53,10 +54,11 @@
                                                 <a href="/edit_sph/{{ $sph->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                                 <a href="/dok_sph/show/{{ $sph->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
                                                 <a href="/dok_sph/delete/{{ $sph->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-                                                <a href="/dok_sph/download/{{ $sph->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a>
+                                                <a href="/dok_sph_sub/download/{{ $sph->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a>
                                                 <a href="/dok_sph/upload_sph/{{ $sph->id }}" class="btn btn-success"><i class="fas fa-upload"></i></a>
                                             </td>
                                         </tr>
+                                    @endif
                                 @endforeach
                          </tbody>
                     </table>

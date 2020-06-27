@@ -30,6 +30,7 @@ class CreateDokspkTable extends Migration
             $table->timestamp('tanggal_dibuat')->nullable();
             $table->string('nama_subkon')->nullable();
             $table->string('nama_perwakilan')->nullable();
+            $table->string('alamat')->nullable();
             $table->string('tembusan1')->nullable();
             $table->string('tembusan2')->nullable();
             $table->string('tembusan3')->nullable();

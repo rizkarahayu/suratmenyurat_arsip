@@ -82,7 +82,7 @@ class RegisterController extends Controller
             return '/sekretaris';
         } 
         elseif (auth()->user()->is_admin == 'pengadaan') {
-            return '/timpengadaan';
+            return '/jurubeli';
         }
         elseif (auth()->user()->is_admin == 'subkontraktor') {
             return '/subkontraktor';

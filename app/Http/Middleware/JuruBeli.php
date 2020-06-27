@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class Timpengadaan
+class JuruBeli
 {
     /**
      * Handle an incoming request.
@@ -33,13 +33,13 @@ class Timpengadaan
         // }
 
         // if (auth()->user()->is_admin == 4) {
-        //     return redirect()->route('timpengadaan');
+        //     return redirect()->route('jurubeli');
         // }
 
         if(auth()->user()->is_admin == 'pengadaan'){
             return $next($request);
         }
         
-        return redirect('timpengadaan')->with('error',"You don't have admin access.");
+        return redirect('jurubeli')->with('error',"You don't have admin access.");
     }
 }
