@@ -557,6 +557,13 @@ class JuruBeliController extends Controller
         return view('jurubeli.detail_spk', compact(['dok_spk','nama_subkon'])); 
     }
 
+    // public function show_sph($id)
+    // {
+    //     $dok_sph = DokSph::findOrFail($id);
+    //     $nama_subkon = User::get();
+    //     return view('jurubeli.sph_download', compact(['dok_sph','nama_subkon'])); 
+    // }
+
     public function edit_spk($id)
     {
         $dok_spk = DokSpk::findOrFail($id);
@@ -602,7 +609,16 @@ class JuruBeliController extends Controller
         $dok_spk= DokSpk::find($id);
         set_time_limit(600);
         $pdf = PDF::loadview('jurubeli.spk_download', compact('dok_spk'))->setPaper('A4', 'potrait'); 
-        return $pdf->download('spph.pdf');
+        return $pdf->download('spk.pdf');
+        // return $pdf->stream('spph.pdf');
+    }
+
+    public function cetak_pdf_sph($id)
+    {
+        $dok_sph= DokSph::find($id);
+        set_time_limit(600);
+        $pdf = PDF::loadview('jurubeli.sph_download', compact('dok_sph'))->setPaper('A4', 'potrait'); 
+        return $pdf->download('sph.pdf');
         // return $pdf->stream('spph.pdf');
     }
 

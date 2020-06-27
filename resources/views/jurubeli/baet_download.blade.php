@@ -35,34 +35,34 @@
       </tr>
   </thead>
   <tbody>
-      <tr>
+      <tr style="width:100%";>
           <td style="width:3%"><strong> &nbsp; 1</strong></td>
-          <td style="width:65%">
+          <td style="width:52%">
             <strong> A. List Pekerjaan yang menjadi tanggungjawab Subkontraktor adalah sebagai berikut : <br/></strong>
             <pre>{{$dok_baet->list_pekerjaan}}</pre>
           </td>
-          <td>{{$dok_baet->keterangan_pekerjaan}}</td>
+          <td style="width:45%";>{{$dok_baet->keterangan_pekerjaan}}</td>
       </tr>
-      <tr>
+      <tr style="width:100%">
           <td style="width:3%"><strong> &nbsp; 3</strong></td>
-          <td style="width:65%"><strong> Durasi Pekerjaan<br/></strong>
+          <td style="width:52%"><strong> Durasi Pekerjaan<br/></strong>
               Mulai {{ date('d-M-yy', strtotime($dok_baet->tanggal_mulai)) }} s/d {{ date('d-M-yy', strtotime($dok_baet->tanggal_selesai  )) }}</td>
-          <td>{{$dok_baet->keterangan_tanggal}}</td>
+          <td style="width:45%";>{{$dok_baet->keterangan_tanggal}}</td>
       </tr>
-      <tr>
+      <tr style="width:100%">
           <td style="width:3%"><strong> &nbsp; 4</strong></td>
-          <td style="width:65%">
+          <td style="width:52%">
             <strong> Peralatan yang disediakan Subkontraktor : </strong><br/>
             <pre>{{$dok_baet->peralatan_subkon}}</pre> <br/>
             Peralatan yang disediakan PT.PAL : </strong><br/>
             <pre>{{$dok_baet->peralatan_pal}}</pre>
           </td>
-          <td>{{$dok_baet->keterangan_peralatan}}</td>
+          <td style="width:45%">{{$dok_baet->keterangan_peralatan}}</td>
       </tr>
       <tr>
           <td style="width:3%"></td>
-          <td style="width:65%"></td>
-          <td><br/></td>
+          <td style="width:52%"></td>
+          <td style="width:45%"><br/></td>
       </tr>
       </tbody>
 </table>

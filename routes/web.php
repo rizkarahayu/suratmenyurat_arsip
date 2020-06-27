@@ -106,7 +106,7 @@ Route::group(['middleware'=>['auth','timpengadaan']],function(){
     Route::post('/dok_baet/uploadstore_baet/{id}', 'JuruBeliController@uploadstore_baet');
     
     //Konfirmasi SPH
-    Route::get('/dok_spph/download/{id}', 'JuruBeliController@cetak_pdf_sph');
+    Route::get('/dok_sph/download/{id}', 'JuruBeliController@cetak_pdf_sph');
     Route::get('/datasphjuru', 'JuruBeliController@data_sph');
 
     //BANH

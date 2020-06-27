@@ -192,7 +192,7 @@
                 <li class="nav-item">
                   <a href="{{url('/datasphjuru')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Data Dokumen Penawaran</p>
+                    <p>Data Dokumen SPH</p>
                   </a>
                 </li>
               </ul>
