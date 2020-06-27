@@ -55,6 +55,7 @@
                                                 <a href="/dok_spph/show/{{ $spph->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
                                                 <a href="/dok_spph/delete/{{ $spph->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a> -->
                                                 <a href="/dok_spph_sub/download/{{ $spph->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a>
+                                                <a href="/dok_spph_sub/show/{{ $spph->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
                                                 <!-- <a href="/dok_spph/upload/{{ $spph->id }}" class="btn btn-success"><i class="fas fa-upload"></i></a> -->
                                             </td>
                                         </tr>

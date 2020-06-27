@@ -21,10 +21,10 @@
   <tr>
       <td width="100%" align="left">
       
-        I.&emsp;  <u>DASAR</u>                  :<br/>
-        &emsp;&emsp;1. Surat Penawaran Harga No. &emsp;&emsp;&nbsp;&nbsp;&nbsp;: {{$dok_spk->no_sph}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_sph)) }} <br/>
-        &emsp;&emsp;2. Berita Acara Evaluasi Teknis No. &nbsp;&nbsp;: {{$dok_spk->no_baet}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_baet)) }} <br/>
-        &emsp;&emsp;3. Berita Acara Negosiasi Harga No. &nbsp;: {{$dok_spk->no_banh}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_banh)) }} <br/>
+        I.  <u>DASAR</u>                  :<br/>
+        1. Surat Penawaran Harga No.  &nbsp;&nbsp;&nbsp;&nbsp;: {{$dok_spk->no_sph}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_sph)) }} <br/>
+        2. Berita Acara Evaluasi Teknis No. &nbsp;&nbsp;: {{$dok_spk->no_baet}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_baet)) }} <br/>
+        3. Berita Acara Negosiasi Harga No. &nbsp;: {{$dok_spk->no_banh}} , tanggal {{ date('d-M-yy', strtotime($dok_spk->tanggal_banh)) }} <br/>
         <br/>
       </td>
   </tr>

@@ -458,7 +458,7 @@ class JuruBeliController extends Controller
     public function show_usulan($id)
     {
         $dok_usulan = DokUsulan::findOrFail($id);
-        return view('jurubeli.memo_download', compact(['dok_usulan'])); 
+        return view('jurubeli.detail_usulan', compact(['dok_usulan'])); 
     }
 
     public function edit_usulan($id)

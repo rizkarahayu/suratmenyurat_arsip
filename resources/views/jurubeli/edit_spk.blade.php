@@ -89,7 +89,7 @@
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Perwakilan</label>
                                 <input class="form-control" name="nama_perwakilan" id="nama_perwakilan"  value="{{$dok_spk->nama_perwakilan}}">
                             </div><div class="form-group">
-                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Perwakilan</label>
+                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Alamat Subkontraktor</label>
                                 <input class="form-control" name="alamat" id="alamat"  value="{{$dok_spk->alamat}}">
                             </div>
                             <div class="form-group">

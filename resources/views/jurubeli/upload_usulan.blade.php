@@ -6,7 +6,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="card-header text-center">
-                            Upload Dokumen Usulan : {{$dok_usulan->no_Memo}}
+                            Upload Dokumen Usulan : {{$dok_usulan->no_memo}}
                         </div>
                     </div>
                     <div class="box-body">

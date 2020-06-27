@@ -91,7 +91,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Alamat Subkontraktor</label>
-                                <input class="form-control" name="alamat" id="alamat" disabled placeholder="{{$dok_spk->nama_perwakilan}}">
+                                <input class="form-control" name="alamat" id="alamat" disabled placeholder="{{$dok_spk->alamat}}">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tembusan1</label>

@@ -173,7 +173,7 @@ Route::group(['middleware'=>['auth','subkontraktor']],function(){
     Route::get('/dok_sph_sub/download/{id}', 'SubkontraktorController@cetak_sph');
     Route::get('/dok_spph_sub/download/{id}', 'SubkontraktorController@cetak_spph');
     Route::post('/dok_sph/uploadstore_sph/{id}', 'SubkontraktorController@uploadstore_sph');
-    Route::get('/dok_spph/show/{id}', 'SubkontraktorController@show_spph');
+    Route::get('/dok_spph/_subshow/{id}', 'SubkontraktorController@show_spph');
 });
 
 
