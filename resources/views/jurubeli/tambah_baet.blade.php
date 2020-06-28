@@ -60,11 +60,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Peralatan Subkon</label>
-                                <input type="text" class="form-control" name="peralatan_subkon" id="peralatan_subkon" required placeholder="Masukkan Peralatan Subkon" >
+                                <textarea class="form-control" name="peralatan_subkon" id="peralatan_subkon" required placeholder="Masukkan Peralatan Subkon"></textarea>
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Peralatan PAL</label>
-                                <input type="text" class="form-control" name="peralatan_pal" id="peralatan_pal" required placeholder="Masukkan Peralatan PAL" >
+                                <textarea class="form-control" name="peralatan_pal" id="peralatan_pal" required placeholder="Masukkan Peralatan PAL"></textarea>
+
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Keterangan Peralatan</label>

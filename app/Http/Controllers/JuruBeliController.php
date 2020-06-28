@@ -337,33 +337,6 @@ class JuruBeliController extends Controller
         $file_banh->move('uploads/banh',$newNamebanh);
         $dok_banh->file_banh = $newNamebanh;
         //
-        // $dok_banh->keterangan_estimasi = $request->input('keterangan_estimasi');
-        // $file_estimasi = $request->file('file_estimasi');
-        // $extension_estimasi = $file_estimasi->getClientOriginalExtension();
-        // $newNameestimasi = rand(100000,1001238912).".".$extension_estimasi;
-        // $file_estimasi->move('uploads/banh',$newNameestimasi);
-        // $dok_banh->file_estimasi = $newNameestimasi;
-        $dok_banh->save();
-        // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
-        return redirect('/dok_banh/upload_banh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
-    }
-   
-    public function upload_eikh($id)
-    {
-        $dok_banh = DokBanh::findOrFail($id);
-        return view('jurubeli.upload_eikh', compact(['dok_banh']));
-    }
-
-    public function uploadstore_eikh($id,Request $request)
-    {
-        $dok_banh = DokBanh::find($id);
-        // $dok_banh->keterangan_banh = $request->input('keterangan_banh');
-        // $file_banh = $request->file('file_banh');
-        // $extension_banh = $file_banh->getClientOriginalExtension();
-        // $newNamebanh = rand(100000,1001238912).".".$extension_banh;
-        // $file_banh->move('uploads/banh',$newNamebanh);
-        // $dok_banh->file_banh = $newNamebanh;
-        // //
         $dok_banh->keterangan_estimasi = $request->input('keterangan_estimasi');
         $file_estimasi = $request->file('file_estimasi');
         $extension_estimasi = $file_estimasi->getClientOriginalExtension();
@@ -372,7 +345,7 @@ class JuruBeliController extends Controller
         $dok_banh->file_estimasi = $newNameestimasi;
         $dok_banh->save();
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
-        return redirect('/dok_banh/upload_eikh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
+        return redirect('/dok_banh/upload_banh/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
    
     //Pemenang

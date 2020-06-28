@@ -60,11 +60,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Peralatan Subkon</label>
-                                <input type="text" class="form-control" name="peralatan_subkon" id="peralatan_subkon"  value="{{$dok_baet->peralatan_subkon}}" >
+                                <textarea type="text" class="form-control" name="peralatan_subkon" id="peralatan_subkon"  value="{{$dok_baet->peralatan_subkon}}" >{{$dok_baet->peralatan_subkon}}</textarea>
                             </div> 
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Peralatan PAL</label>
-                                <input type="text" class="form-control" name="peralatan_pal" id="peralatan_pal"  value="{{$dok_baet->peralatan_pal}}" >
+                                <textarea type="text" class="form-control" name="peralatan_pal" id="peralatan_pal"  value="{{$dok_baet->peralatan_pal}}" >{{$dok_baet->peralatan_pal}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Keterangan Peralatan</label>

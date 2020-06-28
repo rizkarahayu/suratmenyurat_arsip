@@ -19,14 +19,14 @@
 </table>
 <table style="width:100%"; border="1">
   <tr>
-    <td width="100%" align="left" style="font-size:20px">
+    <td width="100%" align="left" style="font-size:20px";>
         Perihal : {{$dok_baet->perihal}}
         Referensi  : {{$dok_baet->referensi_j01}}
         Pada hari ini {{ Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l')}} tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
     </td>
   </tr>
 </table>
-<table border="1">
+<table border="1" style="width:100%";>
   <thead>
     <tr>
       <th>No</th>
@@ -36,20 +36,20 @@
   </thead>
   <tbody>
       <tr>
-          <td><strong> &nbsp; 1</strong></td>
-          <td>
+          <td style="font-size:20px";><strong> &nbsp; 1</strong></td>
+          <td style="font-size:20px";>
             <strong> A. List Pekerjaan yang menjadi tanggungjawab Subkontraktor adalah sebagai berikut : <br/></strong>
             <pre>{{$dok_baet->list_pekerjaan}}</pre>
           </td>
-          <td>{{$dok_baet->keterangan_pekerjaan}}</td>
+          <td style="font-size:20px";>{{$dok_baet->keterangan_pekerjaan}}</td>
       </tr>
       <tr>
-          <td><strong> &nbsp; 3</strong></td>
-          <td><strong> Durasi Pekerjaan<br/></strong>
+          <td style="font-size:20px";><strong> &nbsp; 3</strong></td>
+          <td style="font-size:20px";><strong> Durasi Pekerjaan<br/></strong>
               Mulai {{ date('d-M-yy', strtotime($dok_baet->tanggal_mulai)) }} s/d {{ date('d-M-yy', strtotime($dok_baet->tanggal_selesai  )) }}</td>
-          <td>{{$dok_baet->keterangan_tanggal}}</td>
+          <td style="font-size:20px";>{{$dok_baet->keterangan_tanggal}}</td>
       </tr>
-      <tr>
+      <tr style="font-size:20px";>
           <td ><strong> &nbsp; 4</strong></td>
           <td >
             <strong> Peralatan yang disediakan Subkontraktor : </strong><br/>
@@ -59,7 +59,7 @@
           </td>
           <td >{{$dok_baet->keterangan_peralatan}}</td>
       </tr>
-      <tr>
+      <tr style="font-size:20px";>
           <td ></td>
           <td ></td>
           <td ><br/></td>
