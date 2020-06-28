@@ -73,7 +73,7 @@
                                             </td>
                                                 <td>{{ $dok_banh->keterangan_banh }}</td>
                                             <td>
-                                                <a href="{{asset('/uploads/eikh/'.$dok_banh->file_estimasi)}}">{{$dok_banh->file_estimasi}}</a>
+                                                <a href="{{asset('/uploads/banh/'.$dok_banh->file_estimasi)}}">{{$dok_banh->file_estimasi}}</a>
                                             </td>
                                                 <td>{{ $dok_banh->keterangan_estimasi }}</td>
                                             </tr>

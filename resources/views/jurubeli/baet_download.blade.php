@@ -11,6 +11,7 @@
     <td width="60%" style="font-size:15px" align="center">
         <strong><u>Berita Acara Evaluasi Teknis</u></strong><br/>
         <strong>NO. BAET {{$dok_baet->no_surat}}</strong>
+        <br/>
     </td>
     <td width="20%" style="font-size:20px"; align="center">
         <strong>J02</strong>

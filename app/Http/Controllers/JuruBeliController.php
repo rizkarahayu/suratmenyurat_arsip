@@ -341,7 +341,7 @@ class JuruBeliController extends Controller
         $file_estimasi = $request->file('file_estimasi');
         $extension_estimasi = $file_estimasi->getClientOriginalExtension();
         $newNameestimasi = rand(100000,1001238912).".".$extension_estimasi;
-        $file_estimasi->move('uploads/eikh',$newNameestimasi);
+        $file_estimasi->move('uploads/banh',$newNameestimasi);
         $dok_banh->file_estimasi = $newNameestimasi;
         $dok_banh->save();
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  

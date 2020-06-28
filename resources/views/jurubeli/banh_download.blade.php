@@ -8,7 +8,7 @@
     <td width="20%">
         <img src="{{asset('assets/img/ptpal.jpg')}}" width="150px" align="left">
     </td>
-    <td width="60%" style="font-size:20px" align="center">
+    <td width="60%" style="font-size:15px" align="center">
         <strong><u>Berita Acara</u> <br/>Negosiasi Harga Pengadaan Jasa</strong><br/>
         <strong>BANH {{$dok_banh->no_surat}}</strong>
     </td>
