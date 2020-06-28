@@ -8,7 +8,7 @@
     <td width="20%">
         <img src="{{asset('assets/img/ptpal.jpg')}}" width="150px" align="left">
     </td>
-    <td width="60%" style="font-size:20px" align="center">
+    <td width="60%" style="font-size:15px" align="center">
         <strong><u>Berita Acara Evaluasi Teknis</u></strong><br/>
         <strong>NO. BAET {{$dok_baet->no_surat}}</strong>
     </td>
@@ -36,20 +36,20 @@
   </thead>
   <tbody>
       <tr>
-          <td style="font-size:20px";><strong> &nbsp; 1</strong></td>
-          <td style="font-size:20px";>
+          <td style="font-size:13px";><strong> &nbsp; 1</strong></td>
+          <td style="font-size:13px";>
             <strong> A. List Pekerjaan yang menjadi tanggungjawab Subkontraktor adalah sebagai berikut : <br/></strong>
             <pre>{{$dok_baet->list_pekerjaan}}</pre>
           </td>
-          <td style="font-size:20px";>{{$dok_baet->keterangan_pekerjaan}}</td>
+          <td style="font-size:13px";>{{$dok_baet->keterangan_pekerjaan}}</td>
       </tr>
       <tr>
-          <td style="font-size:20px";><strong> &nbsp; 3</strong></td>
-          <td style="font-size:20px";><strong> Durasi Pekerjaan<br/></strong>
+          <td style="font-size:13px";><strong> &nbsp; 3</strong></td>
+          <td style="font-size:13px";><strong> Durasi Pekerjaan<br/></strong>
               Mulai {{ date('d-M-yy', strtotime($dok_baet->tanggal_mulai)) }} s/d {{ date('d-M-yy', strtotime($dok_baet->tanggal_selesai  )) }}</td>
-          <td style="font-size:20px";>{{$dok_baet->keterangan_tanggal}}</td>
+          <td style="font-size:13px";>{{$dok_baet->keterangan_tanggal}}</td>
       </tr>
-      <tr style="font-size:20px";>
+      <tr style="font-size:13px";>
           <td ><strong> &nbsp; 4</strong></td>
           <td >
             <strong> Peralatan yang disediakan Subkontraktor : </strong><br/>
@@ -59,7 +59,7 @@
           </td>
           <td >{{$dok_baet->keterangan_peralatan}}</td>
       </tr>
-      <tr style="font-size:20px";>
+      <tr style="font-size:13px";>
           <td ></td>
           <td ></td>
           <td ><br/></td>
