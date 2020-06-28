@@ -30,14 +30,14 @@
                                         <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Keterangan</label>
                                         <input type="text" class="form-control" name="keterangan" id="keterangan" required placeholder="Masukkan Keterangan">  
                                     </div>
-                                    <!-- <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                <select class="form-control" name="status" id="status">
-                                    <option value="">Pilih Status</option>
-                                    <option value="diterima" @if (old('status') == 'diterima') selected @endif>Diterima</option>
-                                    <option value="ditolak" @if (old('status') == 'ditolak') selected @endif>Ditolak</option>
-                                </select>
-                            </div> -->
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
+                                        <select class="form-control" name="status" id="status">
+                                            <option value="">Pilih Status</option>
+                                            <option value="diterima">Diterima</option>
+                                            <option value="ditolak">Ditolak</option>
+                                        </select>
+                                    </div>
                                     <div class="box-footer">
                                         <a href="{{ url('/datasph') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                                         <button type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
