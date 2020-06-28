@@ -179,7 +179,7 @@ class SubkontraktorController extends Controller
     {
         $dok_sph = DokSph::find($id);
         $dok_sph->keterangan = $request->input('keterangan');
-        // $dok_sph->status     = $request->input('status');
+        $dok_sph->status     = $request->input('status');
         $file = $request->file('file');
         $extension = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$extension;
