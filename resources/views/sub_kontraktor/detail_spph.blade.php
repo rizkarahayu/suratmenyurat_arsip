@@ -50,7 +50,7 @@
                                 <input type="text" class="form-control" name="jam" id="jam" required placeholder="{{$dok_spph->jam}}">
                             </div> 
                             <div class="box-footer">
-                                <a href="{{ url('/dataspph') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
+                                <a href="{{ url('/dataspphsubkon') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                             </div>
                         </div>
                     </form>

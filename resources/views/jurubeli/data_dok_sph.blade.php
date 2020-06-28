@@ -48,7 +48,7 @@
                                             <td>{{ $sph->tanggal_spph }}</td>
                                             <td>{{ $sph->nama_subkon }}</td>
                                             <td>
-                                            <a href="/dok_sph/show/{{ $sph->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a>
+                                                <a href="/dok_sph/show/{{ $sph->id }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
                                                 <a href="/dok_sph/download/{{ $sph->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a>
                                             </td>
                                         </tr>
