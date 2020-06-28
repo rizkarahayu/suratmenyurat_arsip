@@ -199,10 +199,10 @@ class SubkontraktorController extends Controller
 
     public function cetak_spph($id)
     {
-        $dok_sph= DokSpph::find($id);
+        $dok_spph= DokSpph::find($id);
         set_time_limit(600);
         $pdf = PDF::loadview('sub_kontraktor.spph_download', compact('dok_spph'))->setPaper('A4', 'potrait'); 
-        return $pdf->download('sph.pdf');
+        return $pdf->download('spph.pdf');
         // return $pdf->stream('spph.pdf');
     }
 
