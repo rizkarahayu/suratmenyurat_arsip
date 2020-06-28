@@ -32,11 +32,11 @@
                                     </div>
                                     <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat</label>
-                                <!-- <select class="form-control" name="status" id="status">
+                                <select class="form-control" name="status" id="status">
                                     <option value="">Pilih Status</option>
-                                    <option value="diterima" @if (old('status_surat') == 'diterima') selected @endif>Diterima</option>
-                                    <option value="ditolak" @if (old('status_surat') == 'ditolak') selected @endif>Ditolak</option>
-                                </select> -->
+                                    <option value="diterima" @if (old('status') == 'diterima') selected @endif>Diterima</option>
+                                    <option value="ditolak" @if (old('status') == 'ditolak') selected @endif>Ditolak</option>
+                                </select>
                             </div>
                                     <div class="box-footer">
                                         <a href="{{ url('/datasph') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
