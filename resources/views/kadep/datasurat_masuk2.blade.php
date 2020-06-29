@@ -37,7 +37,7 @@
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
                                     @if(($masuk->status_surat_kabiro=='onprogress') || ($masuk->status_surat_kabiro=='selesai'))
-                                    <tr>
+                                    <tr style="font-size:13px;">
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->status_surat_kabiro }}</td>

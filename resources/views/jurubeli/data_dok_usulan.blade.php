@@ -6,11 +6,11 @@
                 <div class="card-body">
                 <div class="box-header">
                         <div class="card-header text-center">
-                        Tabel Data Dokumen usulan
+                        Tabel Data Dokumen MUPP
                         </div>
                     </div>
                     <br/>
-                    <a href="/tambah_usulan" class="btn btn-primary">Buat Dok usulan</a>
+                    <a href="/tambah_usulan" class="btn btn-primary">Buat Dok MUPP</a>
                     <br/>
                     <br/>
                     @if (session('status'))
@@ -39,7 +39,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_usulan  as $i => $usulan)
-                                        <tr>
+                                        <tr style="font-size:13px;">
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $usulan->no_memo }}</td>
                                             <td>{{ $usulan->referensi_j01 }}</td>

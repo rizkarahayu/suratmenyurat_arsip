@@ -40,7 +40,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_sph  as $i => $sph)
-                                        <tr>
+                                        <tr style="font-size:13px;">
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $sph->no_surat }}</td>
                                             <td>{{ $sph->no_spph }}</td>

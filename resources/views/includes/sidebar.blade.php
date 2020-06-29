@@ -226,7 +226,7 @@
                 <li class="nav-item">
                   <a href="{{url('/databanh')}}" class="nav-link">
                   <i class="fas fa-envelope-open-text nav-icon"></i>
-                    <p>Buat Dokumen BANH & EIKH</p>
+                    <p style="font-size:15px;">Buat Dokumen BANH & EIKH</p>
                   </a>
                 </li>
               </ul>
@@ -234,7 +234,7 @@
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-envelope"></i>
-                <p>
+                <p style="font-size:15px;">
                   Dok Pengumuman Pemenang
                   <i class="fas fa-angle-left right"></i>
                 </p>

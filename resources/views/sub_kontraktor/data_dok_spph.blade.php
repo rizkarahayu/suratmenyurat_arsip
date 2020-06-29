@@ -43,7 +43,7 @@
                         <tbody>
                                 @foreach($dok_spph  as $i => $spph)
                                     @if ($spph->nama_subkon == Auth::user()->name)
-                                        <tr>
+                                        <tr style="font-size:13px;">
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $spph->no_surat }}</td>
                                             <td>{{ $spph->perihal }}</td>

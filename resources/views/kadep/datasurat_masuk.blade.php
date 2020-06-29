@@ -30,7 +30,7 @@
 
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
-                        <tr>
+                        <tr style="font-size:13px;">
                             <th>No.</th>
                             <th>Kode J01</th>
                             <th>Kode Proyek</th>

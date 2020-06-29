@@ -40,7 +40,7 @@
                         </thead>
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
-                                    <tr>
+                                    <tr style="font-size:13px;">
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->kode_proyek }}</td>
