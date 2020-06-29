@@ -20,9 +20,10 @@ class SubkontraktorController extends Controller
      */
     public function index()
     {   
-        $dok_sph = DokSph::count();
+        $dok_sph_diterima = DokSph::where('status','diterima')->count();
         $dok_spph = DokSpph::count();
-        return view('sub_kontraktor.subkontraktorHome', compact( 'dok_sph','dok_spph'));
+        $dok_sph = DokSph::count();
+        return view('sub_kontraktor.subkontraktorHome', compact( 'dok_sph','dok_spph','dok_sph_diterima'));
     }
 
     /**

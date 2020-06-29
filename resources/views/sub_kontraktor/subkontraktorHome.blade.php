@@ -43,7 +43,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{$dok_spph}}</h3>
+                <h3>{{$dok_sph_diterima}}</h3>
                 <p>Total SPH Diterima</p>
               </div>
             </div>
