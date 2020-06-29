@@ -21,14 +21,8 @@ class JuruBeliController extends Controller
 
     public function index()
     {
-        $dok_spph = DokSpph::count();
-        $dok_sph = DokSph::count();
-        $dok_baet = DohBaet::count();
-        $dok_banh = DokBanh::count();
-        $dok_pemenang = DokPemenang::count();
-        $dok_usulan = DokUsulan::count();
-        $dok_spk = DokSpk::count();
-        return view('jurubeli.pengadaanHome', compact('dok_spph','dok_sph','dok_baet','dok_banh','dok_usulan','dok_spk','dok_pemenang'));
+        $dok_spph = DokSpph::paginate(10)->count();
+        return view('jurubeli.pengadaanHome', compact( 'dok_spph'));
     }
 
     public function data_spph()
@@ -358,7 +352,7 @@ class JuruBeliController extends Controller
     //Pemenang
     public function data_pemenang()
     {
-        $dok_pemenang = DokPemenang::paginate(10);
+        $dok_pemenang = Dokpemenang::paginate(10);
         return view('jurubeli.data_dok_pemenang', compact( 'dok_pemenang'));
     }
 
