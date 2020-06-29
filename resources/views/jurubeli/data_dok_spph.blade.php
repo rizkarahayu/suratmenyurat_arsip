@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
-                        <tr>
+                        <tr  style="font-size:13px;">
                             <th>No.</th>
                             <th>Nomor Surat</th>
                             <th>Perihal</th>
@@ -42,7 +42,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_spph  as $i => $spph)
-                                        <tr style="font-size:13px;">
+                                        <tr">
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $spph->no_surat }}</td>
                                             <td>{{ $spph->perihal }}</td>

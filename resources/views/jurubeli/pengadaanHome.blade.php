@@ -21,7 +21,6 @@
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$dok_spph}}</h3>
-
                 <p>Total SPPH</p>
               </div>
               <div class="icon">
@@ -48,7 +47,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-              <h3>{{$dok_spph}}</h3>
+              <h3>{{$dok_baet}}</h3>
               <p>Total Dokumen BAET</p>
               </div>
               <div class="icon">
