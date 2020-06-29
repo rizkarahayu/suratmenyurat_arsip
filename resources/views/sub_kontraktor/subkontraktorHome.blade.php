@@ -5,9 +5,13 @@
             <div class="small-box bg-info">
               <div class="inner">
               <br/>
+              <br/>
+              <br/>
                 <h1 align="center"><strong>Selamat Datang di Dashboard Sub Kontraktor</strong></h1>
                 <h1 align="center"><strong>e-Procurement PT. PAL Indonesia Persero</strong></h1>
                 <h2 align="center">Sistem Informasi Pengadaan Jasa PT. PAL Indonesia (Persero)</h2>
+              <br/>
+              <br/>
               <br/>
               </div>
             </div>

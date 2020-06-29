@@ -6,9 +6,15 @@
             <div class="small-box bg-info">
               <div class="inner">
               <br/>
+              <br/>
+              <br/>
+              <br/>
                 <h1 align="center"><strong>Selamat Datang di Dashboard Sekretaris</strong></h1>
                 <h1 align="center"><strong>e-Procurement PT. PAL Indonesia Persero</strong></h1>
                 <h2 align="center">Sistem Informasi Pengadaan Jasa PT. PAL Indonesia (Persero)</h2>
+              <br/>
+              <br/>
+              <br/>
               <br/>
               </div>
             </div>
@@ -42,9 +48,8 @@
               <a href="/datasurat_keluar" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
+          ./col
+          <!-- <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>{{$surat_keluar}}</h3>
@@ -57,7 +62,6 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>{{$surat_keluar}}</h3>
@@ -68,6 +72,6 @@
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-          </div>
+          </div> -->
 </div>
 @endsection

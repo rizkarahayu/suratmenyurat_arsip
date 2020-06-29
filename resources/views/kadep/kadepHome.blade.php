@@ -21,10 +21,7 @@
 
               <p>Total Surat Masuk</p>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/surat_masuk_kadep" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -33,12 +30,9 @@
             <div class="small-box bg-warning">
               <div class="inner">
               <h3>{{$surat_masuk_kadep}}</h3>
-              <p>Total Surat Keluar</p>
+              <p>Total Surat Masuk </p>
               </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/surat_masuk_kadep2" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

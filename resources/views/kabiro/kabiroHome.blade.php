@@ -20,12 +20,9 @@
               <div class="inner">
               <h3>{{$surat_masuk_kabiro}}</h3>
 
-              <p>Total SPH Masuk</p>
+              <p>Total Total Surat Masuk Kabiro</p>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/surat_masuk_kabiro" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -34,39 +31,12 @@
             <div class="small-box bg-warning">
               <div class="inner">
               <h3>{{$surat_masuk_kabiro}}</h3>
-              <p>Total Dokumen BAET</p>
+              <p>Total Surat Masuk Kabiro</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>{{$surat_masuk_kabiro}}</h3>
-                <p>Total Dokumen BANH</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>{{$surat_masuk_kabiro}}</h3>
-                <p>Total Dokumen BANH</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/surat_masuk_kabiro" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 </div>
