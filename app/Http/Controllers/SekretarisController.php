@@ -18,8 +18,9 @@ class SekretarisController extends Controller
      */
     public function index()
     {
-        //
-        return view('sekretaris.sekretarisHome');
+        $surat_masuk = SuratMasuk::count();
+        $surat_keluar = SuratKeluar::count();
+        return view('sekretaris.sekretarisHome', compact( 'surat_masuk','surat_keluar'));
     }
 
     public function datasurat_masuk()

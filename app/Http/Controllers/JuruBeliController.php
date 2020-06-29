@@ -21,7 +21,8 @@ class JuruBeliController extends Controller
 
     public function index()
     {
-        return view('jurubeli.pengadaanHome');
+        $dok_spph = DokSpph::paginate(10)->count();
+        return view('jurubeli.pengadaanHome', compact( 'dok_spph'));
     }
 
     public function data_spph()

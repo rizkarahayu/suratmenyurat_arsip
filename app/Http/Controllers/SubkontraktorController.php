@@ -19,9 +19,10 @@ class SubkontraktorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-        return view('sub_kontraktor.subkontraktorHome');
+    {   
+        $dok_sph = DokSph::count();
+        $dok_spph = DokSpph::count();
+        return view('sub_kontraktor.subkontraktorHome', compact( 'dok_sph','dok_spph'));
     }
 
     /**

@@ -17,8 +17,9 @@ class KabiroController extends Controller
      */
     public function index()
     {
-        //
-        return view('kabiro.kabiroHome');
+        $surat_masuk = SuratMasuk::count();
+        $surat_masuk_kabiro = SuratMasuk::count();
+        return view('kabiro.kabiroHome', compact( 'surat_masuk','surat_masuk_kabiro'));
     }
 
     public function datasurat_masuk()

@@ -16,8 +16,9 @@ class KadepController extends Controller
      */
     public function index()
     {
-        //
-        return view('kadep.kadepHome');
+        $surat_masuk = SuratMasuk::count();
+        $surat_masuk_kadep= SuratMasuk::count();
+        return view('kadep.kadepHome', compact( 'surat_masuk','surat_masuk_kadep'));
     }
 
     public function datasurat_masuk()
