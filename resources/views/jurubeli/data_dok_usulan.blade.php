@@ -39,7 +39,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_usulan  as $i => $usulan)
-                                        <tr style="font-size:13px;">
+                                        <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $usulan->no_memo }}</td>
                                             <td>{{ $usulan->referensi_j01 }}</td>

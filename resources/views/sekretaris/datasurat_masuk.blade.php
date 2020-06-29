@@ -29,7 +29,7 @@
 
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
-                        <tr>
+                        <tr style="font-size:13px;">
                             <th>No.</th>
                             <th>Kode J01</th>
                             <th>Kode Proyek</th>
@@ -40,7 +40,7 @@
                         </thead>
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
-                                    <tr style="font-size:13px;">
+                                    <tr>
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->kode_proyek }}</td>

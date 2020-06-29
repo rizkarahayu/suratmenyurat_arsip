@@ -25,7 +25,7 @@
 
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
-                        <tr>
+                        <tr style="font-size:13px;">
                             <th>No.</th>
                             <th>Kode J01</th>
                             <th>Status J01</th>
@@ -37,7 +37,7 @@
                         <tbody>
                                 @foreach($surat_masuk as $i => $masuk)
                                     @if(($masuk->status_surat_kabiro=='onprogress') || ($masuk->status_surat_kabiro=='selesai'))
-                                    <tr style="font-size:13px;">
+                                    <tr>
                                           <td>{{ ++$i }}</td>
                                           <td>{{ $masuk->kodej01 }}</td>
                                           <td>{{ $masuk->status_surat_kabiro }}</td>

@@ -41,7 +41,7 @@
                         </thead>
                         <tbody>
                                 @foreach($dok_spk  as $i => $spk)
-                                        <tr style="font-size:13px;">
+                                        <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $spk->no_surat }}</td>
                                             <td>{{ $spk->tanggal_dibuat }}</td>

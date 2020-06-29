@@ -27,7 +27,7 @@
 
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
-                        <tr>
+                        <tr style="font-size:13px;">
                             <th>No.</th>
                             <th>Nama</th>
                             <th>Email</th>
