@@ -358,7 +358,7 @@ class JuruBeliController extends Controller
     //Pemenang
     public function data_pemenang()
     {
-        $dok_pemenang = Dokpemenang::paginate(10);
+        $dok_pemenang = DokPemenang::paginate(10);
         return view('jurubeli.data_dok_pemenang', compact( 'dok_pemenang'));
     }
 
