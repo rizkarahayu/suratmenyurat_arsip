@@ -209,22 +209,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                @foreach($dok_pemenang as $i => $dp)
+                <!-- @foreach($dok_pemenang as $i => $dp)
                     <div class="testimonials-slides owl-carousel">
-                        <!-- Single Testimonial -->
                         <div class="single-testimonial d-md-flex align-items-center">
-                            <!-- Testimonial Thumb -->
                             <div class="testimonial-thumbnail">
                                 <img src="img/clients-img/1.jpg" alt="">
                             </div>
-                            <!-- Content -->
                             <div class="testimonilas-content">
                                 <span class="playfair-font quote">“</span>
                                 <h5>{{$dp->deskripsi_singkat}}</h5>
                                 <h6>{{$dp->nama_proyek}} - <span>  {{$dp->nama_pemenang}}</span></h6>
                             </div>
                         </div>
-                        <!-- Single Testimonial -->
                         <div class="single-testimonial d-md-flex align-items-center">
                             <div class="testimonial-thumbnail">
                                 <img src="img/clients-img/1.jpg" alt="">
@@ -235,13 +231,11 @@
                                 <h6>Aigars Silkalns - <span>CEO DeerCreative</span></h6>
                             </div>
                         </div>
-                        <!-- Single Testimonial -->
                         <div class="single-testimonial d-md-flex align-items-center">
-                            <!-- Testimonial Thumb -->
+
                             <div class="testimonial-thumbnail">
                                 <img src="img/clients-img/1.jpg" alt="">
                             </div>
-                            <!-- Content -->
                             <div class="testimonilas-content">
                                 <span class="playfair-font quote">“</span>
                                 <h5>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</h5>
@@ -249,7 +243,31 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach -->
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            @foreach($dok_pemenang as $key => $slider)
+                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                                <div class="testimonilas-content">
+                                    <span class="playfair-font quote">“</span>
+                                    <h2>{{$slider->deskripsi_singkat}}</h2>
+                                    <h4>{{$slider->nama_proyek}} - <span>  {{$slider->nama_pemenang}}</span></h4>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true">     </span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
