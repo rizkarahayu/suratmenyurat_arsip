@@ -23,7 +23,8 @@ class JuruBeliController extends Controller
     {
         $dok_spph = DokSpph::paginate(10)->count();
         $dok_sph = DokSph::count();
-        return view('jurubeli.pengadaanHome', compact( 'dok_spph','dok_sph'));
+        $dok_baet = DokBaet::count();
+        return view('jurubeli.pengadaanHome', compact('dok_spph','dok_sph','dok_baet'));
     }
 
     public function data_spph()
