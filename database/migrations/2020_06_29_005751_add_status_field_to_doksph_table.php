@@ -14,7 +14,7 @@ class AddStatusFieldToDoksphTable extends Migration
     public function up()
     {
         Schema::table('doksph', function (Blueprint $table) {
-            $table->string('status_surat')->after('status');
+            $table->string('status')->after('keterangan');
         });
     }
 
