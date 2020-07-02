@@ -21,18 +21,18 @@
 </table>
 <table style="width:100%"; border="1">
   <tr>
-    <td width="100%">
+    <td width="100%" style="font-size:15px">
         Pada hari ini {{ Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l')}} tanggal {{ date('d-M-yy', strtotime($dok_banh->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah negosiasi harga pengadaan jasa dengan hasil sebagai berikut :
     </td>
   </tr>
   <tr>
-    <td width="100%">
+    <td width="100%" style="font-size:15px">
         Nama Penyedia Jasa : {{$dok_banh->nama_subkon}}
         Dalam hal ini diwakili : {{$dok_banh->nama_perwakilan}}
     </td>
   </tr>
   <tr>
-    <td width="100%">
+    <td width="100%" style="font-size:15px">
         <strong>Referensi : </strong><br/>
         J01 No &nbsp;&nbsp;&nbsp;&nbsp; : {{$dok_banh->no_j01}} 
     </td>
@@ -112,9 +112,9 @@
      <td>
         <table style="width:100%"; border="1">
         <thead>
-          <tr><th style="width:30%";><br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
-          <tr><th style="width:30%";><br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
-          <tr><th style="width:30%";><br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
+          <tr><th style="width:30%";>{{$dok_banh->nama_jurubeli1}}<br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
+          <tr><th style="width:30%";>{{$dok_banh->nama_jurubeli2}}<br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
+          <tr><th style="width:30%";>{{$dok_banh->nama_jurubeli3}}<br/><br/><br/></th><th style="width:19%";><br/><br/><br/></th></tr>
         </thead>
         </table>
       </td>
