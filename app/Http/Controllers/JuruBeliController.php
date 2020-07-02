@@ -541,7 +541,7 @@ class JuruBeliController extends Controller
     {
         $dok_sph = DokSph::findOrFail($id);
         $nama_subkon = User::get();
-        return view('jurubeli.sph_download', compact(['dok_sph','nama_subkon'])); 
+        return view('jurubeli.detail_sph', compact(['dok_sph','nama_subkon'])); 
     }
 
     public function edit_spk($id)
