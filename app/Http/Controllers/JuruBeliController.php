@@ -275,7 +275,7 @@ class JuruBeliController extends Controller
     {
         $dok_banh = DokBanh::findOrFail($id);
         $nama_subkon = User::get();
-        return view('jurubeli.detail_banh', compact(['dok_banh','nama_subkon'])); 
+        return view('jurubeli.banh_download', compact(['dok_banh','nama_subkon'])); 
     }
 
     public function edit_banh($id)

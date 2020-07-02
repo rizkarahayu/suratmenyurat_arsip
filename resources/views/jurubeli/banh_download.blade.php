@@ -6,7 +6,8 @@
 <table style="width:100%"; border="1">
   <tr>
     <td width="20%">
-        <img src="{{asset('assets/img/ptpal.jpg')}}" width="150px" align="left">
+        <img src="{{asset('assets/img/ptpal.jpg')}}" width="140px" align="left">
+        <br/>
     </td>
     <td width="60%" style="font-size:15px" align="center">
         <strong><u>Berita Acara</u> <br/>Negosiasi Harga Pengadaan Jasa</strong><br/>
