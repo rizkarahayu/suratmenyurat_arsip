@@ -19,7 +19,7 @@
               <div class="inner">
               <h3>{{$surat_masuk}}</h3>
 
-              <p>Total Surat Masuk</p>
+              <p>Total Surat Masuk (Status : Diterima)</p>
               </div>
               <a href="/surat_masuk_kadep" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -30,7 +30,7 @@
             <div class="small-box bg-warning">
               <div class="inner">
               <h3>{{$surat_masuk_kadep}}</h3>
-              <p>Total Surat Masuk </p>
+              <p>Total Surat Masuk (Status : Ditolak)</p>
               </div>
               <a href="/surat_masuk_kadep2" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
