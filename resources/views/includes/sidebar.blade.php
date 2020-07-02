@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   @if(Auth::user()->is_admin=='kadep')
     <a href="{{url('/kadep')}}" class="brand-link">
-      <img src="/assets/dist/img/AdminLTEAdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8;">  
       <span class="brand-text font-weight-light">ADAJASAPROC</span>
     </a>
   @endif

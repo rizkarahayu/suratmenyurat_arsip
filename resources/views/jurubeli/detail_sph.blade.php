@@ -63,7 +63,7 @@
                                 <input type="text" class="form-control" name="nama_perwakilan" id="nama_perwakilan"  disabled placeholder="{{$dok_sph->nama_perwakilan}}" >
                             </div> 
                             <div class="box-footer">
-                                <a href="{{ url('/datasph') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
+                                <a href="{{ url('/datasphjuru') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Back</a>
                             </div>
                         </div>
                     </form>
