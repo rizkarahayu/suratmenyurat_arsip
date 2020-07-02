@@ -23,7 +23,7 @@
     Divisi Supply Chain<br/>
     PT. PAL INDONESIA (PERSERO) <br/>
     Di -<br/>
-    &emsp;&emsp;Tempat<br/><br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tempat<br/><br/><br/>
     </td>
   </tr>
 <tr>

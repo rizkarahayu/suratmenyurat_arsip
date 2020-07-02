@@ -107,6 +107,7 @@ Route::group(['middleware'=>['auth','jurubeli']],function(){
     
     //Konfirmasi SPH
     Route::get('/dok_sph/download/{id}', 'JuruBeliController@cetak_pdf_sph');
+    Route::get('/dok_sph/show/{id}', 'JuruBeliController@show_sph');
     Route::get('/datasphjuru', 'JuruBeliController@data_sph');
 
     //BANH

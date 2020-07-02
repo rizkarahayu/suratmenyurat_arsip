@@ -61,19 +61,19 @@
 </table>
 <table style="width:100%"; border="1">
       <tr>
-          <td><strong>Penawaran Harga : </strong><p align="center" style="font-size:40px">{{$dok_banh->harga}}</p></td>
+          <td><strong>Penawaran Harga : </strong><p align="center" style="font-size:28px">{{$dok_banh->harga}}</p></td>
       </tr>
       <tr>
-          <td><strong>Negosiasi 1 :</strong><p align="center" style="font-size:40px">{{$dok_banh->harga_nego1}}</p></td>
+          <td><strong>Negosiasi 1 :</strong><p align="center" style="font-size:28px">{{$dok_banh->harga_nego1}}</p></td>
       </tr>
       <tr>
-          <td><strong>Negosiasi 2 :</strong><p align="center" style="font-size:40px">{{$dok_banh->harga_nego2}}</p></td>
+          <td><strong>Negosiasi 2 :</strong><p align="center" style="font-size:28px">{{$dok_banh->harga_nego2}}</p></td>
       </tr>
       <tr>
-          <td><strong>Negosiasi 3 :</strong><p align="center" style="font-size:40px">{{$dok_banh->harga_nego3}}</p></td>
+          <td><strong>Negosiasi 3 :</strong><p align="center" style="font-size:28px">{{$dok_banh->harga_nego3}}</p></td>
       </tr>
       <tr>
-          <td><strong>Nilai Kontrak / Perjanjian :</strong> <p align="center" style="font-size:40px">{{$dok_banh->nilai_kontrak}}</p></td>
+          <td><strong>Nilai Kontrak / Perjanjian :</strong> <p align="center" style="font-size:28px">{{$dok_banh->nilai_kontrak}}</p></td>
       </tr>
       <tr>
           <td><strong>Cara Pembayaran :</strong></td>
