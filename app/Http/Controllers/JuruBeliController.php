@@ -275,7 +275,7 @@ class JuruBeliController extends Controller
     {
         $dok_banh = DokBanh::findOrFail($id);
         $nama_subkon = User::get();
-        return view('jurubeli.banh_download', compact(['dok_banh','nama_subkon'])); 
+        return view('jurubeli.detail_banh', compact(['dok_banh','nama_subkon'])); 
     }
 
     public function edit_banh($id)
@@ -537,12 +537,12 @@ class JuruBeliController extends Controller
         return view('jurubeli.detail_spk', compact(['dok_spk','nama_subkon'])); 
     }
 
-    // public function show_sph($id)
-    // {
-    //     $dok_sph = DokSph::findOrFail($id);
-    //     $nama_subkon = User::get();
-    //     return view('jurubeli.sph_download', compact(['dok_sph','nama_subkon'])); 
-    // }
+    public function show_sph($id)
+    {
+        $dok_sph = DokSph::findOrFail($id);
+        $nama_subkon = User::get();
+        return view('jurubeli.sph_download', compact(['dok_sph','nama_subkon'])); 
+    }
 
     public function edit_spk($id)
     {

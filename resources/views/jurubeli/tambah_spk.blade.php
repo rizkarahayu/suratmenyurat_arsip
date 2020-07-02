@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>No BANH</label>
-                                <input class="form-control" name="no_banh" id="no_banh" required placeholder="Masukkan No BAET">
+                                <input class="form-control" name="no_banh" id="no_banh" required placeholder="Masukkan No BANH">
                             </div>  
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>Tanggal BANH</label>

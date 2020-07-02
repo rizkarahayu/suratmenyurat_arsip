@@ -95,6 +95,12 @@
   <td><br/></td>
   </tr>
   <tr>
+  <td><br/></td>
+  </tr>
+  <tr>
+  <td><br/></td>
+  </tr>
+  <tr>
   <td><p align="center"style="font-size:11px;">PT. PAL INDONESIA (PERSERO)<br/>
   Kantor Pusat : Ujung Surabayar 60155, PO BOX 1134 INDONESIA <br/> 
   Telp (62-31) 3292275 (Hunting) Fax: (62-31) 3292530, 3292516, 3292426, E-Mail : headoffice@pal.co.id Web Site : http://www.pal.co.id<br/>

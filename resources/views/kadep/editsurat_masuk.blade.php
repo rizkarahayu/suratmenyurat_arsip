@@ -50,7 +50,7 @@
 
                             <div class="form-group" style='display:none;' id='nama_pj'>
                                 <select class="form-control" id="nama_pj" name="nama_pj">
-                                    <option value="" >Pilih Nama Kabiro (PJ SPK/SPER)</option>
+                                    <option value="" >Pilih Nama Kabiro</option>
                                     @foreach ($nama_kabiro  as  $kabiro)
                                         @if ($kabiro->is_admin == 'kabiro')
                                             <option  value="{{ $kabiro->name }}" > {{ $kabiro->name }} </option>

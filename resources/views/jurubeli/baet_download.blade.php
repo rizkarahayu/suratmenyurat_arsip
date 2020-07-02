@@ -6,7 +6,7 @@
 <table style="width:100%"; border="1">
   <tr>
     <td width="20%">
-        <img src="{{asset('assets/img/ptpal.jpg')}}" width="150px" align="left">
+        <img src="{{asset('assets/img/ptpal.jpg')}}" width="150px" align="center">
     </td>
     <td width="60%" style="font-size:15px" align="center">
         <strong><u>Berita Acara Evaluasi Teknis</u></strong><br/>
@@ -20,7 +20,7 @@
 </table>
 <table style="width:100%"; border="1">
   <tr>
-    <td width="100%" align="left" style="font-size:20px";>
+    <td width="100%" align="left" style="font-size:14px";>
         Perihal : {{$dok_baet->perihal}}
         Referensi  : {{$dok_baet->referensi_j01}}
         Pada hari ini {{ Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l')}} tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
