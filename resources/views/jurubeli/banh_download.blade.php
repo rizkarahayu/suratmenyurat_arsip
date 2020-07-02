@@ -6,14 +6,15 @@
 <table style="width:100%"; border="1">
   <tr>
     <td width="20%">
-        <img src="{{asset('assets/img/ptpal.jpg')}}" width="140px" align="left">
+        <img src="{{asset('assets/img/ptpal.jpg')}}" width="130px" align="left">
         <br/>
     </td>
-    <td width="60%" style="font-size:15px" align="center">
-        <strong><u>Berita Acara</u> <br/>Negosiasi Harga Pengadaan Jasa</strong><br/>
-        <strong>BANH {{$dok_banh->no_surat}}</strong>
+    <td width="60%" style="font-size:15px" >
+        <strong align="center"><u>Berita Acara</u><br/></strong>
+        <strong align="left">Negosiasi Harga Pengadaan Jasa</strong><br/>
+        <strong align="left">BANH {{$dok_banh->no_surat}}</strong>
     </td>
-    <td width="20%" style="font-size:20px"; align="center">
+    <td width="20%" style="font-size:22px"; align="center">
         <strong>J03</strong>
     </td>
   </tr>
