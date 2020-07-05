@@ -130,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Pemilihan Langsung</label>
+                                <label for="inputEmail3" class="col-sm-12 control-label"><i class="fa fa-tty"> &nbsp;</i>Status Surat Pengadaan</label>
                                 <input class="form-control" placeholder="{{$surat_masuk_kabiro->status_surat_kabiro}}" type="input">
                             </div>
                         </div>
