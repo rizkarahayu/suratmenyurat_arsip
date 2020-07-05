@@ -359,7 +359,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
                             <h6>Kontak Kami</h6>
-                            <p>031 3292275 <br>headoffice@pal.co.id
+                            <p>031 3292275 (ext : 4051) <br>headoffice@pal.co.id
                             </p>
                             <p>Ujung Surabaya <br>Surabaya, East Java 60155</p>
                             <p>Jam Kerja: 07.30 - 16.30 WIB</p>
