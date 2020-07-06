@@ -39,6 +39,25 @@ class KadepController extends Controller{
         return view('kadep.datapj_spk', compact('data_pj'));
     }
 
+    public function data_user()
+    {
+        $data_user = User::paginate(10);
+        return view('kadep.data_user', compact('data_user'));
+    }
+
+    public function delete_user($id)
+    {
+        $data_user = User::find($id);
+        $data_user->delete();
+        return redirect('/datauser')->with(['message'=> 'Data Berhasil di Hapus!!']);
+    }
+
+    public function show_user($id)
+    {
+        $data_user= User::find($id); 
+        return view('kadep.detail_user',compact( 'data_user')); 
+    }
+
     /**
      * Store a newly created resource in storage.
      *

@@ -16,7 +16,7 @@
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
       <?php 
-      \Carbon\Carbon::setLocale('id'); echo \Carbon\Carbon::now()->format('l, d F Y H:i');
+      \Carbon\Carbon::setLocale('id'); date_default_timezone_set('Asia/Jakarta'); echo \Carbon\Carbon::now()->format('l, d F Y H:i');
       ?>
       </div>
     </form>

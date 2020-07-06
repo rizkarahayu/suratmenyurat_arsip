@@ -81,7 +81,7 @@
               <a href="#" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
                 <p>
-                  Register 
+                  Data User 
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -90,6 +90,14 @@
                   <a href="{{ route('register') }}" class="nav-link">
                     <i class="far fa-user nav-icon"></i>
                     <p>Register User</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('/datauser')}}" class="nav-link">
+                    <i class="far fa-user nav-icon"></i>
+                    <p>Tabel User</p>
                   </a>
                 </li>
               </ul>

@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware'=>['auth','kadep']],function(){
     //surat masuk
     Route::get('/kadep', 'KadepController@index')->name('kadep');
+    Route::get('/datauser', 'KadepController@data_user');
     Route::get('/surat_masuk_kadep', 'KadepController@datasurat_masuk');
     Route::get('/surat_masuk_kadep2', 'KadepController@datasurat_masuk_bag2');
     Route::get('/editsurat_masuk_kadep/{id}', 'KadepController@edit');
@@ -30,6 +31,8 @@ Route::group(['middleware'=>['auth','kadep']],function(){
     Route::post('/surat_masuk_kadep/update/{id}', 'KadepController@update');
     Route::post('/surat_masuk_kadep/update_kabiro/{id}', 'KadepController@update_kabiro');
     Route::get('/surat_masuk_kadep/show/{id}', 'KadepController@show');
+    Route::get('/data_user/show_user/{id}', 'KadepController@show_user');
+    Route::get('/data_user/delete_user/{id}', 'KadepController@delete_user');
     Route::get('/datapj_spk_kadep', 'KadepController@datapj');
     Route::get('/surat_masuk_kadep/show/penunjukan/{id}', 'KadepController@show_penunjukan');
     Route::get('/surat_masuk_kadep/show/pemilihan/{id}', 'KadepController@show_pemilihan');
