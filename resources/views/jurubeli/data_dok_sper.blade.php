@@ -6,11 +6,11 @@
                 <div class="card-body">
                 <div class="box-header">
                         <div class="card-header text-center">
-                        Tabel Data Dokumen MUPP
+                        Tabel Data Dokumen SPER
                         </div>
                     </div>
                     <br/>
-                    <a href="/tambah_usulan" class="btn btn-primary">Buat Dok MUPP</a>
+                    <a href="/tambah_sper" class="btn btn-primary">Buat Dok SPER</a>
                     <br/>
                     <br/>
                     @if (session('status'))
@@ -32,23 +32,23 @@
                         <thead>
                         <tr>
                         <th style="text-align: center;font-size:13px;">No.</th>
-                        <th style="text-align: center;font-size:13px;">No Memo</th>
+                        <th style="text-align: center;font-size:13px;">No SPER</th>
                         <th style="text-align: center;font-size:13px;">Referensi J01</th>
                         <th style="text-align: center;font-size:13px;">Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                                @foreach($dok_sper  as $i => $usulan)
+                                @foreach($dok_sper  as $i => $sper)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            <td>{{ $usulan->no_memo }}</td>
-                                            <td>{{ $usulan->referensi_j01 }}</td>
+                                            <td>{{ $sper->no_sper }}</td>
+                                            <td>{{ $sper->referensi_j01 }}</td>
                                             <td>
-                                                <a href="/edit_usulan/{{ $usulan->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-                                                <a href="/dok_usulan/show/{{ $usulan->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                                <a href="/dok_usulan/delete/{{ $usulan->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-                                                <!-- <a href="/dok_usulan/download/{{ $usulan->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a> -->
-                                                <a href="/dok_usulan/upload_usulan/{{ $usulan->id }}" class="btn btn-success"><i class="fas fa-upload"></i></a>
+                                                <a href="/edit_sper/{{ $sper->id }}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="/dok_sper/show/{{ $sper->id }}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                                                <a href="/dok_sper/delete/{{ $sper->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                                <!-- <a href="/dok_sper/download/{{ $sper->id }}" class="btn btn-danger"><i class="fa fa-download"></i></a> -->
+                                                <a href="/dok_sper/upload_sper/{{ $sper->id }}" class="btn btn-success"><i class="fas fa-upload"></i></a>
                                             </td>
                                         </tr>
                                 

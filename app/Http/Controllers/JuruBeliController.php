@@ -629,4 +629,75 @@ class JuruBeliController extends Controller
         return redirect('/dok_spk/upload_spk/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }
 
+    public function data_sper()
+    {
+        $dok_sper = DokSpk::paginate(10);
+        return view('jurubeli.data_dok_sper', compact( 'dok_sper'));
+    }
+
+    public function create_sper()
+    {
+        $dok_sper = DokSpk::paginate(10);
+        return view('jurubeli.tambah_sper', compact(['dok_sper']));
+    }
+
+    public function store_sper(Request $request)
+    {
+        $dok_sper                       = new DokSpk;
+        $dok_sper->no_sper             = $request->input('no_sper');
+        $dok_sper->referensi_j01        = $request->input('referensi_j01');
+        $dok_sper->save();
+
+        return redirect('/datasper')->with(['message'=> 'Data Berhasil di Simpan!!']);
+    }
+
+    public function show_sper($id)
+    {
+        $dok_sper = DokSpk::findOrFail($id);
+        return view('jurubeli.detail_sper', compact(['dok_sper'])); 
+    }
+
+    public function edit_sper($id)
+    {
+        $dok_sper = DokSpk::findOrFail($id);
+        return view('jurubeli.edit_sper', compact(['dok_sper']));
+    }
+
+    public function update_sper($id,Request $request)
+    {
+        $dok_sper                       = DokSpk::find($id);
+        $dok_sper->no_sper              = $request->input('no_sper');
+        $dok_sper->referensi_j01        = $request->input('referensi_j01');
+        $dok_sper->save();
+
+        return redirect('/datasper')->with(['message'=> 'Data Berhasil di Simpan!!']);
+    }
+
+    public function destroy_sper($id)
+    {
+        $dok_sper = DokSpk::find($id);
+        $dok_sper->delete();
+        return redirect('/datasper')->with(['message'=> 'Data Berhasil di Hapus!!']);
+    }
+
+    public function upload_sper($id)
+    {
+        $dok_sper = DokSpk::findOrFail($id);
+        return view('jurubeli.upload_sper', compact(['dok_sper']));
+    }
+
+    public function uploadstore_sper($id,Request $request)
+    {
+        $dok_sper = DokSpk::find($id);
+        $dok_sper->keterangan= $request->input('keterangan');
+        $file = $request->file('file');
+        $extension = $file->getClientOriginalExtension();
+        $newName = rand(100000,1001238912).".".$extension;
+        $file->move('uploads/sper',$newName);
+        $dok_sper->file = $newName;
+        $dok_sper->save();
+        // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
+        return redirect('/dok_sper/upload_sper/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
+    }
+
 }

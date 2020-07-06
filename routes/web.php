@@ -144,6 +144,17 @@ Route::group(['middleware'=>['auth','jurubeli']],function(){
     Route::get('/dok_usulan/upload_usulan/{id}', 'JuruBeliController@upload_usulan');
     Route::post('/dok_usulan/uploadstore_usulan/{id}', 'JuruBeliController@uploadstore_usulan');
 
+    //usulan
+    Route::get('/datasper', 'JuruBeliController@data_sper');
+    Route::get('/tambah_sper', 'JuruBeliController@create_sper');
+    Route::post('/tambah_sper/store', 'JuruBeliController@store_sper');
+    Route::get('/edit_sper/{id}', 'JuruBeliController@edit_sper');
+    Route::post('/edit_sper/update/{id}', 'JuruBeliController@update_sper');
+    Route::get('/dok_sper/delete/{id}', 'JuruBeliController@destroy_sper');
+    Route::get('/dok_sper/show/{id}', 'JuruBeliController@show_sper');
+    // Route::get('/dok_usulan/upload_usulan/{id}', 'JuruBeliController@upload_usulan');
+    // Route::post('/dok_usulan/uploadstore_usulan/{id}', 'JuruBeliController@uploadstore_usulan');
+
     //SPK
     Route::get('/dataspk', 'JuruBeliController@data_spk')->name('dataspk');
     Route::get('/tambah_spk', 'JuruBeliController@create_spk');
