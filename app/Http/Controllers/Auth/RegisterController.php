@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -38,8 +40,10 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('kadep');
     }
+
+    protected $redirectTo = '/kadep';
 
     /**
      * Get a validator for an incoming registration request.
@@ -73,25 +77,42 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function redirectTo()
-    {
-        if (auth()->user()->is_admin =='kadep') {
-            return '/kadep';
-        }
-        else if (auth()->user()->is_admin =='sekretaris') {
-            return '/sekretaris';
-        } 
-        elseif (auth()->user()->is_admin == 'pengadaan') {
-            return '/jurubeli';
-        }
-        elseif (auth()->user()->is_admin == 'subkontraktor') {
-            return '/subkontraktor';
-        }
-        elseif (auth()->user()->is_admin == 'kabiro') {
-            return '/kabiro';
-        }
-        else {
-            return '/home';
-        }
-    }
+    // public function redirectTo()
+    // {
+    //     if (auth()->user()->is_admin =='kadep') {
+    //         return '/kadep';
+    //     }
+    //     // else if (auth()->user()->is_admin =='sekretaris') {
+    //     //     return '/sekretaris';
+    //     // } 
+    //     // elseif (auth()->user()->is_admin == 'pengadaan') {
+    //     //     return '/jurubeli';
+    //     // }
+    //     // elseif (auth()->user()->is_admin == 'subkontraktor') {
+    //     //     return '/subkontraktor';
+    //     // }
+    //     // elseif (auth()->user()->is_admin == 'kabiro') {
+    //     //     return '/kabiro';
+    //     // }
+    //     // else {
+    //     //     return '/home';
+    //     // }
+    // }
+
+    // protected function redirectTo()
+    // {
+    //     return '/kadep'; // return dynamicaly generated URL.
+    // }
+
+    public function register(Request $request)
+{
+    $this->validator($request->all())->validate();
+
+    event(new Registered($user = $this->create($request->all())));
+
+    // $this->guard()->login($user);
+
+    return $this->registered($request, $user)
+                    ?: redirect($this->redirectPath());
+}
 }

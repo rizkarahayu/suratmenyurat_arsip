@@ -7,8 +7,8 @@ use App\Models\SuratMasuk;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class KadepController extends Controller
-{
+class KadepController extends Controller{
+
     /**
      * Display a listing of the resource.
      *
@@ -31,16 +31,6 @@ class KadepController extends Controller
     {
         $surat_masuk = SuratMasuk::paginate(10);
         return view('kadep.datasurat_masuk2', compact( 'surat_masuk'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     public function datapj()

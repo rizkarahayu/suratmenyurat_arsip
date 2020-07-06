@@ -1,11 +1,10 @@
-@extends('layouts.app')
-
+@extends('layout.template')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Register User') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -18,7 +17,7 @@
                                 <option value="0" disabled="true" selected="true">-Pilih Hak Akses-</option>
                                 <option value="kadep"> Kepala Departemen </option>
                                 <option value="sekretaris"> Sekretaris </option>
-                                <option value="pengadaan"> Tim Pengadaan </option>
+                                <option value="pengadaan"> Juru Beli </option>
                                 <option value="subkontraktor"> Sub Kontraktor </option>
                                 <option value="kabiro"> Kepala Biro </option>
                             </select>

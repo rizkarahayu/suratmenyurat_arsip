@@ -15,7 +15,9 @@
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-      <?php echo date('l, d-m-Y  h:i:s a');?>
+      <?php 
+      \Carbon\Carbon::setLocale('id'); echo \Carbon\Carbon::now()->format('l, d F Y H:i');
+      ?>
       </div>
     </form>
 

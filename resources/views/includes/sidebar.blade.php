@@ -81,6 +81,23 @@
               <a href="#" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
                 <p>
+                  Register 
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('register') }}" class="nav-link">
+                    <i class="far fa-user nav-icon"></i>
+                    <p>Register User</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
+                <p>
                   Data Master
                   <i class="right fas fa-angle-left"></i>
                 </p>
