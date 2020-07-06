@@ -687,8 +687,9 @@ class JuruBeliController extends Controller
         $extension = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$extension;
         $file->move('uploads/sper',$newName);
-        $dok_sper->file = $newName;
+        $dok_sper->file_sper = $newName;
         $dok_sper->save();
+
         // return redirect('/dataspph')->with(['message'=> 'Data Berhasil di Simpan!!']);  
         return redirect('/dok_sper/upload_sper/'.$id)->with(['message'=> 'Data Berhasil di Simpan!!']);    
     }

@@ -39,7 +39,7 @@
                         <div class="modal-body">
                             <div class="card card-default">
                                 <div class="card-header">
-                                    <h4 class="card-title">File Upload Dokumen sper</h4>
+                                    <h4 class="card-title">File Upload Dokumen SPER</h4>
                                     <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -57,9 +57,9 @@
                                         <tbody>
                                             <tr>
                                             <td>
-                                                <a href="{{asset('/uploads/sper/'.$dok_sper->file)}}">{{$dok_sper->file}}</a>
+                                                <a href="{{asset('/uploads/sper/'.$dok_sper->file)}}">{{$dok_sper->file_sper}}</a>
                                             </td>
-                                                <td>{{ $dok_sper->keterangan }}</td>
+                                                <td>{{ $dok_sper->keterangan_sper }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
