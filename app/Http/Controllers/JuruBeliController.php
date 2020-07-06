@@ -689,8 +689,8 @@ class JuruBeliController extends Controller
     public function uploadstore_sper($id,Request $request)
     {
         $dok_sper = DokSpk::find($id);
-        $dok_sper->keterangan= $request->input('keterangan');
-        $file = $request->file('file');
+        $dok_sper->keterangan_sper= $request->input('keterangan_sper');
+        $file = $request->file('file_sper');
         $extension = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$extension;
         $file->move('uploads/sper',$newName);

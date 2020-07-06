@@ -38,7 +38,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                                @foreach($dok_sper  as $i => $usulan)
+                                @foreach($dok_usulan  as $i => $usulan)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $usulan->no_memo }}</td>
@@ -58,10 +58,10 @@
                 </div>
             </div>
                     <div class="card-header align-center"  >
-                        Halaman : {{ $dok_sper->currentPage() }} <br/>
-                        Jumlah Data : {{ $dok_sper->total() }} <br/>
-                        Data Per Halaman : {{ $dok_sper->perPage() }} <br/>
-                        {{ $dok_sper->links() }}
+                        Halaman : {{ $dok_usulan->currentPage() }} <br/>
+                        Jumlah Data : {{ $dok_usulan->total() }} <br/>
+                        Data Per Halaman : {{ $dok_usulan->perPage() }} <br/>
+                        {{ $dok_usulan->links() }}
                     </div>  
                 </div>
             </div>

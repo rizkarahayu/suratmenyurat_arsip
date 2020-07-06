@@ -152,8 +152,8 @@ Route::group(['middleware'=>['auth','jurubeli']],function(){
     Route::post('/edit_sper/update/{id}', 'JuruBeliController@update_sper');
     Route::get('/dok_sper/delete/{id}', 'JuruBeliController@destroy_sper');
     Route::get('/dok_sper/show/{id}', 'JuruBeliController@show_sper');
-    // Route::get('/dok_usulan/upload_usulan/{id}', 'JuruBeliController@upload_usulan');
-    // Route::post('/dok_usulan/uploadstore_usulan/{id}', 'JuruBeliController@uploadstore_usulan');
+    Route::get('/dok_sper/upload_sper/{id}', 'JuruBeliController@upload_sper');
+    Route::post('/dok_usulan/uploadstore_sper/{id}', 'JuruBeliController@uploadstore_sper');
 
     //SPK
     Route::get('/dataspk', 'JuruBeliController@data_spk')->name('dataspk');
