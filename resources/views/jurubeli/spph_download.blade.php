@@ -63,7 +63,7 @@
     <?php
 \Carbon\Carbon::setLocale('id');
 ?>
-        Hari      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  &nbsp;{{ Carbon\Carbon::parse($dok_spph->tanggal_pelaksanaan)->format('l')}}&nbsp;<br/>
+        Hari      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  &nbsp;{{ Carbon\Carbon::parse($dok_spph->tanggal_pelaksanaan)->->formatLocalized('%A')}}&nbsp;<br/>
         Tanggal   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{ date('d-M-yy', strtotime($dok_spph->tanggal_pelaksanaan)) }} <br/>
         Jam       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{$dok_spph->jam}} <br/>
         Tempat    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; Ruang Negosiasi Dep. Pengadaan Jasa   <br/>

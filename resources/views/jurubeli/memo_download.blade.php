@@ -22,7 +22,7 @@
     <td width="100%">
         Perihal &nbsp;&nbsp;&nbsp;&nbsp;: {{$dok_usulan->perihal}}<br/>
         Referensi  : {{$dok_usulan->referensi_j01}}<br/>
-        Pada hari ini {{ Carbon\Carbon::parse($dok_usulan->tanggal_dibuat)->format('l')}} tanggal {{ date('d-M-yy', strtotime($dok_usulan->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:<br/>
+        Pada hari ini {{ Carbon\Carbon::parse($dok_usulan->tanggal_dibuat)->formatLocalized('%A')}} tanggal {{ date('d-M-yy', strtotime($dok_usulan->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:<br/>
     </td>
   </tr>
 </table>

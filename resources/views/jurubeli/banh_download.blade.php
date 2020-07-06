@@ -22,7 +22,7 @@
 <table style="width:100%"; border="1">
   <tr>
     <td width="100%" style="font-size:15px">
-        Pada hari ini {{ Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l')}} tanggal {{ date('d-M-yy', strtotime($dok_banh->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah negosiasi harga pengadaan jasa dengan hasil sebagai berikut :
+        Pada hari ini {{ Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->formatLocalized('%A')}} tanggal {{ date('d-M-yy', strtotime($dok_banh->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah negosiasi harga pengadaan jasa dengan hasil sebagai berikut :
     </td>
   </tr>
   <tr>

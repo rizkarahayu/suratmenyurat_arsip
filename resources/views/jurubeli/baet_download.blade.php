@@ -24,7 +24,7 @@
         Perihal : {{$dok_baet->perihal}}
         Referensi  : {{$dok_baet->referensi_j01}}
         <?php setlocale(LC_TIME, 'id_ID'); ?>
-        Pada hari ini {{ Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->formatLocalized('%A %d %B %Y')}} tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
+        Pada hari ini {{ Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->formatLocalized('%A')}} tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
     </td>
   </tr>
 </table>
