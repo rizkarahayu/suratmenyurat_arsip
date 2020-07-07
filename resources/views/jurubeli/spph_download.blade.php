@@ -63,7 +63,25 @@
     <?php
 \Carbon\Carbon::setLocale('id');
 ?>
-        Hari      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  &nbsp;{{ Carbon\Carbon::parse($dok_spph->tanggal_pelaksanaan)->->formatLocalized('%A')}}&nbsp;<br/>
+        Hari      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  &nbsp;
+        @if(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Monday')
+          Senin
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Tuesday')
+          Selasa
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Wednesday')
+          Rabu
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Thursday')
+          Kamis
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Friday')
+          Jumat
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Saturday')
+          Sabtu
+        @elseif(Carbon\Carbon::parse($dok_spph->tanggal_dibuat)->format('l') == 'Sunday')
+          Minggu
+        @else
+          Hari Salah
+        @endif
+        &nbsp;<br/>
         Tanggal   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{ date('d-M-yy', strtotime($dok_spph->tanggal_pelaksanaan)) }} <br/>
         Jam       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{$dok_spph->jam}} <br/>
         Tempat    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; Ruang Negosiasi Dep. Pengadaan Jasa   <br/>

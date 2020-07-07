@@ -24,7 +24,26 @@
         Perihal : {{$dok_baet->perihal}}
         Referensi  : {{$dok_baet->referensi_j01}}
         <?php setlocale(LC_TIME, 'id_ID'); ?>
-        Pada hari ini {{ Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->formatLocalized('%A')}} tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
+        Pada hari ini  
+        @if(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Monday')
+          Senin
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Tuesday')
+          Selasa
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Wednesday')
+          Rabu
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Thursday')
+          Kamis
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Friday')
+          Jumat
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Saturday')
+          Sabtu
+        @elseif(Carbon\Carbon::parse($dok_baet->tanggal_dibuat)->format('l') == 'Sunday')
+          Minggu
+        @else
+          Hari Salah
+        @endif
+        tanggal {{ date('d-M-yy', strtotime($dok_baet->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah diadakan evaluasi teknis (aanwijzing) dengan hasil sebagai berikut:
+         
     </td>
   </tr>
 </table>

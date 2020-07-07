@@ -22,7 +22,25 @@
 <table style="width:100%"; border="1">
   <tr>
     <td width="100%" style="font-size:15px">
-        Pada hari ini {{ Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->formatLocalized('%A')}} tanggal {{ date('d-M-yy', strtotime($dok_banh->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah negosiasi harga pengadaan jasa dengan hasil sebagai berikut :
+        Pada hari ini 
+        @if(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Monday')
+          Senin
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Tuesday')
+          Selasa
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Wednesday')
+          Rabu
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Thursday')
+          Kamis
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Friday')
+          Jumat
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Saturday')
+          Sabtu
+        @elseif(Carbon\Carbon::parse($dok_banh->tanggal_dibuat)->format('l') == 'Sunday')
+          Minggu
+        @else
+          Hari Salah
+        @endif
+        tanggal {{ date('d-M-yy', strtotime($dok_banh->tanggal_dibuat)) }} bertempat di Departemen Pengadaan Jasa Divisi Supply Chain telah negosiasi harga pengadaan jasa dengan hasil sebagai berikut :
     </td>
   </tr>
   <tr>
@@ -49,7 +67,7 @@
       </tr>
       <tr>
           <td style="width:50%">No J02 : {{$dok_banh->no_baet}}</td>
-          <td>Tanggal SPH : {{$dok_banh->tanggal_baet}}</td>
+          <td>Tanggal BAET : {{$dok_banh->tanggal_baet}}</td>
       </tr>
 </table>
 <table style="width:100%"; border="1">

@@ -91,11 +91,11 @@
       <td width="100%" align="left">
       
         IX.  <u>SANKSI DAN DENDA</u>           : <br/>
-            1.Apabila karena kesengajaan atau kelalaian penerima SPK pekerjaan ini sehingga pekerjaan 
+            1. Apabila karena kesengajaan atau kelalaian penerima SPK pekerjaan ini sehingga pekerjaan 
 tidak dapat diselesaikan sesuai waktu pelaksanaan pada pasal VIII, maka PT. PAL Indonesia berhak memindahkan pekerjaan kepada pihak ketiga dan biaya yang timbul atas pengalihan 
 tersebut menjadi beban Penerima SPK ini.  
 <br/>
-            2.1% (Satu persen) untuk setiap hari kalender keterlambatan penyelesaian pesanan pekerjaan 
+            2. 1% (Satu persen) untuk setiap hari kalender keterlambatan penyelesaian pesanan pekerjaan 
 dan maksimal 10% (Sepuluh persen) dari biaya pelaksanaan.<br/>
             <br/>
       </td>
