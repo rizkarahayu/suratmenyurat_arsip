@@ -522,6 +522,7 @@ class JuruBeliController extends Controller
         $dok_spk->tanggal_selesai       = $request->input('tanggal_selesai');
         $dok_spk->nama_subkon          = $request->input('nama_subkon');
         $dok_spk->nama_perwakilan      = $request->input('nama_perwakilan');
+        $dok_spk->alamat      = $request->input('alamat');
         $dok_spk->tembusan1 = $request->input('tembusan1');
         $dok_spk->tembusan2 = $request->input('tembusan2');
         $dok_spk->tembusan3 = $request->input('tembusan3');
