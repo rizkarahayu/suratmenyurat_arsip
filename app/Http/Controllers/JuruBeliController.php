@@ -514,18 +514,18 @@ class JuruBeliController extends Controller
         $dok_spk->tanggal_baet         = $request->input('tanggal_baet');
         $dok_spk->no_banh              = $request->input('no_banh');
         $dok_spk->tanggal_banh         = $request->input('tanggal_banh');
-        $dok_spk->nama_proyek            = $request->input('nama_proyek');
-        $dok_spk->harga = $request->input('harga');
-        $dok_spk->harga_terbilang = $request->input('harga_terbilang');
+        $dok_spk->nama_proyek          = $request->input('nama_proyek');
+        $dok_spk->harga                = $request->input('harga');
+        $dok_spk->harga_terbilang      = $request->input('harga_terbilang');
         $dok_spk->tanggal_dibuat       = $request->input('tanggal_dibuat');
-        $dok_spk->tanggal_mulai       = $request->input('tanggal_mulai');
-        $dok_spk->tanggal_selesai       = $request->input('tanggal_selesai');
+        $dok_spk->tanggal_mulai        = $request->input('tanggal_mulai');
+        $dok_spk->tanggal_selesai      = $request->input('tanggal_selesai');
         $dok_spk->nama_subkon          = $request->input('nama_subkon');
         $dok_spk->nama_perwakilan      = $request->input('nama_perwakilan');
-        $dok_spk->alamat      = $request->input('alamat');
-        $dok_spk->tembusan1 = $request->input('tembusan1');
-        $dok_spk->tembusan2 = $request->input('tembusan2');
-        $dok_spk->tembusan3 = $request->input('tembusan3');
+        $dok_spk->alamat               = $request->input('alamat');
+        $dok_spk->tembusan1            = $request->input('tembusan1');
+        $dok_spk->tembusan2            = $request->input('tembusan2');
+        $dok_spk->tembusan3            = $request->input('tembusan3');
         $dok_spk->save();
 
         return redirect('/dataspk')->with(['message'=> 'Data Berhasil di Simpan!!']);
