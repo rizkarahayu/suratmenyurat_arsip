@@ -31,7 +31,7 @@
                             </button>
                         </div>
                     @endif
-
+                    <div style="overflow-x:auto;">
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
@@ -91,6 +91,7 @@
                             @endforeach
                          </tbody>
                       </table>
+                      </div>
                     <div class="card-header align-center"  >
                         Halaman : {{ $surat_masuk->currentPage() }} <br/>
                         Jumlah Data : {{ $surat_masuk->total() }} <br/>

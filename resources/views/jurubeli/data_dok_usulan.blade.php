@@ -28,6 +28,7 @@
                         </div>
                     @endif
                 <div class="card-body">
+                <div style="overflow-x:auto;">
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
@@ -55,6 +56,7 @@
                                 @endforeach
                          </tbody>
                     </table>
+                </div>
                 </div>
             </div>
                     <div class="card-header align-center"  >
